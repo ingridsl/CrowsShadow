@@ -342,7 +342,7 @@ namespace CrowShadowPlayer
 
             if (Cat.instance != null)
             {
-                Cat.instance.ChangePosition(transform.position.x - 0.6f, transform.position.y - 0.3f);
+                Cat.instance.GetComponent<Cat>().ChangePosition(transform.position.x - 0.6f, transform.position.y - 0.3f);
             }
 
             if ((GameManager.instance.mission is Mission8) &&

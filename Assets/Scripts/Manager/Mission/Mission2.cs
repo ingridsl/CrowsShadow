@@ -379,7 +379,7 @@ public class Mission2 : Mission {
 
             Cat.instance.followWhenClose = false;
             Cat.instance.stopEndPath = true;
-            Cat.instance.Patrol();
+            Cat.instance.GetComponent<Cat>().Patrol();
 
             Vector3 target1 = crowBabies.transform.position;
             Vector3 target2 = new Vector3(-2f, 0.6f, -0.5f);

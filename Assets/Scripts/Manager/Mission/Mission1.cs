@@ -351,8 +351,8 @@ public class Mission1 : Mission {
             Cat.instance.GetComponent<Cat>().Patrol();
             Vector3 aux = new Vector3(1.8f, 1f, -0.5f);
             Vector3[] catPos = { aux };
-            Cat.instance.GetComponent<Cat>().targets = catPos;
-            Cat.instance.GetComponent<Cat>().destroyEndPath = true;
+            Cat.instance.targets = catPos;
+            Cat.instance.destroyEndPath = true;
         }
         else if (secao == enumMission.GATO_CORREDOR)
         {
