@@ -170,7 +170,7 @@ Alex: I can't let she see me.
 
 -------------------------------------- MISSAO 3 ----------------------------------------------------
 ----------------------------------- DICAS --------------------------------------------
-[ti][title=M3QuadroStart]
+[title=M3QuadroStart]
 Alex: Hum... Maybe I should look at both the portraits?
 [title=M3QuadroEnd]
 ----------------------------------- ESPECIAL -----------------------------------
@@ -254,7 +254,14 @@ Alex: Go inside? I wonder if she is still there.
 
 
 -------------------------------------- MISSAO 4 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M4DicaInvert]
+Alex: Maybe if I use that power again...
+[title=M4DicaInvertEnd]
 ----------------------------------- ESPECIAL -----------------------------------
+[title=M4VaseStart]
+Alex: Mom's vase is broken!
+[title=M4VaseEnd]
 [title=M4DicaCorredor]
 Alex: Maybe if I tried to go to that place again ...
 [title=M4DicaCorredorEnd]
@@ -262,7 +269,7 @@ Alex: Maybe if I tried to go to that place again ...
 Alex: I can't get close ...
 [title=M4DicaQuartoMaeEnd]
 [title=OQ]
-Alex: Mom's vase is broken.
+Alex: Pumpkin? What are you going to do?
 [title=OQEnd]
 [title=NadaAqui]
 Alex: Nothing here.
