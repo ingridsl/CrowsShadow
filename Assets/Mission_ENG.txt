@@ -76,6 +76,8 @@ Alex: Maybe I can find something with light.
 Alex: Like a lantern or a lighter.
 [title=M1Lanterna2ArmarioEnd]
 -------------------------------------- MISSAO 2 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+
 ----------------------------------- ESPECIAL -----------------------------------
 [title=M2AllObjectsRespeita]
 Alex: I think I have everything I need.
@@ -120,9 +122,11 @@ Alex: I need a match to light the candle ...
 [title=M2KidRoomSceneFosforoEnd]
 [title=M2KidRoomSceneFaca]
 Alex: I need something to attack ...
+Alex: Like a knife or something.
 [title=M2KidRoomSceneFacaEnd]
 [title=M2KidRoomSceneTampa]
-Alex: I need something to defend myself...
+Alex: I need something to use as defense...
+Alex: A shield of some kind.
 [title=M2KidRoomSceneTampaEnd]
 [title=M2KidRoomSceneRepeat]
 Alex: I need to put the candle somewhere and light it.
@@ -165,6 +169,10 @@ Alex: I can't let she see me.
 
 
 -------------------------------------- MISSAO 3 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[ti][title=M3QuadroStart]
+Alex: Hum... Maybe I should look at both the portraits?
+[title=M3QuadroEnd]
 ----------------------------------- ESPECIAL -----------------------------------
 [title=M3Painting]
 Alex: What do you want to show me with that?
@@ -221,7 +229,7 @@ Alex: Pumpkin?
 ----------------------------------- CENAS NO JARDIM -----------------------------------
 [title=M3GardenSceneStart]
 Alex: It looks like a safe place here ...
-Alex: I think I should that thing again.
+Alex: I think I should do that thing again.
 Alex: And maybe...
 Alex: Go inside? I wonder if she is still there.
 [title=M3GardenSceneEnd]
