@@ -17,19 +17,23 @@ namespace CrowShadowObjects
         Renderer playerRenderer;
         SpriteRenderer spriteRenderer;
         Rigidbody2D rb;
-        Collider2D colliderMO, colliderPlayer;
+        BoxCollider2D colliderMO, colliderPlayer;
 
+        bool moving = false;
         float distanceWantedX = 0.4f;
         float distanceWantedY = 0.45f;
-        int originalDirection;
+        Player.Directions originalDirection;
         float originalX, originalY;
         float aproxTimerMult = 1f;
+        float colliderFactorX, colliderFactorY;
 
         void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             rb = GetComponent<Rigidbody2D>();
-            colliderMO = GetComponent<Collider2D>();
+            colliderMO = GetComponent<BoxCollider2D>();
+            colliderFactorX = colliderMO.size.x / 2;
+            colliderFactorY = colliderMO.size.y / 2;
         }
 
         private void Start()
@@ -37,7 +41,7 @@ namespace CrowShadowObjects
             player = GameManager.instance.gameObject;
             scriptPlayer = player.GetComponent<Player>();
             playerRenderer = player.GetComponent<SpriteRenderer>();
-            colliderPlayer = player.GetComponent<Collider2D>();
+            colliderPlayer = player.GetComponent<BoxCollider2D>();
         }
 
         void Update()
@@ -50,36 +54,89 @@ namespace CrowShadowObjects
             {
                 spriteRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
+
             if (colliding && !GameManager.instance.paused && !GameManager.instance.pausedObject && !GameManager.instance.blocked)
             {
-                if (CrossPlatformInputManager.GetButton("keySpecial") && canMoveUp)
+                bool facingObject = false;
+                var relativePoint = transform.InverseTransformPoint(player.transform.position);
+
+                if (relativePoint.x < 0.0 && scriptPlayer.direction == Player.Directions.EAST)
                 {
-                    if (CrossPlatformInputManager.GetButtonDown("keyMove"))
+                    if ((player.transform.position.y > transform.position.y - colliderFactorY) && 
+                        (player.transform.position.y < transform.position.y + colliderFactorY))
                     {
-                        MoveUp();
+                        print("Object is to the left");
+                        facingObject = true;
                     }
                 }
-                else if (scriptPlayer.playerAction != Player.Actions.ON_OBJECT)
+                else if (relativePoint.x > 0.0 && scriptPlayer.direction == Player.Directions.WEST)
                 {
-                    if (CrossPlatformInputManager.GetButtonDown("keyMove")) //GetKeyDown e GetKeyUp não pode ser usado fora do Update
+                    if ((player.transform.position.y > transform.position.y - colliderFactorY) &&
+                        (player.transform.position.y < transform.position.y + colliderFactorY))
                     {
-                        InitMove();
+                        print("Object is to the right");
+                        facingObject = true;
                     }
-                    else if (CrossPlatformInputManager.GetButton("keyMove"))
+                }
+                else if (relativePoint.y < 0.0 && scriptPlayer.direction == Player.Directions.NORTH)
+                {
+                    if ((player.transform.position.x > transform.position.x - colliderFactorX) &&
+                        (player.transform.position.x < transform.position.x + colliderFactorX))
                     {
-                        Move();
+                        print("Object is down");
+                        facingObject = true;
                     }
-                    else if (CrossPlatformInputManager.GetButtonUp("keyMove"))
+                }
+                else if (relativePoint.y > 0.0 && scriptPlayer.direction == Player.Directions.SOUTH)
+                {
+                    if ((player.transform.position.x > transform.position.x - colliderFactorX) &&
+                        (player.transform.position.x < transform.position.x + colliderFactorX))
+                    {
+                        print("Object is up");
+                        facingObject = true;
+                    }
+                }
+
+                if (facingObject)
+                {
+                    if (CrossPlatformInputManager.GetButton("keySpecial") && canMoveUp)
+                    {
+                        if (CrossPlatformInputManager.GetButtonDown("keyMove"))
+                        {
+                            MoveUp();
+                        }
+                    }
+                    else if (scriptPlayer.playerAction != Player.Actions.ON_OBJECT)
+                    {
+                        if (CrossPlatformInputManager.GetButtonDown("keyMove")) //GetKeyDown e GetKeyUp não pode ser usado fora do Update
+                        {
+                            InitMove();
+                        }
+                        else if (CrossPlatformInputManager.GetButton("keyMove"))
+                        {
+                            Move();
+                        }
+                        else if (CrossPlatformInputManager.GetButtonUp("keyMove"))
+                        {
+                            EndMove();
+                        }
+                    }
+                    else if (moving)
                     {
                         EndMove();
                     }
                 }
+            }
+            else if (moving)
+            {
+                EndMove();
             }
         }
 
         public void InitMove()
         {
             //print("INITMOVE");
+            moving = true;
             scriptPlayer.playerAction = Player.Actions.MOVING_OBJECT;
             scriptPlayer.animator.SetTrigger("movingObject");
             aproxTimerMult = 0f;
@@ -101,10 +158,10 @@ namespace CrowShadowObjects
             //para ver se esta na esquerda ou direta, em cima ou baixo
             //para nao dar problema com a colisão do MovingObject em bordas, faze-las grandes (maiores do que ele)
 
-            if ((scriptPlayer.direction == 0 && relativePoint.x < 0.0)
-                || (scriptPlayer.direction == 1 && relativePoint.x > 0.0)
-                || (scriptPlayer.direction == 0 && relativePoint.x < 0.0 && scriptPlayer.wantedDirection == 1)
-                || (scriptPlayer.direction == 1 && relativePoint.x > 0.0 && scriptPlayer.wantedDirection == 0)
+            if ((scriptPlayer.direction == Player.Directions.EAST && relativePoint.x < 0.0)
+                || (scriptPlayer.direction == Player.Directions.WEST && relativePoint.x > 0.0)
+                || (scriptPlayer.direction == Player.Directions.EAST && relativePoint.x < 0.0 && scriptPlayer.wantedDirection == Player.Directions.WEST)
+                || (scriptPlayer.direction == Player.Directions.WEST && relativePoint.x > 0.0 && scriptPlayer.wantedDirection == Player.Directions.EAST)
                 )
             {
                 Vector3 diff = new Vector3(rb.position.x, rb.position.y) - player.transform.position;
@@ -112,10 +169,10 @@ namespace CrowShadowObjects
                 diff.z = 0;
                 rb.position = Vector2.Lerp(rb.position, player.transform.position + diff.normalized * distanceWantedX, aproxTimerMult * Time.deltaTime);
             }
-            else if ((scriptPlayer.direction == 2 && relativePoint.y < 0.0)
-                || (scriptPlayer.direction == 3 && relativePoint.y > 0.0)
-                || (scriptPlayer.direction == 2 && relativePoint.y < 0.0 && scriptPlayer.wantedDirection == 3)
-                || (scriptPlayer.direction == 3 && relativePoint.y > 0.0 && scriptPlayer.wantedDirection == 2))
+            else if ((scriptPlayer.direction == Player.Directions.NORTH && relativePoint.y < 0.0)
+                || (scriptPlayer.direction == Player.Directions.SOUTH && relativePoint.y > 0.0)
+                || (scriptPlayer.direction == Player.Directions.NORTH && relativePoint.y < 0.0 && scriptPlayer.wantedDirection == Player.Directions.SOUTH)
+                || (scriptPlayer.direction == Player.Directions.SOUTH && relativePoint.y > 0.0 && scriptPlayer.wantedDirection == Player.Directions.NORTH))
             {
                 Vector3 diff = new Vector3(rb.position.x, rb.position.y) - player.transform.position;
                 diff.x = 0; // ignore X
@@ -131,8 +188,9 @@ namespace CrowShadowObjects
 
         public void EndMove()
         {
-            GameManager.instance.scenerySounds2.StopSound();
             //print("ENDMOVE");
+            moving = false;
+            GameManager.instance.scenerySounds2.StopSound();
             scriptPlayer.playerAction = Player.Actions.DEFAULT;
             scriptPlayer.animator.SetTrigger("changeDirection");
         }
@@ -144,53 +202,53 @@ namespace CrowShadowObjects
             if (scriptPlayer.playerAction != Player.Actions.ON_OBJECT)
             {
                 originalDirection = scriptPlayer.direction;
-                if (originalDirection != 3)
+                if (originalDirection != Player.Directions.SOUTH)
                 {
                     scriptPlayer.playerAction = Player.Actions.ANIMATION;
                     originalX = player.transform.position.x;
                     originalY = player.transform.position.y;
                     colliderMO.enabled = false;
                     colliderPlayer.enabled = false;
-                    if (originalDirection == 0)
+                    if (originalDirection == Player.Directions.EAST)
                     {
                         scriptPlayer.ChangePositionDefault(rb.position.x - (spriteRenderer.bounds.size.x / (float)1.5), rb.position.y, -1);
-                        scriptPlayer.MoveUpAnimation(this, "playerClimbEast", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), originalDirection);
+                        scriptPlayer.MoveUpAnimation(this, "playerClimbEast", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), (int)originalDirection);
                     }
-                    else if (originalDirection == 1)
+                    else if (originalDirection == Player.Directions.WEST)
                     {
                         scriptPlayer.ChangePositionDefault(rb.position.x + (spriteRenderer.bounds.size.x / (float)1.5), rb.position.y, -1);
-                        scriptPlayer.MoveUpAnimation(this, "playerClimbWest", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), originalDirection);
+                        scriptPlayer.MoveUpAnimation(this, "playerClimbWest", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), (int)originalDirection);
                     }
-                    else if (originalDirection == 2)
+                    else if (originalDirection == Player.Directions.NORTH)
                     {
                         scriptPlayer.ChangePositionDefault(rb.position.x, rb.position.y, -1);
-                        scriptPlayer.MoveUpAnimation(this, "playerClimbNorth", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), originalDirection);
+                        scriptPlayer.MoveUpAnimation(this, "playerClimbNorth", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), (int)originalDirection);
                     }
-                    /*else if (originalDirection == 3)
+                    /*else if (originalDirection == Player.Directions.SOUTH)
                     {
                         scriptPlayer.ChangePositionDefault(this, rb.position.x, rb.position.y, -1);
-                        scriptPlayer.MoveUpAnimation("playerClimbSouth", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), originalDirection);
+                        scriptPlayer.MoveUpAnimation("playerClimbSouth", rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), (int)originalDirection);
                     }*/
                 }
             }
             else
             {
-                if (originalDirection == 0)
+                if (originalDirection == Player.Directions.EAST)
                 {
                     scriptPlayer.ChangePositionDefault(rb.position.x - (spriteRenderer.bounds.size.x / (float)1.5), rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), 1);
                     scriptPlayer.MoveDownAnimation("playerDownWest", originalX, originalY, -1);
                 }
-                else if (originalDirection == 1)
+                else if (originalDirection == Player.Directions.WEST)
                 {
                     scriptPlayer.ChangePositionDefault(rb.position.x + (spriteRenderer.bounds.size.x / (float)1.5), rb.position.y + (spriteRenderer.bounds.size.y / scaleMoveUp), 0);
                     scriptPlayer.MoveDownAnimation("playerDownEast", originalX, originalY, -1);
                 }
-                else if (originalDirection == 2)
+                else if (originalDirection == Player.Directions.NORTH)
                 {
                     scriptPlayer.ChangePositionDefault(rb.position.x, rb.position.y, 3);
                     scriptPlayer.MoveDownAnimation("playerDownSouth", originalX, originalY, -1);
                 }
-                /*else if (originalDirection == 3)
+                /*else if (originalDirection == Player.Directions.SOUTH)
                 {
                 scriptPlayer.ChangePositionDefault(this, rb.position.x, rb.position.y + (spriteRenderer.bounds.size.y / 4), 2);
                     scriptPlayer.MoveDownAnimation("playerDownNorth", originalX, originalY, -1);

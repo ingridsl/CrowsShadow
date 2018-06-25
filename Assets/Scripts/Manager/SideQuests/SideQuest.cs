@@ -33,7 +33,7 @@ public abstract class SideQuest
         GameObject player = GameObject.Find("Player").gameObject;
         oldX = player.transform.position.x;
         oldY = player.transform.position.y;
-        oldDir = player.GetComponent<Player>().direction;
+        oldDir = (int)player.GetComponent<Player>().direction;
 
         GameManager.initX = sideX;
         GameManager.initY = sideY;

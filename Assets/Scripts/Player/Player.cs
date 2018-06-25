@@ -23,7 +23,8 @@ namespace CrowShadowPlayer
         [Header("Data")]
         public bool hidden = false;
         public bool isRunning = false;
-        public int direction = 0, wantedDirection = 0;
+        public enum Directions { EAST, WEST, NORTH, SOUTH, NONE }; //0 = east, 1 = west, 2 = north, 3 = south
+        public Directions direction = Directions.EAST, wantedDirection = Directions.EAST;
 
         [Header("External Sources")]
         public Animator animator;
@@ -31,20 +32,20 @@ namespace CrowShadowPlayer
         public AudioSource source { get { return GetComponent<AudioSource>(); } }
 
         private SpriteRenderer spriteRenderer;
-        private Collider2D colliderPlayer;
+        private BoxCollider2D colliderPlayer;
         private Rigidbody2D rb;
         private MovingObject auxOnObject;
 
         private float stepsControl = 0.5f;
         private string lastSceneGameOver = "", corvoScene = "";
         private float corvoPositionX, corvoPositionY;
-        private int oldDirection; //0 = east, 1 = west, 2 = north, 3 = south
+        private Directions oldDirection;
 
         void Start()
         {
             animator = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-            colliderPlayer = GetComponent<Collider2D>();
+            colliderPlayer = GetComponent<BoxCollider2D>();
             rb = GetComponent<Rigidbody2D>();
             source.playOnAwake = false;
         }
@@ -87,7 +88,7 @@ namespace CrowShadowPlayer
                             rb.position = new Vector2(rb.position.x + move, rb.position.y);
                         }
                         isWalking = true;
-                        direction = 0;
+                        direction = Directions.EAST;
                     }
                     else if (CrossPlatformInputManager.GetAxis("Horizontal") < 0)
                     {
@@ -100,7 +101,7 @@ namespace CrowShadowPlayer
                             rb.position = new Vector2(rb.position.x - move, rb.position.y);
                         }
                         isWalking = true;
-                        direction = 1;
+                        direction = Directions.WEST;
                     }
                     else if (CrossPlatformInputManager.GetAxis("Vertical") > 0)
                     {
@@ -113,7 +114,7 @@ namespace CrowShadowPlayer
                             rb.position = new Vector2(rb.position.x, rb.position.y + move);
                         }
                         isWalking = true;
-                        direction = 2;
+                        direction = Directions.NORTH;
                     }
                     else if (CrossPlatformInputManager.GetAxis("Vertical") < 0)
                     {
@@ -126,7 +127,7 @@ namespace CrowShadowPlayer
                             rb.position = new Vector2(rb.position.x, rb.position.y - move);
                         }
                         isWalking = true;
-                        direction = 3;
+                        direction = Directions.SOUTH;
                     }
 
                     if (isRunning)
@@ -177,23 +178,23 @@ namespace CrowShadowPlayer
                     }
                     if (CrossPlatformInputManager.GetAxis("Horizontal") > 0)
                     {
-                        direction = 0;
+                        direction = Directions.EAST;
                     }
                     else if (CrossPlatformInputManager.GetAxis("Horizontal") < 0)
                     {
-                        direction = 1;
+                        direction = Directions.WEST;
                     }
                     else if (CrossPlatformInputManager.GetAxis("Vertical") > 0)
                     {
-                        direction = 2;
+                        direction = Directions.NORTH;
                     }
                     else if (CrossPlatformInputManager.GetAxis("Vertical") < 0)
                     {
-                        direction = 3;
+                        direction = Directions.SOUTH;
                     }
                 }
 
-                animator.SetInteger("direction", direction);
+                animator.SetInteger("direction", (int)direction);
                 if (oldDirection != direction)
                 {
                     animator.SetTrigger("changeDirection");
@@ -201,12 +202,12 @@ namespace CrowShadowPlayer
                 }
 
             }
-            else if (oldDirection != -1)
+            else if (oldDirection != Directions.NONE)
             {
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isRunning", false);
                 animator.SetTrigger("changeDirection");
-                oldDirection = -1;
+                oldDirection = Directions.NONE;
             }
         }
 
@@ -225,8 +226,8 @@ namespace CrowShadowPlayer
 
         public void ChangeDirection(int newDirection)
         {
-            direction = newDirection;
-            animator.SetInteger("direction", direction);
+            direction = (Directions)newDirection;
+            animator.SetInteger("direction", (int)direction);
             animator.SetTrigger("changeDirection");
             oldDirection = direction;
         }
@@ -265,7 +266,7 @@ namespace CrowShadowPlayer
                     else if (previousSceneName.Equals("QuartoMae"))
                     {
                         transform.position = new Vector3(-1.6f, -0.3f, -1f);
-                        ChangeDirection(3);
+                        ChangeDirection((int)Directions.NORTH);
                     }
                     else if (previousSceneName.Equals("Cozinha"))
                     {
@@ -274,13 +275,13 @@ namespace CrowShadowPlayer
                     else if (previousSceneName.Equals("Banheiro"))
                     {
                         transform.position = new Vector3(-11.3f, -0.3f, -1f);
-                        ChangeDirection(3);
+                        ChangeDirection((int)Directions.NORTH);
                     }
                     //else if (previousSceneName.Equals("QuartoKid"))
                     else
                     {
                         transform.position = new Vector3(11.9f, -0.3f, -1f);
-                        ChangeDirection(3);
+                        ChangeDirection((int)Directions.NORTH);
                     }
                 }
                 else if (GameManager.currentSceneName.Equals("Cozinha"))
@@ -292,7 +293,7 @@ namespace CrowShadowPlayer
                     if (previousSceneName.Equals("Porao"))
                     {
                         transform.position = new Vector3(6.0f, 2.5f, -1f);
-                        ChangeDirection(3);
+                        ChangeDirection((int)Directions.NORTH);
                     }
                     else
                     {
@@ -302,22 +303,22 @@ namespace CrowShadowPlayer
                 else if (GameManager.currentSceneName.Equals("Porao"))
                 {
                     transform.position = new Vector3(3.2f, 0.5f, -1f);
-                    ChangeDirection(3);
+                    ChangeDirection((int)Directions.NORTH);
                 }
                 else if (GameManager.currentSceneName.Equals("QuartoKid"))
                 {
                     transform.position = new Vector3(1.75f, 0.65f, -1f);
-                    ChangeDirection(3);
+                    ChangeDirection((int)Directions.NORTH);
                 }
                 else if (GameManager.currentSceneName.Equals("QuartoMae"))
                 {
                     transform.position = new Vector3(-3.8f, -0.45f, -1f);
-                    ChangeDirection(3);
+                    ChangeDirection((int)Directions.NORTH);
                 }
                 else if (GameManager.currentSceneName.Equals("Banheiro"))
                 {
                     transform.position = new Vector3(2.171f, 0.284f, -1f);
-                    ChangeDirection(3);
+                    ChangeDirection((int)Directions.NORTH);
                 }
                 else if (GameManager.currentSceneName.Equals("Sala"))
                 {
@@ -329,7 +330,7 @@ namespace CrowShadowPlayer
                     else
                     {
                         transform.position = new Vector3(-3.15f, 0.85f, -1f);
-                        ChangeDirection(3);
+                        ChangeDirection((int)Directions.NORTH);
                     }
                 }
                 else if (GameManager.currentSceneName.Equals("SideQuest"))
