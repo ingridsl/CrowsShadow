@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 114833596618350534}
   - component: {fileID: 114401343632510796}
   - component: {fileID: 114966263676562284}
-  - component: {fileID: 114762222619580006}
   - component: {fileID: 61343407655216614}
   - component: {fileID: 50105999824673716}
   - component: {fileID: 82755673366926274}
@@ -1615,19 +1614,6 @@ MonoBehaviour:
   miniGameBlocked: 1
   miniGameUnlocked: 0
   achievedGoal: 0
---- !u!114 &114762222619580006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1103832579489714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b08fb0f3f8da694286d08a6bfefbdd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  sound: {fileID: 8300000, guid: 5feec34d02e08e24f83e43fafffb70d8, type: 3}
 --- !u!114 &114763080374060220
 MonoBehaviour:
   m_ObjectHideFlags: 1
