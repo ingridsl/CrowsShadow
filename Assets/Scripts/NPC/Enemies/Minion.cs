@@ -33,8 +33,8 @@ namespace CrowShadowNPCs
             playerScript = player.GetComponent<Player>();
             playerRB = player.GetComponent<Rigidbody2D>();
             playerRenderer = player.GetComponent<Renderer>();
-            tampa = GameObject.Find("Tampa").gameObject.GetComponent<ProtectionObject>();
-            escudo = GameObject.Find("Escudo").gameObject.GetComponent<ProtectionObject>();
+            tampa = GameManager.instance.gameObject.transform.Find("Tampa").gameObject.GetComponent<ProtectionObject>();
+            escudo = GameManager.instance.gameObject.transform.Find("Escudo").gameObject.GetComponent<ProtectionObject>();
         }
 
         protected new void Update()

@@ -417,6 +417,18 @@ namespace CrowShadowManager
         /************ FUNÇÕES DE OBJETO ************/
 
         // ADICIONAR OBJETO NA CENA
+        public GameObject AddObject(GameObject newGameObject, string sprite, Vector3 position, Vector3 scale)
+        {
+            print("ADD OBJECT ");
+            GameObject instance =
+                Instantiate(newGameObject,
+                position, Quaternion.identity) as GameObject;
+            if (sprite != "") instance.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(sprite);
+            instance.transform.localScale = scale;
+            return instance;
+        }
+
+        // ADICIONAR OBJETO NA CENA
         public GameObject AddObject(string name, string sprite, Vector3 position, Vector3 scale)
         {
             print("ADD OBJECT: " + name + " [" + sprite + "]");
@@ -429,10 +441,27 @@ namespace CrowShadowManager
         }
 
         // ADICIONAR OBJETO NA CENA, COM DADOS REDUZIDOS
+        public GameObject AddObject(string name, Vector3 position)
+        {
+            print("ADD OBJECT: " + name);
+            GameObject instance =
+                Instantiate(Resources.Load("Prefab/" + name), position, Quaternion.identity) as GameObject;
+            return instance;
+        }
+
+        // ADICIONAR OBJETO NA CENA, COM DADOS REDUZIDOS
         public GameObject AddObject(string name)
         {
             print("ADD OBJECT: " + name);
             GameObject instance = Instantiate(Resources.Load("Prefab/" + name)) as GameObject;
+            return instance;
+        }
+
+        // ADICIONAR OBJETO NA CENA COM PAI ASSOCIADO
+        public GameObject AddObjectWithParent(GameObject newGameObject, string sprite, Vector3 position, Vector3 scale, Transform parent)
+        {
+            GameObject instance = AddObject(newGameObject, sprite, position, scale);
+            instance.transform.parent = parent;
             return instance;
         }
 
@@ -451,6 +480,8 @@ namespace CrowShadowManager
             instance.transform.SetParent(parent);
             return instance;
         }
+
+
 
         // SALVA AS VARIÁVEIS DE OBJETOS
         private static void SaveObjectsVariables()
