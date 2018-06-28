@@ -1,30 +1,55 @@
 ﻿using UnityEngine;
 using CrowShadowManager;
-/// <summary>
-/// https://www.youtube.com/watch?v=BGe5HDsyhkY
-/// </summary>
+using UnityStandardAssets.CrossPlatformInput;
+
 namespace CrowShadowScenery
 {
     public class MiniGameCircle : MonoBehaviour
     {
-        private float RotateSpeed = 5f;
-        private float Radius = 0.1f;
+        public GameObject pointer;
+        public float speed = 60;
+        public float minAcerto, maxAcerto;
+        public GameObject miniGame;
+        public bool inside = false;
 
-        private Vector2 _centre;
-        private float _angle;
+        public float angle = 0.0F;
+        public Vector3 axis = Vector3.zero;
 
         private void Start()
         {
-            _centre = transform.position;
+            
+            transform.rotation.ToAngleAxis(out angle, out axis);
         }
 
         private void Update()
         {
+            pointer.transform.Rotate(Vector3.back * Time.deltaTime * speed/*, Space.World*/);
+            var angleQuart2 = pointer.transform.rotation.z;
+            var angleEuler2 = pointer.transform.rotation.eulerAngles.z;
+            if (angleEuler2 > 180)
+                angleEuler2 /= 2;
 
-            _angle += RotateSpeed * Time.deltaTime;
+            if (CrossPlatformInputManager.GetButtonDown("keyMiniGame") & inside) { 
+                  miniGame.SetActive(false);                
+            }
+        }
 
-            var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
-            transform.position = _centre + offset;
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag.Equals("MiniGameRightArea"))
+            {
+
+                inside = true;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.gameObject.tag.Equals("MiniGameRightArea"))
+            {
+
+                inside = false;
+            }
         }
 
     }
