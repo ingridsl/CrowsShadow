@@ -7,9 +7,11 @@ namespace CrowShadowScenery
     public class MiniGameCircle : MonoBehaviour
     {
         public GameObject pointer;
-        public float speed = 60;
+        public float speed = 300;
         public GameObject miniGame;
         public bool inside = false;
+        private bool playing = false;
+        public bool goalAchieved = false;
 
         private void Start()
         {
@@ -18,15 +20,18 @@ namespace CrowShadowScenery
 
         private void Update()
         {
-            pointer.transform.Rotate(Vector3.back * Time.deltaTime * speed/*, Space.World*/);
-            var angleQuart2 = pointer.transform.rotation.z;
-            var angleEuler2 = pointer.transform.rotation.eulerAngles.z;
-            if (angleEuler2 > 180)
-                angleEuler2 /= 2;
-
-            if (CrossPlatformInputManager.GetButtonDown("keyMiniGame") & inside) { 
-                  miniGame.SetActive(false);                
+            if (CrossPlatformInputManager.GetButtonDown("keyUseObject") && !playing) //GetKeyDown e GetKeyUp não pode ser usado fora do Update
+            {
+                GameManager.instance.pausedObject = true;
+                playing = true;
             }
+            pointer.transform.Rotate(Vector3.back * Time.deltaTime * speed);
+
+            if (CrossPlatformInputManager.GetButtonDown("keyMiniGame") & inside) {
+                StopMiniGame();
+            }
+
+
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -46,6 +51,16 @@ namespace CrowShadowScenery
                 inside = false;
             }
         }
+
+        public void StopMiniGame()
+        {
+
+            GameManager.instance.pausedObject = false;
+
+            goalAchieved = true;
+            playing = false;
+        }
+
 
     }
 }

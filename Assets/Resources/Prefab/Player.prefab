@@ -1341,6 +1341,7 @@ MonoBehaviour:
   refreshTimeMax: 1
   posFlareX: 0
   posFlareY: 0
+  miniGame: {fileID: 0}
 --- !u!114 &114336094573981668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1360,6 +1361,7 @@ MonoBehaviour:
   refreshTimeMax: 1
   posFlareX: 0
   posFlareY: 0
+  miniGame: {fileID: 0}
 --- !u!114 &114365670633547336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1757,6 +1759,7 @@ MonoBehaviour:
   refreshTimeMax: 1
   posFlareX: 0
   posFlareY: 0
+  miniGame: {fileID: 0}
 --- !u!114 &114966263676562284
 MonoBehaviour:
   m_ObjectHideFlags: 1

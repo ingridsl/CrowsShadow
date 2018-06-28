@@ -61,7 +61,7 @@ namespace CrowShadowPlayer
         {
             // Adiciona todos os objetos, para testar
             // DELETAR PARA A VERSÃO FINAL
-            /*NewItem(InventoryItems.LIVRO);
+            NewItem(InventoryItems.LIVRO);
             NewItem(InventoryItems.RACAO);
             NewItem(InventoryItems.VELA);
             NewItem(InventoryItems.PAPEL);
@@ -72,7 +72,7 @@ namespace CrowShadowPlayer
             NewItem(InventoryItems.FACA);
             NewItem(InventoryItems.FOSFORO);
             NewItem(InventoryItems.ISQUEIRO);
-            NewItem(InventoryItems.FLASHLIGHT);*/
+            NewItem(InventoryItems.FLASHLIGHT);
 
             gameObject.AddComponent<AudioSource>();
             source.clip = sound;
