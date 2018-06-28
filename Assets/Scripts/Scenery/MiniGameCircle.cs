@@ -14,7 +14,6 @@ namespace CrowShadowScenery
         private void Start()
         {
             
-            transform.rotation.ToAngleAxis(out angle, out axis);
         }
 
         private void Update()
