@@ -47,16 +47,16 @@ namespace CrowShadowPlayer
 
                 switch (player.direction)
                 {
-                    case 0:
+                    case Player.Directions.EAST:
                         anim += "East";
                         break;
-                    case 1:
+                    case Player.Directions.WEST:
                         anim += "West";
                         break;
-                    case 2:
+                    case Player.Directions.NORTH:
                         anim += "North";
                         break;
-                    case 3:
+                    case Player.Directions.SOUTH:
                         anim += "South";
                         break;
                     default:
@@ -72,16 +72,16 @@ namespace CrowShadowPlayer
 
             switch (player.direction)
             {
-                case 0:
+                case Player.Directions.EAST:
                     colliderComponent.offset = new Vector2(1, 0);
                     break;
-                case 1:
+                case Player.Directions.WEST:
                     colliderComponent.offset = new Vector2(-1, 0);
                     break;
-                case 2:
+                case Player.Directions.NORTH:
                     colliderComponent.offset = new Vector2(0, 1);
                     break;
-                case 3:
+                case Player.Directions.SOUTH:
                     colliderComponent.offset = new Vector2(0, -1);
                     break;
                 default:

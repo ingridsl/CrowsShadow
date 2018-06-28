@@ -106,6 +106,15 @@ namespace CrowShadowManager
         private Renderer rendererPlayer;
         private UnityStandardAssets.ImageEffects.ColorCorrectionLookup colorCamera;
 
+
+        // GAMEOVER
+        private bool gameOver = false;
+
+        // INVOKE
+        private bool wasInvoked = false;
+        private string invokeFunction = "";
+        private float invokeDelay = 0f;
+
         // CRIAÇÃO JOGO
         public void Awake()
         {
@@ -271,6 +280,10 @@ namespace CrowShadowManager
             {
                 LoadGame(0);
             }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                GameOver();
+            }
 
         }
 
@@ -279,8 +292,8 @@ namespace CrowShadowManager
         // FUNÇÕES DE MUDANÇA DE CENA
         public static void LoadScene(string name, bool menu = false)
         {
-            //print("OLDSCENE: " + previousSceneName);
-            //print("NEWSCENE: " + currentSceneName);
+            print("OLDSCENE: " + previousSceneName + " " + Time.time * 1000);
+            print("NEWSCENE: " + currentSceneName + " " + Time.time * 1000);
             if (!(name.Equals(currentSceneName) && !forceReload))
             {
                 forceReload = false;
@@ -288,9 +301,16 @@ namespace CrowShadowManager
                 {
                     SaveObjectsVariables();
                 }
-                //print("ACTIVE " + Time.time * 1000);
+                print("ACTIVE " + Time.time * 1000);
 
-                FadingScene.instance.LoadSceneAsync(name, 0);
+                if (FadingScene.instance != null)
+                {
+                    FadingScene.instance.LoadSceneAsync(name, 0);
+                }
+                else
+                {
+                    SceneManager.LoadSceneAsync(name, 0);
+                }
             }
         }
 
@@ -311,20 +331,17 @@ namespace CrowShadowManager
             previousSceneName = currentSceneName;
             currentSceneName = scene.name;
 
+            print("OLDSCENE: " + previousSceneName + " " + Time.time * 1000);
+            print("NEWSCENE: " + currentSceneName + " " + Time.time * 1000);
+
+            print("CLOSED " + Time.time * 1000);
+
             SetSceneWhenLoaded();
         }
 
         // ESPECIFICA DETALHES DA CENA QUANDO ESTÁ É CARREGADA
         private void SetSceneWhenLoaded()
         {
-            SetPlayerOnScene();
-
-            if (previousSceneName.Equals("GameOver"))
-            {
-                player.enabled = true;
-                rendererPlayer.enabled = true;
-            }
-
             if (currentSceneName.Equals("GameOver"))
             {
                 player.enabled = false;
@@ -343,6 +360,7 @@ namespace CrowShadowManager
                 DeleteAllPlayerPrefs();
             }
 
+            SetPlayerOnScene();
             InvertWorld(invertWorld);
 
             if (mission != null) mission.LoadMissionScene();
@@ -350,6 +368,20 @@ namespace CrowShadowManager
             ExtrasManager.PagesManager();
             SetObjectsVariables();
             SetPickUps();
+
+            if (previousSceneName.Equals("GameOver"))
+            {
+                gameOver = false;
+                blocked = false;
+                hud.SetActive(true);
+                player.enabled = true;
+                rendererPlayer.enabled = true;
+
+                if (wasInvoked)
+                {
+                    Invoke(invokeFunction, invokeDelay);
+                }
+            }
         }
 
         // DETERMINA POSIÇÃO DO PLAYER AO CARREGAR A CENA
@@ -385,6 +417,18 @@ namespace CrowShadowManager
         /************ FUNÇÕES DE OBJETO ************/
 
         // ADICIONAR OBJETO NA CENA
+        public GameObject AddObject(GameObject newGameObject, string sprite, Vector3 position, Vector3 scale)
+        {
+            print("ADD OBJECT ");
+            GameObject instance =
+                Instantiate(newGameObject,
+                position, Quaternion.identity) as GameObject;
+            if (sprite != "") instance.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(sprite);
+            instance.transform.localScale = scale;
+            return instance;
+        }
+
+        // ADICIONAR OBJETO NA CENA
         public GameObject AddObject(string name, string sprite, Vector3 position, Vector3 scale)
         {
             print("ADD OBJECT: " + name + " [" + sprite + "]");
@@ -397,10 +441,27 @@ namespace CrowShadowManager
         }
 
         // ADICIONAR OBJETO NA CENA, COM DADOS REDUZIDOS
+        public GameObject AddObject(string name, Vector3 position)
+        {
+            print("ADD OBJECT: " + name);
+            GameObject instance =
+                Instantiate(Resources.Load("Prefab/" + name), position, Quaternion.identity) as GameObject;
+            return instance;
+        }
+
+        // ADICIONAR OBJETO NA CENA, COM DADOS REDUZIDOS
         public GameObject AddObject(string name)
         {
             print("ADD OBJECT: " + name);
             GameObject instance = Instantiate(Resources.Load("Prefab/" + name)) as GameObject;
+            return instance;
+        }
+
+        // ADICIONAR OBJETO NA CENA COM PAI ASSOCIADO
+        public GameObject AddObjectWithParent(GameObject newGameObject, string sprite, Vector3 position, Vector3 scale, Transform parent)
+        {
+            GameObject instance = AddObject(newGameObject, sprite, position, scale);
+            instance.transform.parent = parent;
             return instance;
         }
 
@@ -419,6 +480,8 @@ namespace CrowShadowManager
             instance.transform.SetParent(parent);
             return instance;
         }
+
+
 
         // SALVA AS VARIÁVEIS DE OBJETOS
         private static void SaveObjectsVariables()
@@ -832,23 +895,25 @@ namespace CrowShadowManager
         // FINALIZAR JOGO
         public void GameOver()
         {
-            blocked = true;
-            hud.SetActive(false);
-            InvertWorld(false);
-            if (sideQuest == null)
+            if (!gameOver)
             {
-                if (Cat.instance != null) Cat.instance.DestroyCat();
-                if (Crow.instance != null) Crow.instance.DestroyRaven();
+                gameOver = true;
+                blocked = true;
+                hud.SetActive(false);
+                InvertWorld(false);
+                if (sideQuest == null)
+                {
+                    if (Cat.instance != null) Cat.instance.DestroyCat();
+                    if (Crow.instance != null) Crow.instance.DestroyRaven();
+                }
+                LoadScene("GameOver");
             }
-            LoadScene("GameOver");
         }
 
         // CONTINUAR JOGO
         public void ContinueGame()
         {
             LoadScene(previousSceneName, true);
-            blocked = false;
-            hud.SetActive(true);
         }
 
         /************ FUNÇÕES ESPECIAIS ************/
@@ -961,10 +1026,25 @@ namespace CrowShadowManager
         }
 
         // AUXILIAR PARA INVOCAÇÃO NAS MISSÕES
+        public new void Invoke(string function, float time)
+        {
+            invokeFunction = function;
+            invokeDelay = time;
+            base.Invoke(function, time);
+        }
+
         public void InvokeMission()
         {
             //print("INVOKEMISSION");
-            mission.InvokeMission();
+            if (currentSceneName.Equals("GameOver"))
+            {
+                wasInvoked = true;
+            }
+            else
+            {
+                wasInvoked = false;
+                mission.InvokeMission();
+            }
         }
 
         // AUXILIAR PARA IMPRIMIR NAS MISSÕES

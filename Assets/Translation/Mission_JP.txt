@@ -1,0 +1,644 @@
+-------------------------------------- DEFAULT ----------------------------------------------------
+[title=Trancada]
+アレックス: ドアはロックされています。
+[title=TrancadaEnd]
+
+-------------------------------------- MISSAO 1 ----------------------------------------------------
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M1Q0C0]
+アレックス: 出ててアトズ、私は一人になりたい。
+[title=M1Q0C0End]
+[title=M1Q0C1]
+アレックス: アトズ、私と一緒に寝ることができますか？
+[title=M1Q0C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M1KidRoomSceneStart]
+アレックス: 何？もう朝ですか。 
+アレックス: ドアは開いていますか?
+[title=M1KidRoomSceneEnd]
+[title=M1KidRoomSceneCat]
+アレックス: アトズ?
+[title=M1KidRoomSceneCatEnd]
+[title=M1KidRoomSceneRepeat]
+お母さん: もう一つの悪夢か。 
+アレックス: お母さん,怖いです.
+お母さん: 大丈夫ですよ。眠りに戻して。
+お母さん: 今、私の部屋に戻ります。
+[title=M1KidRoomSceneRepeatEnd]
+[title=M1KidRoomSceneChoice]
+アレックス: アトズ?
+アレックス: なぜあなたは私を見つめているのですか？
+[question=0] あなたは今何をしたいですか?
+[choice]"出ててアトズ、私は一人になりたい。"
+[choice]“アトズ、私と一緒に寝ることができますか?”
+[title=M1KidRoomSceneChoiceEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M1KitchenSceneStart]
+[title=M1KitchenSceneEnd]
+[title=M1KitchenSceneRepeat]
+[title=M1KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M1GardenSceneStart]
+[title=M1GardenSceneEnd]
+[title=M1GardenSceneRepeat]
+[title=M1GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M1MomRoomSceneStart]
+アレックス: アトズ?
+[title=M1MomRoomSceneEnd]
+[title=M1MomRoomSceneRepeat]
+[title=M1MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M1LivingroomSceneStart]
+[title=M1LivingroomSceneEnd]
+[title=M1LivingroomSceneRepeat]
+[title=M1LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M1CorridorSceneStart]
+アレックス: アトズ?
+[title=M1CorridorSceneEnd]
+[title=M1CorridorSceneRepeat]
+[title=M1CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 2 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M2AllObjectsRespeita]
+アレックス: Acho que tenho tudo que preciso.
+アレックス: Melhor acender essa vela no meu quarto.
+[title=M2AllObjectsRespeitaEnd]
+[title=M2AllObjectsContesta]
+アレックス: Acho que tenho tudo que preciso.
+アレックス: Melhor guardar isso no meu quarto.
+[title=M2AllObjectsContestaEnd]
+[title=M2AtaqueContesta]
+アトズ: Mrrrrow!
+[title=M2AtaqueContestaEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M2Q1C0]
+アレックス: Você não me entende!! 
+アレックス: Eu não gosto de ficar sozinho, eu não gosto de você!
+アレックス: Vamos, アトズ!
+[title=M2Q1C0End]
+[title=M2Q1C0_2]
+アレックス: Precisamos pegar uma arma, アトズ.
+アレックス: Vamos nos defender do que está nos assombrando!
+[title=M2Q1C0_2End]
+[title=M2Q1C1]
+アレックス: Tudo bem, maお母さん.
+アレックス: Ao menos アトズ pode ficar ao meu lado...
+[title=M2Q1C1End]
+[title=M2Q1C1_2]
+アレックス: アトズ, vamos pegar uma vela!
+アレックス: Assim podemos dormir com um pouco de luz a noite!
+[title=M2Q1C1_2End]
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M2KidRoomSceneStart]
+アレックス: Onde minha お母さん está?
+アレックス: Será que posso dormir com ela?
+[title=M2KidRoomSceneEnd]
+[title=M2KidRoomSceneVela]
+アレックス: Eu preciso de uma vela para acender...
+[title=M2KidRoomSceneVelaEnd]
+[title=M2KidRoomSceneFosforo]
+アレックス: Eu preciso de um fósforo para acender a vela...
+[title=M2KidRoomSceneFosforoEnd]
+[title=M2KidRoomSceneFaca]
+アレックス: Eu preciso de algo para atacar...
+[title=M2KidRoomSceneFacaEnd]
+[title=M2KidRoomSceneTampa]
+アレックス: Eu preciso de algo para me defender...
+[title=M2KidRoomSceneTampaEnd]
+[title=M2KidRoomSceneRepeat]
+アレックス: Preciso colocar a vela em algum local e acendê-la.
+[title=M2KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M2LivingRoomSceneStart]
+[title=M2LivingRoomSceneEnd]
+[title=M2LivingRoomSceneRepeat]
+[title=M2LivingRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M2KitchenSceneStart]
+[title=M2KitchenSceneEnd]
+[title=M2KitchenSceneRepeat]
+[title=M2KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M2GardenSceneStart]
+[title=M2GardenSceneEnd]
+[title=M2GardenSceneRepeat]
+[title=M2GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M2MomRoomSceneStart]
+[title=M2MomRoomSceneEnd]
+[title=M2MomRoomSceneRepeat]
+[title=M2MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M2CorridorSceneStart]
+アレックス: Maお母さん, eu posso dormir com a senhora essa noite?
+アレックス: Eu tenho medo do que está vindo no escuro.
+お母さん: Me desculpe bebê, maお母さん se mexe muito a noite.
+お母さん: Você não iria conseguir dormir ao meu lado.
+お母さん: Além disso, você precisa lidar com seus medos por conta própria.
+[question=1]O que quer dizer para a maお母さん?
+[choice]"Você não me entende!! Eu não gosto de ficar sozinho, eu não gosto de você!"
+[choice]"Tudo bem maお母さん, ao menos アトズ pode ficar ao meu lado..."
+[title=M2CorridorSceneEnd]
+[title=M2CorridorSceneRepeat]
+アレックス: Eu não posso deixar ela me ver.
+[title=M2CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 3 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M3Painting]
+アレックス: O que você quer me mostrar com isso?
+アレックス: São só os quadros dos meus bisavós.
+アレックス: Talvez eu deva me concentrar!!
+[title=M3PaintingEnd]
+[title=M3MundoInvertido]
+おじいさん: Não temos mais muito dinheiro sobrando...
+おばあさん: Ninguém vai querer comprar uma casa assombrada dessas.
+おじいさん: Pare de dizer besteiras...
+おじいさん: Você só acha que é assombrada porque não para de falar disso.
+アトズ: Consegue ver?
+おばあさん: Como você explica todos os acidentes então?
+おじいさん: Pff. O importante é que ainda temos nosso pequeno アトズ.
+[title=M3MundoInvertidoEnd]
+[title=M3MundoInvertido2]
+アトズ: アレックス...
+アトズ: 逃げて!
+[title=M3MundoInvertido2End]
+[title=M3MundoInvertido3]
+アレックス: Não quero mais voltar para aquele lugar!
+[title=M3MundoInvertido3End]
+[title=M3VoltaMundoInvertido]
+お母さん: O que está acontecendo aqui?
+[question=2] あなたは今何をしたいですか?
+[choice]"Não aconteceu nada!! Não importa!"
+[choice]"Eu não sei, eu vi coisas estranhas ontem e hoje."
+[title=M3VoltaMundoInvertidoEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M3Q2C0]
+アレックス: Não aconteceu nada!! Não importa!
+アレックス: Então o que está fazendo ai parado?!
+アレックス: Ande e saia daqui para eu limpar a casa!
+[title=M3Q2C0End]
+[title=M3Q2C1]
+アレックス: Eu não sei, eu vi coisas estranhas ontem e hoje! 
+アレックス: Uns senhores falando sobre coisas que não entendi direito.
+お母さん: Entendi... 
+お母さん: Você apenas deve ter comido algo estranho!
+お母さん: Acho que deveria descansar um pouco a cabeça. 
+[title=M3Q2C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M3KidRoomSceneStart]
+アレックス: アトズ?
+[title=M3KidRoomSceneEnd]
+[title=M3KidRoomSceneRepeat]
+[title=M3KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M3KitchenSceneStart]
+[title=M3KitchenSceneEnd]
+[title=M3KitchenSceneRepeat]
+[title=M3KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M3GardenSceneStart]
+アレックス: Aqui parece um local seguro...
+アレックス: Acho que devo tentar de novo.
+[title=M3GardenSceneEnd]
+[title=M3GardenSceneRepeat]
+[title=M3GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M3MomRoomSceneStart]
+[title=M3MomRoomSceneEnd]
+[title=M3MomRoomSceneRepeat]
+[title=M3MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M3LivingroomSceneStart]
+[title=M3LivingroomSceneEnd]
+[title=M3LivingroomSceneRepeat]
+[title=M3LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M3CorridorSceneStart]
+[title=M3CorridorSceneEnd]
+[title=M3CorridorSceneRepeat]
+[title=M3CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 4 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M4DicaCorredor]
+アレックス: Talvez se eu tentasse ir para aquele lugar de novo...
+[title=M4DicaCorredorEnd]
+[title=M4DicaQuartoMae]
+アレックス: Não posso chegar perto...
+[title=M4DicaQuartoMaeEnd]
+[title=OQ]
+アレックス: Já era o vaso da maお母さん.
+[title=OQEnd]
+[title=NadaAqui]
+アレックス: Nada aqui.
+[title=NadaAquiEnd]
+[title=frenteCriadoStart]
+アレックス: Espera! 
+アレックス: Você quer que eu encontre o livro que estava aqui?
+アトズ: Miau.
+アレックス: Vamos tentar achar então o livro?
+アレックス: Será que a estante seria óbvia demais?
+アレックス: Você consegue me ajudar, アトズ? 
+[title=frenteCriadoEnd]
+[title=GrandeBarulhoStart]
+アレックス: Tenho que distraí-la.
+アレックス: Eu poderia fazer um grande barulho.
+アレックス: Acho melhor destruir algo no corredor.
+アレックス: Assim ela conseguirá ouvir.
+[question=3] あなたは今何をしたいですか?
+[choice]Convencer o gato a quebrar algo
+[choice]Quebrar algo sozinho 
+[title=GrandeBarulhoEnd]
+[title=EuJaTenhoIsso]
+アレックス: Eu já tenho isso.
+[title=EuJaTenhoIssoEnd]
+[title=M4MaeChegouCorredor]
+Alex: Que barulho foi esse?
+Alex: Preciso sair daqui logo!
+[title=M4MaeChegouCorredorEnd]
+[title=M4MaeChegou]
+Mãe: Alex, venha aqui agora!
+[title=M4MaeChegouEnd]
+[title=VerdadeOuMentira]
+お母さん: O que está fazendo aqui?!
+お母さん: Foi você que quebrou o vaso!?
+[question=4] あなたは今何をしたいですか?
+[choice]Falar a verdade
+[choice]Mentir 
+[title=VerdadeOuMentiraEnd]
+
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M4Q3C0]
+アレックス: アトズ, você pode quebrar aquele vaso pra mim?
+アレックス: Eu vou te dar um prêmio para fazer isso.
+アレックス: Uma ração bem gostosa.
+[title=M4Q3C0End]
+[title=M4Q3C1]
+アレックス: Eu vou quebrar aquele vaso.
+アレックス: Preciso de algo para não me machucar quebrando.
+[title=M4Q3C1End]
+[title=M4Q4C0]
+アレックス: Sim maお母さん, me desculpe.
+お母さん: Ok... para seu quarto então.
+[title=M4Q4C0End]
+[title=M4Q4C1]
+アレックス: Não お母さん, não fui eu.
+お母さん: Acha que vou acreditar nisso?
+お母さん: Quem mais poderia ter sido? Para o quarto! Já!
+[title=M4Q4C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M4KidRoomSceneStart]
+アレックス: Eu preciso descobrir o que está acontecendo comigo…
+アレックス: アトズ? O que foi?
+アレックス: Quer que eu te siga?
+[title=M4KidRoomSceneEnd]
+[title=M4KidRoomSceneRepeat]
+[title=M4KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M4KitchenSceneStart]
+[title=M4KitchenSceneEnd]
+[title=M4KitchenSceneRepeat]
+[title=M4KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M4GardenSceneStart]
+[title=M4GardenSceneEnd]
+[title=M4GardenSceneRepeat]
+[title=M4GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M4MomRoomSceneStart]
+アレックス: Deve ter algo naquele armário…
+[title=M4MomRoomSceneEnd]
+[title=M4MomRoomSceneRepeat]
+[title=M4MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M4LivingroomSceneStart]
+[title=M4LivingroomSceneEnd]
+[title=M4LivingroomSceneRepeat]
+[title=M4LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M4CorridorSceneStart]
+[title=M4CorridorSceneEnd]
+[title=M4CorridorSceneRepeat]
+[title=M4CorridorSceneRepeatEnd]
+
+
+-------------------------------------- MISSAO 5 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica5]
+アレックス: Tenho que tomar cuidado.
+アレックス: Algumas podem estar naquele mundo estranho.
+[title=Dica5End]
+[title=DicaMundoInvertido5]
+アレックス: O que são essas coisas?
+アレックス: Elas parecem tentar falar comigo.
+アレックス: "Precisamos de Luz!"... O que isso quer dizer?
+[title=DicaMundoInvertido5End]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M5Q5C0]
+アトズ: Grrrr.
+アレックス: アトズ... Não me faça fazer isso...
+アトズ: Grrrrrrr.
+アレックス: Ok... Mas não me deixe sozinho!
+[title=M5Q5C0End]
+[title=M5Q5C1]
+アレックス: Vamos, アトズ!
+アレックス: Precisamos descobrir o que está acontecendo.
+[title=M5Q5C1End]
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M5KidRoomSceneStart]
+[title=M5KidRoomSceneEnd]
+[title=M5KidRoomSceneRepeat]
+[title=M5KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M5KitchenSceneStart]
+[title=M5KitchenSceneEnd]
+[title=M5KitchenSceneRepeat]
+[title=M5KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M5GardenSceneStart]
+アレックス: Esse livro está faltando várias páginas.
+アレックス: Vou tentar reuni-las.
+[title=M5GardenSceneEnd]
+[title=M5GardenSpiritKilled]
+アレックス: Eles se foram... 
+アレックス: Parecia ser como os sentimentos acumulados.
+アレックス: Mas de quem?
+アレックス: Daqueles que moraram aqui?
+アレックス: O que é aquilo? Uma página!
+アレックス: Preciso lê-la!
+[title=M5GardenSpiritKilledEnd]
+[title=M5BookClosed]
+アレックス: O que foi essa sensação?!
+アレックス: お母さん...? Estou com um mal pressentimento.
+[title=M5BookClosedEnd]
+[title=M5GardenSceneRepeat]
+[title=M5GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M5MomRoomSceneStart]
+[title=M5MomRoomSceneEnd]
+[title=M5MomRoomSceneRepeat]
+[title=M5MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M5LivingroomSceneStart]
+アレックス: Esses seres de novo...
+アレックス: Parece que eles ficaram mais brilhosos.
+[title=M5LivingroomSceneEnd]
+[title=M5LivingroomSceneRepeat]
+[title=M5LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M5CorridorSceneStart]
+アレックス: Acho que preciso sair desse mundo estranho...
+[title=M5CorridorSceneEnd]
+[title=M5TryQuit]
+アレックス: O que?!?! Não consigo?
+[question=5] あなたは今何をしたいですか?
+[choice]Procurar onde se esconder
+[choice]Investigar o que está acontecendo
+[title=M5TryQuitEnd]
+[title=M5CorridorSceneRepeat]
+[title=M5CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 6 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica6]
+[title=Dica6End]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M6KidRoomSceneStart]
+[title=M6KidRoomSceneEnd]
+[title=M6KidRoomSceneRepeat]
+[title=M6KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M6KitchenSceneStart]
+[title=M6KitchenSceneEnd]
+[title=M6KitchenSceneRepeat]
+[title=M6KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M6GardenSceneStart]
+アレックス: アトズ?
+アレックス: O que são essas folhas?
+アレックス: Hm... Essas folhas secas só servem para...
+アトズ: Miau!
+アレックス: Queimá-las?
+アレックス: Como isso vai ajudar a salvar a maお母さん?
+アレックス: Ah! Assustar o monstro?
+アレックス: Ele vai achar que vou queimar a casa...
+[title=M6GardenSceneEnd]
+[title=M6IncorrectTree]
+アレックス: Acho que seria melhor uma árvore perto de casa...
+[title=M6IncorrectTreeEnd]
+[title=M6HasEverything]
+アレックス: Perfeito, posso acender essa árvore!
+[title=M6HasEverythingEnd]
+[title=M6HasntEverything]
+アレックス: Eu precisaria de algo para atear fogo nessa árvore.
+[title=M6HasntEverythingEnd]
+[title=M6FireTree]
+アレックス: Preciso ver se isso funcionou!!
+[title=M6FireTreeEnd]
+[title=M6GardenSceneRepeat]
+[title=M6GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M6MomRoomSceneStart]
+アレックス: Parece ter algo de errado aqui...
+アレックス: お母さん?
+アレックス: O que é isso em cima de você?
+アレックス: Ela está dormindo... está doente!! 
+アレックス: Ou pior!
+アレックス: Preciso fazer algo para ajudá-la!
+アレックス: Será que a lanterna irá funcionar aqui também?
+[title=M6MomRoomSceneEnd]
+[title=M6AfterFlashlight]
+アレックス: Parece que a lanterna só o deixa mais nervoso...
+[title=M6AfterFlashlightEnd]
+[title=M6AfterFlashlightShutdown]
+アレックス: Será que esse monstro apareceu devido aos
+アレックス: sentimentos negativos da maお母さん?
+アレックス: Preciso encontrar uma forma de assustá-lo.
+アレックス: Vou ver se não deixei nada passar no jardim.
+[title=M6AfterFlashlightShutdownEnd]
+[title=M6BeforeFinal]
+アレックス: Achei uma página! Aquele mostro sumiu daqui...
+アレックス: Minha お母さん parece bem melhor.
+アレックス: Agora só falta ver se consigo sair desse mundo.
+[title=M6BeforeFinalEnd]
+[title=M6Final]
+アレックス: Ufa, consegui!
+アレックス: Mas... por que está tudo tão escuro?
+[title=M6FinalEnd]
+[title=M6MomRoomSceneRepeat]
+[title=M6MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M6LivingroomSceneStart]
+アレックス: Eles estão bloqueando o caminho...
+アレックス: Aquilo ali é uma página?!
+[title=M6LivingroomSceneEnd]
+[title=M6LivingroomTipStart]
+アレックス: Acho que eu deveria parar de iluminar os roxos...
+[title=M6LivingroomTipEnd]
+[title=M6LivingroomSceneRepeat]
+[title=M6LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M6CorridorSceneStart]
+[title=M6CorridorSceneEnd]
+[title=M6CorridorSceneRepeat]
+[title=M6CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 7 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M7Dica]
+アレックス: Acho que não posso sair de dentro do círculo...
+[title=M7DicaEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M7KidRoomSceneStart]
+アレックス: !!!!!
+アレックス: O que é isso?! Uma página!
+[title=M7KidRoomSceneEnd]
+[title=M7PagePicked]
+アレックス: Espera, parece que não falta mais nenhuma página!!
+[title=M7PagePickedEnd]
+[title=M7KidRoomSceneRepeat]
+[title=M7KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M7KitchenSceneStart]
+[title=M7KitchenSceneEnd]
+[title=M7KitchenSceneRepeat]
+[title=M7KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M7GardenSceneStart]
+[title=M7GardenSceneEnd]
+[title=M7GardenSceneRepeat]
+[title=M7GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M7MomRoomSceneStart]
+アレックス: Quantas páginas será que ainda faltam?
+アレックス: Com esse escuro repentino...
+アレックス: Fica complicado ver o livro desse jeito.
+アレックス: Pra não dizer perigoso até...
+アレックス: Calma... Cadê o アトズ?
+アレックス: Onde será que ele foi?
+アレックス: アトズ?!?
+[title=M7MomRoomSceneEnd]
+[title=M7LightFull]
+アレックス: O que é essa luz?!
+アレックス: Seriam aqueles...
+アレックス: ...espíritos ou sentimentos que ajudei!?
+アレックス: Ela deve ter aparecido por algum motivo...
+[title=M7LightFullEnd]
+[title=M7MomRoomSceneRepeat]
+[title=M7MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M7LivingroomSceneStart]
+アレックス: アトズ!! O que está fazendo ai?
+[title=M7LivingroomSceneEnd]
+[title=M7Talkedアトズ]
+アレックス: アトズ, o que está fazendo?
+アトズ: Miaaau...
+アレックス: Por que está arisco dessa forma!?
+アレックス: O quê? O livro?! Espere...
+アレックス: Você quer que eu leia ele?
+アレックス: Aqui não é seguro...
+アレックス: Preciso ir para meu quarto para isso!
+アトズ: Miau!
+アレックス: Você deve ficar bem! Eu já volto!
+[title=M7TalkedアトズEnd]
+[title=M7LivingroomSceneRepeat]
+[title=M7LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M7CorridorSceneStart]
+アレックス: Se multiplicou em duas!
+アレックス: Que barulho é esse?
+アレックス: Parece estar vindo da sala...
+アレックス: Será que é o アトズ?
+[title=M7CorridorSceneEnd]
+[title=M7Corridor2]
+アレックス: Outra?!
+[title=M7Corridor2End]
+[title=M7CorridorSceneRepeat]
+[title=M7CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 8 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica8PB]
+アレックス: Acho que agora sei como destruí-lo...
+アレックス: Preciso incendiar a casa!
+アレックス: Na cozinha deve ter algo para ajudar.
+[title=Dica8PBEnd]
+[title=Dica8PC]
+アレックス: Acho que agora sei como destruí-lo...
+アレックス: Preciso incendiá-lo!
+アレックス: O mais lonje possível dos quartos.
+[title=Dica8PCEnd]
+[title=M8MomCat]
+お母さん: O que você está fazendo? 
+お母さん: O que está acontecendo?
+アレックス: お母さん, só peço que acredite em mim...
+[title=M8MomCatEnd]
+[title=M8PedraCozinha]
+アレックス: Preciso achar algo para destruir o cabo do gás...
+[title=M8PedraCozinhaEnd]
+[title=M8PedraJardim]
+アレックス: Deve ter algo aqui para me ajudar.
+[title=M8PedraJardimEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M8KidRoomSceneStart]
+アレックス: Agora que tenho todas as páginas, preciso entendê-las...
+[title=M8KidRoomSceneEnd]
+[title=M8KidRoomSceneRepeat]
+[title=M8KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M8KitchenSceneStart]
+アレックス: O gás!!!
+[title=M8KitchenSceneEnd]
+[title=M8KitchenSceneRepeat]
+アレックス: Tenho que fazer uma faísca!
+[title=M8KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M8GardenSceneStart]
+[title=M8GardenSceneEnd]
+[title=M8GardenSceneRepeat]
+[title=M8GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA お母さん -----------------------------------
+[title=M8MomRoomSceneStart]
+アレックス: Onde a minha お母さん está? O que ele fez?
+[title=M8MomRoomSceneEnd]
+[title=M8MomRoomSceneRepeat]
+[title=M8MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M8LivingroomSceneStart]
+アレックス: Vou queimar algumas coisas daqui...
+[title=M8LivingroomSceneEnd]
+[title=M8LivingroomSceneRepeat]
+アレックス: お母さん! アトズ! Vamos sair daqui...
+[title=M8LivingroomSceneRepeatEnd]
+[title=M8LivingroomSceneRepeat2]
+アレックス: アトズ??? O que fizeram com a minha família?
+[title=M8LivingroomSceneRepeat2End]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M8CorridorSceneStart]
+[title=M8CorridorSceneEnd]
+[title=M8CorridorSceneRepeat]
+[title=M8CorridorSceneRepeatEnd]

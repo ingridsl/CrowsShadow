@@ -274,8 +274,6 @@ public class Mission2 : Mission {
             else if (secao == enumMission.FINAL_CONTESTA)
             {
                 // Crow atacando
-                //faca = GameObject.Find("Player").gameObject.transform.Find("Faca").gameObject;
-                //tampa = GameObject.Find("Player").gameObject.transform.Find("Tampa").gameObject;
                 GameManager.instance.Print("CORVO");
                 crowBabies = GameManager.instance.AddObject("NPCs/CrowBabies", "", new Vector3(-1.97f, 1.42f, -0.5f), new Vector3(3f, 3f, 1));
                 crowBabies.GetComponent<CrowBabies>().speed = 0.1f;
@@ -379,7 +377,7 @@ public class Mission2 : Mission {
 
             Cat.instance.followWhenClose = false;
             Cat.instance.stopEndPath = true;
-            Cat.instance.Patrol();
+            Cat.instance.GetComponent<Cat>().Patrol();
 
             Vector3 target1 = crowBabies.transform.position;
             Vector3 target2 = new Vector3(-2f, 0.6f, -0.5f);

@@ -1,0 +1,676 @@
+-------------------------------------- DEFAULT ----------------------------------------------------
+[title=Trancada]
+Alex: The door is locked.
+[title=TrancadaEnd]
+
+-------------------------------------- MISSAO 1 ----------------------------------------------------
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M1Q0C0]
+Alex: Go away Pumpkin, I want to be alone.
+[title=M1Q0C0End]
+[title=M1Q0C1]
+Alex: Can you sleep with me, Pumpkin?
+[title=M1Q0C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M1KidRoomSceneStart]
+Alex: Hm? What is this strange noise? 
+Alex:　I'll check out.
+[title=M1KidRoomSceneEnd]
+[title=M1KidRoomSceneCat]
+Alex: A Crow?
+Alex: Pumpkin? What's wrong?
+Pumpkin: Meow.
+[title=M1KidRoomSceneCatEnd]
+[title=M1KidRoomSceneRepeat]
+Mom: One more nightmare? 
+Alex: Mom, I'm scared.
+Mom: Everything is going to be ok. Just go back to sleep.
+Mom: I'm going back to my room now.
+[title=M1KidRoomSceneRepeatEnd]
+[title=M1KidRoomSceneChoice]
+Alex: Pumpkin?
+Alex: Why are you staring at me?
+[question=0] What do you want to do now?
+[choice]"Go away Pumpkin, I want to be alone."
+[choice]“Can you sleep with me, Pumpkin?”
+[title=M1KidRoomSceneChoiceEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M1KitchenSceneStart]
+[title=M1KitchenSceneEnd]
+[title=M1KitchenSceneRepeat]
+[title=M1KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M1GardenSceneStart]
+[title=M1GardenSceneEnd]
+[title=M1GardenSceneRepeat]
+[title=M1GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M1MomRoomSceneStart]
+Alex: Pumpkin?
+[title=M1MomRoomSceneEnd]
+[title=M1MomRoomSceneRepeat]
+[title=M1MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M1LivingroomSceneStart]
+[title=M1LivingroomSceneEnd]
+[title=M1LivingroomSceneRepeat]
+[title=M1LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M1CorridorSceneStart]
+Alex: Pumpkin?
+[title=M1CorridorSceneEnd]
+[title=M1CorridorSceneRepeat]
+[title=M1CorridorSceneRepeatEnd]
+----------------------------------- DICAS --------------------------------------------
+[title=M1CorvoArmarioStart]
+Alex: I have to look what is above the wardrobe.
+Alex: But I'm too small.
+Alex: Maybe I can use something to reach up there.
+[title=M1CorvoArmarioEnd]
+[title=M1Lanterna1ArmarioStart]
+Alex: This house is too dark.
+Alex: I'm getting scared.
+[title=M1Lanterna1ArmarioEnd]
+[title=M1Lanterna2ArmarioStart]
+Alex: Maybe I can find something with light.
+Alex: Like a lantern or a lighter.
+[title=M1Lanterna2ArmarioEnd]
+-------------------------------------- MISSAO 2 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+
+----------------------------------- ESPECIAL -----------------------------------
+[title=M2AllObjectsRespeita]
+Alex: I think I have everything I need.
+Alex: Better light that candle in my room.
+[title=M2AllObjectsRespeitaEnd]
+[title=M2AllObjectsContesta]
+Alex: I think I have everything I need.
+Alex: Better keep this in my room.
+[title=M2AllObjectsContestaEnd]
+[title=M2AtaqueContesta]
+Pumpkin: Mrrrrow!
+[title=M2AtaqueContestaEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M2Q1C0]
+Alex: You don't understand me!! 
+Alex: I don't like being alone, I don't like you!
+Alex: Come on, Pumpkin!
+[title=M2Q1C0End]
+[title=M2Q1C0_2]
+Alex: We need a weapon, Pumpkin.
+Alex: Let us defend ourselves from what is haunting us!
+[title=M2Q1C0_2End]
+[title=M2Q1C1]
+Alex: That's ok, mommy.
+Alex: At least Pumpkin can be by my side...
+[title=M2Q1C1End]
+[title=M2Q1C1_2]
+Alex: Pumpkin, let's get a candle!
+Alex: So we can sleep with a little light at night!
+[title=M2Q1C1_2End]
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M2KidRoomSceneStart]
+Alex: Where is my mom?
+Alex: Can I sleep with her?
+[title=M2KidRoomSceneEnd]
+[title=M2KidRoomSceneVela]
+Alex: I need a candle to light ...
+[title=M2KidRoomSceneVelaEnd]
+[title=M2KidRoomSceneFosforo]
+Alex: I need a match to light the candle ...
+[title=M2KidRoomSceneFosforoEnd]
+[title=M2KidRoomSceneFaca]
+Alex: I need something to attack ...
+Alex: Like a knife or something.
+[title=M2KidRoomSceneFacaEnd]
+[title=M2KidRoomSceneTampa]
+Alex: I need something to use as defense...
+Alex: A shield of some kind.
+[title=M2KidRoomSceneTampaEnd]
+[title=M2KidRoomSceneRepeat]
+Alex: I need to put the candle somewhere and light it.
+[title=M2KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M2LivingRoomSceneStart]
+[title=M2LivingRoomSceneEnd]
+[title=M2LivingRoomSceneRepeat]
+[title=M2LivingRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M2KitchenSceneStart]
+[title=M2KitchenSceneEnd]
+[title=M2KitchenSceneRepeat]
+[title=M2KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M2GardenSceneStart]
+[title=M2GardenSceneEnd]
+[title=M2GardenSceneRepeat]
+[title=M2GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M2MomRoomSceneStart]
+[title=M2MomRoomSceneEnd]
+[title=M2MomRoomSceneRepeat]
+[title=M2MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M2CorridorSceneStart]
+Alex: Mom, can I sleep with you tonight?
+Alex: I'm afraid of what's coming in the dark.
+Mom: I'm sorry baby, Mommy moves a lot at night.
+Mom: You wouldn't sleep next to me.
+Mom: And also, you need to deal with your fears on your own.
+[question=1]What do you want to say to your mom?
+[choice]"You don't understand me! I don't like being alone, I don't like you!"
+[choice]"That's ok, mommy. At least Pumpkin can be by my side..."
+[title=M2CorridorSceneEnd]
+[title=M2CorridorSceneRepeat]
+Alex: I can't let she see me.
+[title=M2CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 3 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M3QuadroStart]
+Alex: Hum... Maybe I should look at both the portraits?
+[title=M3QuadroEnd]
+----------------------------------- ESPECIAL -----------------------------------
+[title=M3Painting]
+Alex: What do you want to show me with that?
+Alex: It's just the pictures of my Great-grandparents.
+Alex: Maybe I should concentrate !!
+[title=M3PaintingEnd]
+[title=M3MundoInvertido]
+Great-grandfather: We don't have much more money left ...
+Great-grandmother: No one will want to buy such a haunted house.
+Great-grandfather: Stop talking nonsense ...
+Great-grandfather: You just think it's haunted because you keep on talking about it.
+Pumpkin: Can you see, Alex?
+Great-grandmother: How do you explain all the accidents then?
+Great-grandfather: Pff. The important thing is that we still have our little Pumpkin.
+[title=M3MundoInvertidoEnd]
+[title=M3MundoInvertido2]
+Pumpkin: Alex...
+Pumpkin: RUN!
+[title=M3MundoInvertido2End]
+[title=M3MundoInvertido3]
+Alex: I don't want to go back to that place!
+[title=M3MundoInvertido3End]
+[title=M3VoltaMundoInvertido]
+Mom: What's going on here?
+[question=2] What do you want to do now?
+[choice]"Nothing happened!! It doesn't matter!"
+[choice]"I don't know, I've seen strange things yesterday and today."
+[title=M3VoltaMundoInvertidoEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M3Q2C0]
+Alex: Nothing happened!! It doesn't matter!
+Mom: So what are you doing standing there ?!
+Mom: Walk and get out of here so I can clean the house!
+Mom: Go play outside or something like that!
+[title=M3Q2C0End]
+[title=M3Q2C1]
+Alex: I don't know, I've seen strange things yesterday and today.! 
+Alex: An old couple talking about things I didn't understood well enough.
+Mother: Got it ...
+Mother: You just must have eaten something strange!
+Mother: Why don't you take some air?
+[title=M3Q2C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M3KidRoomSceneStart]
+Alex: Pumpkin?
+[title=M3KidRoomSceneEnd]
+[title=M3KidRoomSceneRepeat]
+[title=M3KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M3KitchenSceneStart]
+[title=M3KitchenSceneEnd]
+[title=M3KitchenSceneRepeat]
+[title=M3KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M3GardenSceneStart]
+Alex: It looks like a safe place here ...
+Alex: I think I should do that thing again.
+Alex: And maybe...
+Alex: Go inside? I wonder if she is still there.
+[title=M3GardenSceneEnd]
+[title=M3GardenSceneRepeat]
+[title=M3GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M3MomRoomSceneStart]
+[title=M3MomRoomSceneEnd]
+[title=M3MomRoomSceneRepeat]
+[title=M3MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M3LivingroomSceneStart]
+[title=M3LivingroomSceneEnd]
+[title=M3LivingroomSceneRepeat]
+[title=M3LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M3CorridorSceneStart]
+[title=M3CorridorSceneEnd]
+[title=M3CorridorSceneRepeat]
+[title=M3CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 4 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M4DicaInvert]
+Alex: Maybe if I use that power again...
+[title=M4DicaInvertEnd]
+----------------------------------- ESPECIAL -----------------------------------
+[title=M4VaseStart]
+Alex: Mom's vase is broken!
+[title=M4VaseEnd]
+[title=M4DicaCorredor]
+Alex: Maybe if I tried to go to that place again ...
+[title=M4DicaCorredorEnd]
+[title=M4DicaQuartoMae]
+Alex: I can't get close ...
+[title=M4DicaQuartoMaeEnd]
+[title=OQ]
+Alex: Pumpkin? What are you going to do?
+[title=OQEnd]
+[title=NadaAqui]
+Alex: Nothing here.
+[title=NadaAquiEnd]
+[title=frenteCriadoStart]
+Alex: Wait!
+Alex: Do you want me to find the book that was here?
+Pumpkin: Meow.
+Alex: Let's try to find the book then?
+Alex: Would the bookcase be too obvious?
+Alex: Can you help me, Pumpkin?
+[title=frenteCriadoEnd]
+[title=GrandeBarulhoStart]
+Alex: I have to distract her.
+Alex: I could make a big noise.
+Alex: I think it's better to destroy something in the hallway.
+Alex: So she can hear.
+[question=3] What do you want to do now?
+[choice] Convince the cat to break something
+[choice] Break something alone
+[title=GrandeBarulhoEnd]
+[title=EuJaTenhoIsso]
+Alex: I already have this.
+[title=EuJaTenhoIssoEnd]
+[title=M4MaeChegouCorredor]
+Alex: What was that noise?
+Alex: I need to get out of here soon!
+[title=M4MaeChegouCorredorEnd]
+[title=M4MaeChegou]
+Mom: Alex, come here now!
+[title=M4MaeChegouEnd]
+[title=VerdadeOuMentira]
+Mom: What are you doing here ?!
+Mom: Did you break the vase!?
+[question=4] What do you want to do now?
+[choice] Tell the truth
+[choice] Lie
+[title=VerdadeOuMentiraEnd]
+
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M4Q3C0]
+Alex: Pumpkin, can you break that vase for me?
+Alex: I'll give you a prize to do this.
+Alex: A very tasty ration.
+[title=M4Q3C0End]
+[title=M4Q3C1]
+Alex: I'm going to break that vase.
+Alex: I need something to keep me from getting hurt as breaking.
+[title=M4Q3C1End]
+[title=M4Q4C0]
+Alex: Yes, Mom, I'm sorry.
+Mom: Ok ... to your room then.
+[title=M4Q4C0End]
+[title=M4Q4C1]
+Alex: No mother, it wasn't me.
+Mom: Do you think I'll believe that?
+Mom: Who else could have been? To your room! Now!
+[title=M4Q4C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M4KidRoomSceneStart]
+Alex: I need to find out what's happening to me ...
+Alex: Pumpkin? What's it?
+Alex: You want me to follow you?
+[title=M4KidRoomSceneEnd]
+[title=M4KidRoomSceneRepeat]
+[title=M4KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M4KitchenSceneStart]
+[title=M4KitchenSceneEnd]
+[title=M4KitchenSceneRepeat]
+[title=M4KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M4GardenSceneStart]
+[title=M4GardenSceneEnd]
+[title=M4GardenSceneRepeat]
+[title=M4GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M4MomRoomSceneStart]
+Alex: There must be something in that closet...
+[title=M4MomRoomSceneEnd]
+[title=M4MomRoomSceneRepeat]
+[title=M4MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M4LivingroomSceneStart]
+[title=M4LivingroomSceneEnd]
+[title=M4LivingroomSceneRepeat]
+[title=M4LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M4CorridorSceneStart]
+[title=M4CorridorSceneEnd]
+[title=M4CorridorSceneRepeat]
+[title=M4CorridorSceneRepeatEnd]
+
+
+-------------------------------------- MISSAO 5 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica5]
+Alex: I have to be careful.
+Alex: Some may still be in that strange world.
+[title=Dica5End]
+[title=DicaMundoInvertido5]
+Alex: O que são essas coisas?
+Alex: Elas parecem tentar falar comigo.
+Alex: "Precisamos de Luz!"... O que isso quer dizer?
+[title=DicaMundoInvertido5End]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M5Q5C0]
+Pumpkin: Grrrr.
+Alex: Pumpkin... Don't make me do it...
+Pumpkin: Grrrrrrr.
+Alex: Ok... But don't leave me alone!
+[title=M5Q5C0End]
+[title=M5Q5C1]
+Alex: Come on, Pumpkin!
+Alex: We need to find out what is happening.
+[title=M5Q5C1End]
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M5KidRoomSceneStart]
+Alex: I wonder if there is something interesting in that book.
+[title=M5KidRoomSceneEnd]
+[title=M5KidRoomSceneRepeat]
+[title=M5KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M5KitchenSceneStart]
+[title=M5KitchenSceneEnd]
+[title=M5KitchenSceneRepeat]
+[title=M5KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M5GardenSceneStart]
+Alex: This book is missing several pages.
+Alex: I'll try to get them together.
+[title=M5GardenSceneEnd]
+[title=M5GardenSpiritKilled]
+Alex: They're gone ...
+Alex: It seemed like the accumulated feelings.
+Alex: But from whom?
+Alex: Of those who lived here?
+Alex: What's that? One page!
+Alex: I need to read it!
+[title=M5GardenSpiritKilledEnd]
+[title=M5BookClosed]
+Alex: What was that feeling ?!
+Alex: Mother ...? I have a bad feeling.
+[title=M5BookClosedEnd]
+[title=M5GardenSceneRepeat]
+[title=M5GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M5MomRoomSceneStart]
+[title=M5MomRoomSceneEnd]
+[title=M5MomRoomSceneRepeat]
+[title=M5MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M5LivingroomSceneStart]
+Alex: These beings again ...
+Alex: Looks like they've gotten brighter.
+[title=M5LivingroomSceneEnd]
+[title=M5LivingroomSceneRepeat]
+[title=M5LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M5CorridorSceneStart]
+Alex: I think I need to get out of this strange world ...
+[title=M5CorridorSceneEnd]
+[title=M5TryQuit]
+Alex: What?!?! I can't?
+[question=5] What do you want to do now?
+[choice] Find where to hide
+[choice] Investigate what is happening
+[title=M5TryQuitEnd]
+[title=M5CorridorSceneRepeat]
+[title=M5CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 6 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica6]
+[title=Dica6End]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M6KidRoomSceneStart]
+[title=M6KidRoomSceneEnd]
+[title=M6KidRoomSceneRepeat]
+[title=M6KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M6KitchenSceneStart]
+[title=M6KitchenSceneEnd]
+[title=M6KitchenSceneRepeat]
+[title=M6KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M6GardenSceneStart]
+Alex: Pumpkin?
+Alex: What are these leaves?
+Alex: Hm ... These dried leaves are only good for ...
+Pumpkin: Meow!
+Alex: Burn them?
+Alex: How is it going to help save Mom?
+Alex: Ah! Scare the monster?
+Alex: He'll think I'm going to burn the house ...
+[title=M6GardenSceneEnd]
+[title=M6IncorrectTree]
+Alex: I think it would be better to try on a tree near the house ...
+[title=M6IncorrectTreeEnd]
+[title=M6HasEverything]
+Alex: Perfect, I can light this tree!
+[title=M6HasEverythingEnd]
+[title=M6HasntEverything]
+Alex: I would need something to set the tree on fire.
+[title=M6HasntEverythingEnd]
+[title=M6FireTree]
+Alex: I need to see if this worked !!
+[title=M6FireTreeEnd]
+[title=M6GardenSceneRepeat]
+[title=M6GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M6MomRoomSceneStart]
+Alex: There seems to be something wrong here ...
+Alex: Mother?
+Alex: What's that over you?
+Alex: She's sleeping ... she's sick !!
+Alex: Or worse!
+Alex: I need to do something to help you!
+Alex: Will the flashlight work here, too?
+[title=M6MomRoomSceneEnd]
+[title=M6AfterFlashlight]
+Alex: It looks like the flashlight just makes it more nervous ...
+[title=M6AfterFlashlightEnd]
+[title=M6AfterFlashlightShutdown]
+Alex: Did this monster appear because of...
+Alex: Mommy's negative feelings?
+Alex: I need to find a way to scare it.
+Alex: I'll see if I find anything in the garden.
+[title=M6AfterFlashlightShutdownEnd]
+[title=M6BeforeFinal]
+Alex: I found a page! That monster disappeared from here ...
+Alex: My mom looks so much better.
+Alex: Now all I have to do is see if I can get out of this world.
+[title=M6BeforeFinalEnd]
+[title=M6Final]
+Alex: Phew, I did it!
+Alex: But ... why is everything so dark?
+[title=M6FinalEnd]
+[title=M6MomRoomSceneRepeat]
+[title=M6MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M6LivingroomSceneStart]
+Alex: They're blocking the way ...
+Alex: Is that a page ?!
+[title=M6LivingroomSceneEnd]
+[title=M6LivingroomTipStart]
+Alex: I think I should stop lighting the purple ones ...
+[title=M6LivingroomTipEnd]
+[title=M6LivingroomSceneRepeat]
+[title=M6LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M6CorridorSceneStart]
+[title=M6CorridorSceneEnd]
+[title=M6CorridorSceneRepeat]
+[title=M6CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 7 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M7Dica]
+Alex: I don't think I can get out of the circle ...
+[title=M7DicaEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M7KidRoomSceneStart]
+Alex: !!!!!
+Alex: What is this?! A page!
+[title=M7KidRoomSceneEnd]
+[title=M7PagePicked]
+Alex: Wait, there seems to be another page left !!
+[title=M7PagePickedEnd]
+[title=M7KidRoomSceneRepeat]
+[title=M7KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M7KitchenSceneStart]
+[title=M7KitchenSceneEnd]
+[title=M7KitchenSceneRepeat]
+[title=M7KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M7GardenSceneStart]
+[title=M7GardenSceneEnd]
+[title=M7GardenSceneRepeat]
+[title=M7GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M7MomRoomSceneStart]
+Alex: How many pages are still missing?
+Alex: With that sudden dark ...
+Alex: It's hard to see the book like that.
+Alex: Not to say dangerous...
+Alex: Calm down ... Where's Pumpkin?
+Alex: Where did he go?
+Alex: Pumpkin?!?
+[title=M7MomRoomSceneEnd]
+[title=M7LightFull]
+Alex: What's that light ?!
+Alex: Maybe it's those ...
+Alex: ... spirits or feelings that I helped !?
+Alex: It must have appeared for some reason ...
+[title=M7LightFullEnd]
+[title=M7MomRoomSceneRepeat]
+[title=M7MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M7LivingroomSceneStart]
+Alex: Pumpkin !! What are you doing there?
+[title=M7LivingroomSceneEnd]
+[title=M7TalkedPumpkin]
+Alex: Pumpkin, what are you doing?
+Pumpkin: Meoww...
+Alex: Why are you so angry !?
+Alex: What? The book?! Hang on...
+Alex: Do you want me to read it?
+Alex: It's not safe here ...
+Alex: I need to go to my room for this!
+Pumpkin: Meow!
+Alex: You should be fine! I'll be right back!
+[title=M7TalkedPumpkinEnd]
+[title=M7LivingroomSceneRepeat]
+[title=M7LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M7CorridorSceneStart]
+Alex: It multiplied by two!
+Alex: What's that noise?
+Alex: It seems to be coming from the room ...
+Alex: Is it Pumpkin?
+[title=M7CorridorSceneEnd]
+[title=M7Corridor2]
+Alex: Another one?!
+[title=M7Corridor2End]
+[title=M7CorridorSceneRepeat]
+[title=M7CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 8 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica8PB]
+Alex: I think I know how to destroy it now ...
+Alex: I need to set the house on fire!
+Alex: In the kitchen there must have something to help.
+[title=Dica8PBEnd]
+[title=Dica8PC]
+Alex: I think I know how to destroy it now ...
+Alex: I need to set it on fire!
+Alex: As far away from the rooms as possible.
+[title=Dica8PCEnd]
+[title=M8MomCat]
+Mom what are you doing?
+Mom: What's going on?
+Alex: Mom, I just ask you to believe me ...
+[title=M8MomCatEnd]
+[title=M8PedraCozinha]
+Alex: I need to find something to destroy the gas cable ...
+[title=M8PedraCozinhaEnd]
+[title=M8PedraJardim]
+Alex: Deve ter algo aqui para me ajudar.
+[title=M8PedraJardimEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M8KidRoomSceneStart]
+Alex: Now that I have all the pages, I need to understand them ...
+[title=M8KidRoomSceneEnd]
+[title=M8KidRoomSceneRepeat]
+[title=M8KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M8KitchenSceneStart]
+Alex: The gas!!!
+[title=M8KitchenSceneEnd]
+[title=M8KitchenSceneRepeat]
+Alex: I have to make a spark!
+[title=M8KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M8GardenSceneStart]
+[title=M8GardenSceneEnd]
+[title=M8GardenSceneRepeat]
+[title=M8GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
+[title=M8MomRoomSceneStart]
+Alex: Where is my mother? What did the monster do?
+[title=M8MomRoomSceneEnd]
+[title=M8MomRoomSceneRepeat]
+[title=M8MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M8LivingroomSceneStart]
+Alex: I'm going to burn some things out of here ...
+[title=M8LivingroomSceneEnd]
+[title=M8LivingroomSceneRepeat]
+Alex: Mother! Pumpkin! Let's get out of here...
+[title=M8LivingroomSceneRepeatEnd]
+[title=M8LivingroomSceneRepeat2]
+Alex: Pumpkin??? What have they done to my family?
+[title=M8LivingroomSceneRepeat2End]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M8CorridorSceneStart]
+[title=M8CorridorSceneEnd]
+[title=M8CorridorSceneRepeat]
+[title=M8CorridorSceneRepeatEnd]

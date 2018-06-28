@@ -1,0 +1,644 @@
+-------------------------------------- DEFAULT ----------------------------------------------------
+[title=Trancada]
+Alex: A porta está trancada.
+[title=TrancadaEnd]
+
+-------------------------------------- MISSAO 1 ----------------------------------------------------
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M1Q0C0]
+Alex: Sai daqui Atze, quero ficar sozinho.
+[title=M1Q0C0End]
+[title=M1Q0C1]
+Alex: Você pode dormir comigo, Atze?
+[title=M1Q0C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M1KidRoomSceneStart]
+Alex: Hm? Is it morning already? 
+Alex: The door is opened?　どうして
+[title=M1KidRoomSceneEnd]
+[title=M1KidRoomSceneCat]
+Alex: Atze?
+[title=M1KidRoomSceneCatEnd]
+[title=M1KidRoomSceneRepeat]
+Mãe: Mais um pesadelo? 
+Alex: Mãe, estou com medo.
+Mãe: Tudo vai ficar bem. Só volte a dormir.
+Mãe: Vou voltar para o meu quarto agora.
+[title=M1KidRoomSceneRepeatEnd]
+[title=M1KidRoomSceneChoice]
+Alex: Atze?
+Alex: Por que está me encarando?
+[question=0] O que quer fazer agora?
+[choice]"Sai daqui Atze, quero ficar sozinho."
+[choice]“Você pode dormir comigo, Atze?”
+[title=M1KidRoomSceneChoiceEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M1KitchenSceneStart]
+[title=M1KitchenSceneEnd]
+[title=M1KitchenSceneRepeat]
+[title=M1KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M1GardenSceneStart]
+[title=M1GardenSceneEnd]
+[title=M1GardenSceneRepeat]
+[title=M1GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M1MomRoomSceneStart]
+Alex: Atze?
+[title=M1MomRoomSceneEnd]
+[title=M1MomRoomSceneRepeat]
+[title=M1MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M1LivingroomSceneStart]
+[title=M1LivingroomSceneEnd]
+[title=M1LivingroomSceneRepeat]
+[title=M1LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M1CorridorSceneStart]
+Alex: Atze?
+[title=M1CorridorSceneEnd]
+[title=M1CorridorSceneRepeat]
+[title=M1CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 2 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M2AllObjectsRespeita]
+Alex: Acho que tenho tudo que preciso.
+Alex: Melhor acender essa vela no meu quarto.
+[title=M2AllObjectsRespeitaEnd]
+[title=M2AllObjectsContesta]
+Alex: Acho que tenho tudo que preciso.
+Alex: Melhor guardar isso no meu quarto.
+[title=M2AllObjectsContestaEnd]
+[title=M2AtaqueContesta]
+Atze: Mrrrrow!
+[title=M2AtaqueContestaEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M2Q1C0]
+Alex: Você não me entende!! 
+Alex: Eu não gosto de ficar sozinho, eu não gosto de você!
+Alex: Vamos, Atze!
+[title=M2Q1C0End]
+[title=M2Q1C0_2]
+Alex: Precisamos pegar uma arma, Atze.
+Alex: Vamos nos defender do que está nos assombrando!
+[title=M2Q1C0_2End]
+[title=M2Q1C1]
+Alex: Tudo bem, mamãe.
+Alex: Ao menos Atze pode ficar ao meu lado...
+[title=M2Q1C1End]
+[title=M2Q1C1_2]
+Alex: Atze, vamos pegar uma vela!
+Alex: Assim podemos dormir com um pouco de luz a noite!
+[title=M2Q1C1_2End]
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M2KidRoomSceneStart]
+Alex: Onde minha mãe está?
+Alex: Será que posso dormir com ela?
+[title=M2KidRoomSceneEnd]
+[title=M2KidRoomSceneVela]
+Alex: Eu preciso de uma vela para acender...
+[title=M2KidRoomSceneVelaEnd]
+[title=M2KidRoomSceneFosforo]
+Alex: Eu preciso de um fósforo para acender a vela...
+[title=M2KidRoomSceneFosforoEnd]
+[title=M2KidRoomSceneFaca]
+Alex: Eu preciso de algo para atacar...
+[title=M2KidRoomSceneFacaEnd]
+[title=M2KidRoomSceneTampa]
+Alex: Eu preciso de algo para me defender...
+[title=M2KidRoomSceneTampaEnd]
+[title=M2KidRoomSceneRepeat]
+Alex: Preciso colocar a vela em algum local e acendê-la.
+[title=M2KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M2LivingRoomSceneStart]
+[title=M2LivingRoomSceneEnd]
+[title=M2LivingRoomSceneRepeat]
+[title=M2LivingRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M2KitchenSceneStart]
+[title=M2KitchenSceneEnd]
+[title=M2KitchenSceneRepeat]
+[title=M2KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M2GardenSceneStart]
+[title=M2GardenSceneEnd]
+[title=M2GardenSceneRepeat]
+[title=M2GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M2MomRoomSceneStart]
+[title=M2MomRoomSceneEnd]
+[title=M2MomRoomSceneRepeat]
+[title=M2MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M2CorridorSceneStart]
+Alex: Mamãe, eu posso dormir com a senhora essa noite?
+Alex: Eu tenho medo do que está vindo no escuro.
+Mãe: Me desculpe bebê, mamãe se mexe muito a noite.
+Mãe: Você não iria conseguir dormir ao meu lado.
+Mãe: Além disso, você precisa lidar com seus medos por conta própria.
+[question=1]O que quer dizer para a mamãe?
+[choice]"Você não me entende!! Eu não gosto de ficar sozinho, eu não gosto de você!"
+[choice]"Tudo bem mamãe, ao menos Atze pode ficar ao meu lado..."
+[title=M2CorridorSceneEnd]
+[title=M2CorridorSceneRepeat]
+Alex: Eu não posso deixar ela me ver.
+[title=M2CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 3 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M3Painting]
+Alex: O que você quer me mostrar com isso?
+Alex: São só os quadros dos meus bisavós.
+Alex: Talvez eu deva me concentrar!!
+[title=M3PaintingEnd]
+[title=M3MundoInvertido]
+Velho: Não temos mais muito dinheiro sobrando...
+Velha: Ninguém vai querer comprar uma casa assombrada dessas.
+Velho: Pare de dizer besteiras...
+Velho: Você só acha que é assombrada porque não para de falar disso.
+Atze: Consegue ver?
+Velha: Como você explica todos os acidentes então?
+Velho: Pff. O importante é que ainda temos nosso pequeno Atze.
+[title=M3MundoInvertidoEnd]
+[title=M3MundoInvertido2]
+Atze: Alex...
+Atze: FUJA!
+[title=M3MundoInvertido2End]
+[title=M3MundoInvertido3]
+Alex: Não quero mais voltar para aquele lugar!
+[title=M3MundoInvertido3End]
+[title=M3VoltaMundoInvertido]
+Mãe: O que está acontecendo aqui?
+[question=2] O que quer fazer agora?
+[choice]"Não aconteceu nada!! Não importa!"
+[choice]"Eu não sei, eu vi coisas estranhas ontem e hoje."
+[title=M3VoltaMundoInvertidoEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M3Q2C0]
+Alex: Não aconteceu nada!! Não importa!
+Alex: Então o que está fazendo ai parado?!
+Alex: Ande e saia daqui para eu limpar a casa!
+[title=M3Q2C0End]
+[title=M3Q2C1]
+Alex: Eu não sei, eu vi coisas estranhas ontem e hoje! 
+Alex: Uns senhores falando sobre coisas que não entendi direito.
+Mãe: Entendi... 
+Mãe: Você apenas deve ter comido algo estranho!
+Mãe: Acho que deveria descansar um pouco a cabeça. 
+[title=M3Q2C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M3KidRoomSceneStart]
+Alex: Atze?
+[title=M3KidRoomSceneEnd]
+[title=M3KidRoomSceneRepeat]
+[title=M3KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M3KitchenSceneStart]
+[title=M3KitchenSceneEnd]
+[title=M3KitchenSceneRepeat]
+[title=M3KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M3GardenSceneStart]
+Alex: Aqui parece um local seguro...
+Alex: Acho que devo tentar de novo.
+[title=M3GardenSceneEnd]
+[title=M3GardenSceneRepeat]
+[title=M3GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M3MomRoomSceneStart]
+[title=M3MomRoomSceneEnd]
+[title=M3MomRoomSceneRepeat]
+[title=M3MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M3LivingroomSceneStart]
+[title=M3LivingroomSceneEnd]
+[title=M3LivingroomSceneRepeat]
+[title=M3LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M3CorridorSceneStart]
+[title=M3CorridorSceneEnd]
+[title=M3CorridorSceneRepeat]
+[title=M3CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 4 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M4DicaCorredor]
+Alex: Talvez se eu tentasse ir para aquele lugar de novo...
+[title=M4DicaCorredorEnd]
+[title=M4DicaQuartoMae]
+Alex: Não posso chegar perto...
+[title=M4DicaQuartoMaeEnd]
+[title=OQ]
+Alex: Já era o vaso da mamãe.
+[title=OQEnd]
+[title=NadaAqui]
+Alex: Nada aqui.
+[title=NadaAquiEnd]
+[title=frenteCriadoStart]
+Alex: Espera! 
+Alex: Você quer que eu encontre o livro que estava aqui?
+Atze: Miau.
+Alex: Vamos tentar achar então o livro?
+Alex: Será que a estante seria óbvia demais?
+Alex: Você consegue me ajudar, Atze? 
+[title=frenteCriadoEnd]
+[title=GrandeBarulhoStart]
+Alex: Tenho que distraí-la.
+Alex: Eu poderia fazer um grande barulho.
+Alex: Acho melhor destruir algo no corredor.
+Alex: Assim ela conseguirá ouvir.
+[question=3] O que quer fazer agora?
+[choice]Convencer o gato a quebrar algo
+[choice]Quebrar algo sozinho 
+[title=GrandeBarulhoEnd]
+[title=EuJaTenhoIsso]
+Alex: Eu já tenho isso.
+[title=EuJaTenhoIssoEnd]
+[title=M4MaeChegouCorredor]
+Alex: Que barulho foi esse?
+Alex: Preciso sair daqui logo!
+[title=M4MaeChegouCorredorEnd]
+[title=M4MaeChegou]
+Mãe: Alex, venha aqui agora!
+[title=M4MaeChegouEnd]
+[title=VerdadeOuMentira]
+Mãe: O que está fazendo aqui?!
+Mãe: Foi você que quebrou o vaso!?
+[question=4] O que quer fazer agora?
+[choice]Falar a verdade
+[choice]Mentir 
+[title=VerdadeOuMentiraEnd]
+
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M4Q3C0]
+Alex: Atze, você pode quebrar aquele vaso pra mim?
+Alex: Eu vou te dar um prêmio para fazer isso.
+Alex: Uma ração bem gostosa.
+[title=M4Q3C0End]
+[title=M4Q3C1]
+Alex: Eu vou quebrar aquele vaso.
+Alex: Preciso de algo para não me machucar quebrando.
+[title=M4Q3C1End]
+[title=M4Q4C0]
+Alex: Sim mamãe, me desculpe.
+Mãe: Ok... para seu quarto então.
+[title=M4Q4C0End]
+[title=M4Q4C1]
+Alex: Não mãe, não fui eu.
+Mãe: Acha que vou acreditar nisso?
+Mãe: Quem mais poderia ter sido? Para o quarto! Já!
+[title=M4Q4C1End]
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M4KidRoomSceneStart]
+Alex: Eu preciso descobrir o que está acontecendo comigo…
+Alex: Atze? O que foi?
+Alex: Quer que eu te siga?
+[title=M4KidRoomSceneEnd]
+[title=M4KidRoomSceneRepeat]
+[title=M4KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M4KitchenSceneStart]
+[title=M4KitchenSceneEnd]
+[title=M4KitchenSceneRepeat]
+[title=M4KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M4GardenSceneStart]
+[title=M4GardenSceneEnd]
+[title=M4GardenSceneRepeat]
+[title=M4GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M4MomRoomSceneStart]
+Alex: Deve ter algo naquele armário…
+[title=M4MomRoomSceneEnd]
+[title=M4MomRoomSceneRepeat]
+[title=M4MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M4LivingroomSceneStart]
+[title=M4LivingroomSceneEnd]
+[title=M4LivingroomSceneRepeat]
+[title=M4LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M4CorridorSceneStart]
+[title=M4CorridorSceneEnd]
+[title=M4CorridorSceneRepeat]
+[title=M4CorridorSceneRepeatEnd]
+
+
+-------------------------------------- MISSAO 5 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica5]
+Alex: Tenho que tomar cuidado.
+Alex: Algumas podem estar naquele mundo estranho.
+[title=Dica5End]
+[title=DicaMundoInvertido5]
+Alex: O que são essas coisas?
+Alex: Elas parecem tentar falar comigo.
+Alex: "Precisamos de Luz!"... O que isso quer dizer?
+[title=DicaMundoInvertido5End]
+----------------------------------- ESCOLHAS -----------------------------------
+[title=M5Q5C0]
+Atze: Grrrr.
+Alex: Atze... Não me faça fazer isso...
+Atze: Grrrrrrr.
+Alex: Ok... Mas não me deixe sozinho!
+[title=M5Q5C0End]
+[title=M5Q5C1]
+Alex: Vamos, Atze!
+Alex: Precisamos descobrir o que está acontecendo.
+[title=M5Q5C1End]
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M5KidRoomSceneStart]
+[title=M5KidRoomSceneEnd]
+[title=M5KidRoomSceneRepeat]
+[title=M5KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M5KitchenSceneStart]
+[title=M5KitchenSceneEnd]
+[title=M5KitchenSceneRepeat]
+[title=M5KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M5GardenSceneStart]
+Alex: Esse livro está faltando várias páginas.
+Alex: Vou tentar reuni-las.
+[title=M5GardenSceneEnd]
+[title=M5GardenSpiritKilled]
+Alex: Eles se foram... 
+Alex: Parecia ser como os sentimentos acumulados.
+Alex: Mas de quem?
+Alex: Daqueles que moraram aqui?
+Alex: O que é aquilo? Uma página!
+Alex: Preciso lê-la!
+[title=M5GardenSpiritKilledEnd]
+[title=M5BookClosed]
+Alex: O que foi essa sensação?!
+Alex: Mãe...? Estou com um mal pressentimento.
+[title=M5BookClosedEnd]
+[title=M5GardenSceneRepeat]
+[title=M5GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M5MomRoomSceneStart]
+[title=M5MomRoomSceneEnd]
+[title=M5MomRoomSceneRepeat]
+[title=M5MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M5LivingroomSceneStart]
+Alex: Esses seres de novo...
+Alex: Parece que eles ficaram mais brilhosos.
+[title=M5LivingroomSceneEnd]
+[title=M5LivingroomSceneRepeat]
+[title=M5LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M5CorridorSceneStart]
+Alex: Acho que preciso sair desse mundo estranho...
+[title=M5CorridorSceneEnd]
+[title=M5TryQuit]
+Alex: O que?!?! Não consigo?
+[question=5] O que quer fazer agora?
+[choice]Procurar onde se esconder
+[choice]Investigar o que está acontecendo
+[title=M5TryQuitEnd]
+[title=M5CorridorSceneRepeat]
+[title=M5CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 6 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica6]
+[title=Dica6End]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M6KidRoomSceneStart]
+[title=M6KidRoomSceneEnd]
+[title=M6KidRoomSceneRepeat]
+[title=M6KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M6KitchenSceneStart]
+[title=M6KitchenSceneEnd]
+[title=M6KitchenSceneRepeat]
+[title=M6KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M6GardenSceneStart]
+Alex: Atze?
+Alex: O que são essas folhas?
+Alex: Hm... Essas folhas secas só servem para...
+Atze: Miau!
+Alex: Queimá-las?
+Alex: Como isso vai ajudar a salvar a mamãe?
+Alex: Ah! Assustar o monstro?
+Alex: Ele vai achar que vou queimar a casa...
+[title=M6GardenSceneEnd]
+[title=M6IncorrectTree]
+Alex: Acho que seria melhor uma árvore perto de casa...
+[title=M6IncorrectTreeEnd]
+[title=M6HasEverything]
+Alex: Perfeito, posso acender essa árvore!
+[title=M6HasEverythingEnd]
+[title=M6HasntEverything]
+Alex: Eu precisaria de algo para atear fogo nessa árvore.
+[title=M6HasntEverythingEnd]
+[title=M6FireTree]
+Alex: Preciso ver se isso funcionou!!
+[title=M6FireTreeEnd]
+[title=M6GardenSceneRepeat]
+[title=M6GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M6MomRoomSceneStart]
+Alex: Parece ter algo de errado aqui...
+Alex: Mãe?
+Alex: O que é isso em cima de você?
+Alex: Ela está dormindo... está doente!! 
+Alex: Ou pior!
+Alex: Preciso fazer algo para ajudá-la!
+Alex: Será que a lanterna irá funcionar aqui também?
+[title=M6MomRoomSceneEnd]
+[title=M6AfterFlashlight]
+Alex: Parece que a lanterna só o deixa mais nervoso...
+[title=M6AfterFlashlightEnd]
+[title=M6AfterFlashlightShutdown]
+Alex: Será que esse monstro apareceu devido aos
+Alex: sentimentos negativos da mamãe?
+Alex: Preciso encontrar uma forma de assustá-lo.
+Alex: Vou ver se não deixei nada passar no jardim.
+[title=M6AfterFlashlightShutdownEnd]
+[title=M6BeforeFinal]
+Alex: Achei uma página! Aquele mostro sumiu daqui...
+Alex: Minha mãe parece bem melhor.
+Alex: Agora só falta ver se consigo sair desse mundo.
+[title=M6BeforeFinalEnd]
+[title=M6Final]
+Alex: Ufa, consegui!
+Alex: Mas... por que está tudo tão escuro?
+[title=M6FinalEnd]
+[title=M6MomRoomSceneRepeat]
+[title=M6MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M6LivingroomSceneStart]
+Alex: Eles estão bloqueando o caminho...
+Alex: Aquilo ali é uma página?!
+[title=M6LivingroomSceneEnd]
+[title=M6LivingroomTipStart]
+Alex: Acho que eu deveria parar de iluminar os roxos...
+[title=M6LivingroomTipEnd]
+[title=M6LivingroomSceneRepeat]
+[title=M6LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M6CorridorSceneStart]
+[title=M6CorridorSceneEnd]
+[title=M6CorridorSceneRepeat]
+[title=M6CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 7 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=M7Dica]
+Alex: Acho que não posso sair de dentro do círculo...
+[title=M7DicaEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M7KidRoomSceneStart]
+Alex: !!!!!
+Alex: O que é isso?! Uma página!
+[title=M7KidRoomSceneEnd]
+[title=M7PagePicked]
+Alex: Espera, parece que não falta mais nenhuma página!!
+[title=M7PagePickedEnd]
+[title=M7KidRoomSceneRepeat]
+[title=M7KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M7KitchenSceneStart]
+[title=M7KitchenSceneEnd]
+[title=M7KitchenSceneRepeat]
+[title=M7KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M7GardenSceneStart]
+[title=M7GardenSceneEnd]
+[title=M7GardenSceneRepeat]
+[title=M7GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M7MomRoomSceneStart]
+Alex: Quantas páginas será que ainda faltam?
+Alex: Com esse escuro repentino...
+Alex: Fica complicado ver o livro desse jeito.
+Alex: Pra não dizer perigoso até...
+Alex: Calma... Cadê o Atze?
+Alex: Onde será que ele foi?
+Alex: Atze?!?
+[title=M7MomRoomSceneEnd]
+[title=M7LightFull]
+Alex: O que é essa luz?!
+Alex: Seriam aqueles...
+Alex: ...espíritos ou sentimentos que ajudei!?
+Alex: Ela deve ter aparecido por algum motivo...
+[title=M7LightFullEnd]
+[title=M7MomRoomSceneRepeat]
+[title=M7MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M7LivingroomSceneStart]
+Alex: Atze!! O que está fazendo ai?
+[title=M7LivingroomSceneEnd]
+[title=M7TalkedAtze]
+Alex: Atze, o que está fazendo?
+Atze: Miaaau...
+Alex: Por que está arisco dessa forma!?
+Alex: O quê? O livro?! Espere...
+Alex: Você quer que eu leia ele?
+Alex: Aqui não é seguro...
+Alex: Preciso ir para meu quarto para isso!
+Atze: Miau!
+Alex: Você deve ficar bem! Eu já volto!
+[title=M7TalkedAtzeEnd]
+[title=M7LivingroomSceneRepeat]
+[title=M7LivingroomSceneRepeatEnd]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M7CorridorSceneStart]
+Alex: Se multiplicou em duas!
+Alex: Que barulho é esse?
+Alex: Parece estar vindo da sala...
+Alex: Será que é o Atze?
+[title=M7CorridorSceneEnd]
+[title=M7Corridor2]
+Alex: Outra?!
+[title=M7Corridor2End]
+[title=M7CorridorSceneRepeat]
+[title=M7CorridorSceneRepeatEnd]
+
+
+
+-------------------------------------- MISSAO 8 ----------------------------------------------------
+----------------------------------- ESPECIAL -----------------------------------
+[title=Dica8PB]
+Alex: Acho que agora sei como destruí-lo...
+Alex: Preciso incendiar a casa!
+Alex: Na cozinha deve ter algo para ajudar.
+[title=Dica8PBEnd]
+[title=Dica8PC]
+Alex: Acho que agora sei como destruí-lo...
+Alex: Preciso incendiá-lo!
+Alex: O mais lonje possível dos quartos.
+[title=Dica8PCEnd]
+[title=M8MomCat]
+Mãe: O que você está fazendo? 
+Mãe: O que está acontecendo?
+Alex: Mãe, só peço que acredite em mim...
+[title=M8MomCatEnd]
+[title=M8PedraCozinha]
+Alex: Preciso achar algo para destruir o cabo do gás...
+[title=M8PedraCozinhaEnd]
+[title=M8PedraJardim]
+Alex: Deve ter algo aqui para me ajudar.
+[title=M8PedraJardimEnd]
+----------------------------------- ESCOLHAS -----------------------------------
+
+----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
+[title=M8KidRoomSceneStart]
+Alex: Agora que tenho todas as páginas, preciso entendê-las...
+[title=M8KidRoomSceneEnd]
+[title=M8KidRoomSceneRepeat]
+[title=M8KidRoomSceneRepeatEnd]
+----------------------------------- CENAS NA COZINHA -----------------------------------
+[title=M8KitchenSceneStart]
+Alex: O gás!!!
+[title=M8KitchenSceneEnd]
+[title=M8KitchenSceneRepeat]
+Alex: Tenho que fazer uma faísca!
+[title=M8KitchenSceneRepeatEnd]
+----------------------------------- CENAS NO JARDIM -----------------------------------
+[title=M8GardenSceneStart]
+[title=M8GardenSceneEnd]
+[title=M8GardenSceneRepeat]
+[title=M8GardenSceneRepeatEnd]
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
+[title=M8MomRoomSceneStart]
+Alex: Onde a minha mãe está? O que ele fez?
+[title=M8MomRoomSceneEnd]
+[title=M8MomRoomSceneRepeat]
+[title=M8MomRoomSceneRepeatEnd]
+----------------------------------- CENAS NA SALA -----------------------------------
+[title=M8LivingroomSceneStart]
+Alex: Vou queimar algumas coisas daqui...
+[title=M8LivingroomSceneEnd]
+[title=M8LivingroomSceneRepeat]
+Alex: Mãe! Atze! Vamos sair daqui...
+[title=M8LivingroomSceneRepeatEnd]
+[title=M8LivingroomSceneRepeat2]
+Alex: Atze??? O que fizeram com a minha família?
+[title=M8LivingroomSceneRepeat2End]
+----------------------------------- CENAS NO CORREDOR -----------------------------------
+[title=M8CorridorSceneStart]
+[title=M8CorridorSceneEnd]
+[title=M8CorridorSceneRepeat]
+[title=M8CorridorSceneRepeatEnd]

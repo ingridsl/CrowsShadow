@@ -14,12 +14,9 @@ namespace CrowShadowMenu
         {
             /* REINICIAR SAVE:
              *  1. Deletar todos os saves em C:\Users\Admin\AppData\LocalLow\DefaultCompany\AlGhaib
-             *  2. Descomentar a linha abaixo, para deleter o Player Prefs
-             *  3. Rodar o jogo uma vez, começando da cena do MainMenu
-             *  4. Começar um novo jogo
-             *  5. Parar
-             *  6. Comentar a linha abaixo
-             *  7. Jogar pelo Continue (para salvar) ou Carregar (para não salvar)*/
+             *  2. Rodar o jogo uma vez, começando da cena do MainMenu
+             *  3. Começar um novo jogo
+             *  Observação: jogar pelo Continue (para salvar) ou Carregar (para não salvar)*/
             //PlayerPrefs.DeleteAll();
 
             if (PlayerPrefs.HasKey("Language"))

@@ -225,6 +225,7 @@ public class Mission1 : Mission {
 
         if (secao == enumMission.NIGHT || secao == enumMission.INICIO) {
             // Tutorial
+            GameManager.instance.AddObject("Tutorial/Z-key1");
             GameManager.instance.AddObject("Tutorial/C-key");
             GameManager.instance.AddObject("Tutorial/CtrlC-key");
 
@@ -300,8 +301,8 @@ public class Mission1 : Mission {
         trigger2.GetComponent<BoxCollider2D>().size = new Vector2(1.55f, 0.8f);
 
         // Tutorial
-        GameManager.instance.AddObject("Tutorial/Z-bau");
-        GameManager.instance.AddObject("Tutorial/X-lantern");
+        GameManager.instance.AddObject("Tutorial/Z-key2");
+        GameManager.instance.AddObject("Tutorial/X-key");
 
         areaTriggered = false;
         birdsActive = false;
@@ -342,12 +343,15 @@ public class Mission1 : Mission {
             Vector3[] catPos = { aux };
             cat.GetComponent<Cat>().targets = catPos;
             cat.GetComponent<Cat>().stopEndPath = true;
+            cat.GetComponent<Cat>().destroyEndPath = false;
         }
         else if (secao == enumMission.GATO_APARECEU)
         {
+            GameManager.instance.scenerySounds.PlayCat(2);
+            Cat.instance.GetComponent<Cat>().Patrol();
             Vector3 aux = new Vector3(1.8f, 1f, -0.5f);
             Vector3[] catPos = { aux };
-            Cat.instance.GetComponent<Cat>().targets = catPos;
+            Cat.instance.targets = catPos;
             Cat.instance.destroyEndPath = true;
         }
         else if (secao == enumMission.GATO_CORREDOR)

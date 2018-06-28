@@ -20,6 +20,7 @@ namespace CrowShadowScenery
 
         private int repeatTime = 2;
         private bool exit = false, end = false, invoked = false;
+        private bool movingObjectOnArea = false;
 
         void Awake()
         {
@@ -34,6 +35,12 @@ namespace CrowShadowScenery
 
         void Update()
         {
+            if (movingObjectOnArea && player.playerAction == playerAction)
+            {
+                exit = false;
+                AreaTriggered();
+            }
+
             if (!end && !exit)
             {
                 KeyPressed();
@@ -46,35 +53,20 @@ namespace CrowShadowScenery
                 GameManager.instance.currentMission == mission && player.playerAction == playerAction && !end)
             {
                 exit = false;
-                if (!inventoryObject)
-                {
-                    InvokeShow();
-                }
-                else
-                {
-                    if (Inventory.HasItemType(Inventory.InventoryItems.FLASHLIGHT))
-                    {
-                        InvokeShow();
-                    }
-                }
+                AreaTriggered();
+            }
+            else if ((other.gameObject.tag.Equals("MovingObject") && playerAction == Player.Actions.ON_OBJECT))
+            {
+                movingObjectOnArea = true;
             }
         }
 
         void OnTriggerStay2D(Collider2D other)
         {
-            if (other.gameObject.tag.Equals("Player") && GameManager.instance.currentMission == mission && !end)
+            if (other.gameObject.tag.Equals("Player") && 
+                GameManager.instance.currentMission == mission && player.playerAction == playerAction && !end)
             {
-                if (!inventoryObject)
-                {
-                    InvokeShow();
-                }   
-                else
-                {
-                    if (Inventory.HasItemType(Inventory.InventoryItems.FLASHLIGHT))
-                    {
-                        InvokeShow();
-                    }
-                }
+                AreaTriggered();
             }
         }
 
@@ -86,6 +78,11 @@ namespace CrowShadowScenery
                 invoked = false;
                 key.SetActive(false);
             }
+            else if ((other.gameObject.tag.Equals("MovingObject") && playerAction == Player.Actions.ON_OBJECT &&
+                player.playerAction != Player.Actions.ANIMATION && player.playerAction != Player.Actions.ON_OBJECT))
+            {
+                movingObjectOnArea = false;
+            }
         }
 
         void KeyPressed()
@@ -94,6 +91,21 @@ namespace CrowShadowScenery
             {
                 end = true;
                 key.SetActive(false);
+            }
+        }
+
+        void AreaTriggered()
+        {
+            if (!inventoryObject)
+            {
+                InvokeShow();
+            }
+            else
+            {
+                if (Inventory.HasItemType(Inventory.InventoryItems.FLASHLIGHT))
+                {
+                    InvokeShow();
+                }
             }
         }
 

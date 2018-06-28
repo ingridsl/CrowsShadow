@@ -82,16 +82,16 @@ namespace CrowShadowPlayer
 
                     switch (player.direction)
                     {
-                        case 0:
+                        case Player.Directions.EAST:
                             directionAttack = 0;
                             break;
-                        case 1:
+                        case Player.Directions.WEST:
                             directionAttack = 1;
                             break;
-                        case 2:
+                        case Player.Directions.NORTH:
                             directionAttack = 2;
                             break;
-                        case 3:
+                        case Player.Directions.SOUTH:
                             directionAttack = 3;
                             break;
                         default:
@@ -152,16 +152,16 @@ namespace CrowShadowPlayer
             {
                 switch (player.direction)
                 {
-                    case 0:
+                    case Player.Directions.EAST:
                         transform.localPosition = new Vector3(distance, 0, 0);
                         break;
-                    case 1:
+                    case Player.Directions.WEST:
                         transform.localPosition = new Vector3(-distance, 0, 0);
                         break;
-                    case 2:
+                    case Player.Directions.NORTH:
                         transform.localPosition = new Vector3(0, distance, 0);
                         break;
-                    case 3:
+                    case Player.Directions.SOUTH:
                         transform.localPosition = new Vector3(0, -distance, 0);
                         break;
                     default:

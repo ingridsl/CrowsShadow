@@ -33,7 +33,7 @@ public abstract class SideQuest
         GameObject player = GameObject.Find("Player").gameObject;
         oldX = player.transform.position.x;
         oldY = player.transform.position.y;
-        oldDir = player.GetComponent<Player>().direction;
+        oldDir = (int)player.GetComponent<Player>().direction;
 
         GameManager.initX = sideX;
         GameManager.initY = sideY;
@@ -41,7 +41,7 @@ public abstract class SideQuest
 
         if (Cat.instance != null)
         {
-            Cat.instance.gameObject.SetActive(false);
+            Cat.instance.GetComponent<Cat>().gameObject.SetActive(false);
             hasCat = true;
         }
         if (Crow.instance != null)
@@ -134,7 +134,7 @@ public abstract class SideQuest
 
         if (hasCat)
         {
-            Cat.instance.gameObject.SetActive(true);
+            Cat.instance.GetComponent<Cat>().gameObject.SetActive(true);
         }
         if (hasRaven)
         {

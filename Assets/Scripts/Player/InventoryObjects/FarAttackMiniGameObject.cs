@@ -53,18 +53,18 @@ namespace CrowShadowPlayer
                     }
                     switch (player.direction)
                     {
-                        case 0:
+                        case Player.Directions.EAST:
                             fire.SetActive(true);
                             fire.transform.localPosition = new Vector3(-0.3f, -0.6f, 0f);
                             break;
-                        case 1:
+                        case Player.Directions.WEST:
                             fire.SetActive(false);
                             break;
-                        case 2:
+                        case Player.Directions.NORTH:
                             fire.SetActive(true);
                             fire.transform.localPosition = new Vector3(0.3f, -0.6f, 0f);
                             break;
-                        case 3:
+                        case Player.Directions.SOUTH:
                             fire.SetActive(true);
                             fire.transform.localPosition = new Vector3(-0.3f, -0.6f, 0f);
                             break;

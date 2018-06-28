@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -18.002268, y: 6.186133}
+  m_Offset: {x: -18.002268, y: 6.086133}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -329,9 +329,9 @@ MonoBehaviour:
   keyName1: keyMove
   keyName2: keySpecial
   mission: 1
+  inventoryObject: 0
   playerAction: 1
   click: {fileID: 8300000, guid: b5216c39f29141f44bb81b2319a3fcc2, type: 3}
-  inventoryObject: 0
 --- !u!212 &212474507601160836
 SpriteRenderer:
   m_ObjectHideFlags: 1
