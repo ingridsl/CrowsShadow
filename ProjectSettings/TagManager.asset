@@ -47,6 +47,7 @@ TagManager:
   - Pedra
   - Papel
   - SickCrow
+  - MiniGameRightArea
   layers:
   - Default
   - TransparentFX

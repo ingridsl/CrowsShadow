@@ -8,12 +8,8 @@ namespace CrowShadowScenery
     {
         public GameObject pointer;
         public float speed = 60;
-        public float minAcerto, maxAcerto;
         public GameObject miniGame;
         public bool inside = false;
-
-        public float angle = 0.0F;
-        public Vector3 axis = Vector3.zero;
 
         private void Start()
         {
