@@ -536,18 +536,12 @@ Alex: I think I should stop lighting the purple ones ...
 -------------------------------------- MISSAO 7 ----------------------------------------------------
 ----------------------------------- ESPECIAL -----------------------------------
 [title=M7Dica]
-Alex: I don't think I can get out of the circle ...
 [title=M7DicaEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M7KidRoomSceneStart]
-Alex: !!!!!
-Alex: What is this?! A page!
 [title=M7KidRoomSceneEnd]
-[title=M7PagePicked]
-Alex: Wait, there seems to be another page left !!
-[title=M7PagePickedEnd]
 [title=M7KidRoomSceneRepeat]
 [title=M7KidRoomSceneRepeatEnd]
 ----------------------------------- CENAS NA COZINHA -----------------------------------
@@ -557,24 +551,15 @@ Alex: Wait, there seems to be another page left !!
 [title=M7KitchenSceneRepeatEnd]
 ----------------------------------- CENAS NO JARDIM -----------------------------------
 [title=M7GardenSceneStart]
+Alex: That didn't work.
+Alex: I need to try to do another thing!
 [title=M7GardenSceneEnd]
 [title=M7GardenSceneRepeat]
 [title=M7GardenSceneRepeatEnd]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M7MomRoomSceneStart]
-Alex: How many pages are still missing?
-Alex: With that sudden dark ...
-Alex: It's hard to see the book like that.
-Alex: Not to say dangerous...
-Alex: Calm down ... Where's Pumpkin?
-Alex: Where did he go?
-Alex: Pumpkin?!?
 [title=M7MomRoomSceneEnd]
 [title=M7LightFull]
-Alex: What's that light ?!
-Alex: Maybe it's those ...
-Alex: ... spirits or feelings that I helped !?
-Alex: It must have appeared for some reason ...
 [title=M7LightFullEnd]
 [title=M7MomRoomSceneRepeat]
 [title=M7MomRoomSceneRepeatEnd]
@@ -583,24 +568,11 @@ Alex: It must have appeared for some reason ...
 Alex: Pumpkin !! What are you doing there?
 [title=M7LivingroomSceneEnd]
 [title=M7TalkedPumpkin]
-Alex: Pumpkin, what are you doing?
-Pumpkin: Meoww...
-Alex: Why are you so angry !?
-Alex: What? The book?! Hang on...
-Alex: Do you want me to read it?
-Alex: It's not safe here ...
-Alex: I need to go to my room for this!
-Pumpkin: Meow!
-Alex: You should be fine! I'll be right back!
 [title=M7TalkedPumpkinEnd]
 [title=M7LivingroomSceneRepeat]
 [title=M7LivingroomSceneRepeatEnd]
 ----------------------------------- CENAS NO CORREDOR -----------------------------------
 [title=M7CorridorSceneStart]
-Alex: It multiplied by two!
-Alex: What's that noise?
-Alex: It seems to be coming from the room ...
-Alex: Is it Pumpkin?
 [title=M7CorridorSceneEnd]
 [title=M7Corridor2]
 Alex: Another one?!
