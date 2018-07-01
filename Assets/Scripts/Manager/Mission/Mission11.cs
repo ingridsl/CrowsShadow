@@ -371,6 +371,10 @@ public class Mission11 : Mission {
             GameManager.instance.Invoke("InvokeMission", 10f);
         }
     }
+    public override void SetBanheiro()
+    {
+
+    }
 
     public override void EspecificaEnum(int pos)
     {

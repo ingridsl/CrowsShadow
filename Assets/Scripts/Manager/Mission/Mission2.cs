@@ -310,6 +310,10 @@ public class Mission2 : Mission {
             GameManager.instance.CreateScenePickUp("Armario", Inventory.InventoryItems.VELA);
         }
     }
+    public override void SetBanheiro()
+    {
+
+    }
 
     public override void EspecificaEnum(int pos)
     {

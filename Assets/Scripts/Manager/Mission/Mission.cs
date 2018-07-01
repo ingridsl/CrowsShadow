@@ -53,6 +53,10 @@ public abstract class Mission {
         {
             SetSala();
         }
+        else if (GameManager.currentSceneName.Equals("Banheiro"))
+        {
+            SetBanheiro();
+        }
     }
 
     public abstract void InitMission();
@@ -70,6 +74,8 @@ public abstract class Mission {
     public abstract void SetQuartoMae();
 
     public abstract void SetSala();
+
+    public abstract void SetBanheiro();
 
     public abstract void EspecificaEnum(int pos);
 

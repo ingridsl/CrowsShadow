@@ -648,6 +648,10 @@ public class Mission10 : Mission {
             }
         }
     }
+    public override void SetBanheiro()
+    {
+
+    }
 
     public override void InvokeMission()
     {

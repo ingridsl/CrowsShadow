@@ -395,6 +395,10 @@ public class Mission1 : Mission {
             GameManager.instance.Invoke("InvokeMission", 4f);
         }
     }
+    public override void SetBanheiro()
+    {
+
+    }
 
     public override void ForneceDica()
     {
