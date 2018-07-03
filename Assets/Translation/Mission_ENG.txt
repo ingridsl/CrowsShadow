@@ -554,6 +554,15 @@ Alex: I think I should stop lighting the purple ones ...
 Alex: That didn't work.
 Alex: I need to try to do another thing!
 [title=M7GardenSceneEnd]
+[title=M7GardenShadowSceneStart]
+Shadow: The raven that urges.
+Shadow: The cat that strikes!
+Shadow: Two sides of the same coin.
+Shadow: For one must live while the other lives still.
+Shadow: Shadow and Light.
+Shadow: The world destroyer and the protector.
+Shadow: The raven and the cat.
+[title=M7GardenShadowSceneEnd]
 [title=M7GardenSceneRepeat]
 [title=M7GardenSceneRepeatEnd]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
