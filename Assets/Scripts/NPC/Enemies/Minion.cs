@@ -11,7 +11,7 @@ namespace CrowShadowNPCs
         public int decrementFaca = 30, decrementBastao = 25, decrementPedra = 20;
         public float addPath = 0.5f; // quanto vai ser adicionado ao somatório das escolhas
         public float timeMaxPower = 3f; // tempo máximo que pode ficar colidindo com o minion para não ativar próximo poder
-        public float timeMaxChangeVelocity = 6f, factorDivideSpeed = 1.8f; // tempo máximo com velocidade menor e fator para dividi-la
+        public float timeMaxChangeVelocity = 6f, factorDivideSpeed = 1.2f; // tempo máximo com velocidade menor e fator para dividi-la
         public float timeInvertControls = 6f; // tempo adicional para ficar com o controle invertido
 
         MinionEmmitter emmitter;

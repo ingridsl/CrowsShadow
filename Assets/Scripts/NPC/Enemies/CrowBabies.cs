@@ -59,7 +59,7 @@ namespace CrowShadowNPCs
                 }
                 Vector3 dir = player.transform.position - transform.position;
                 Quaternion rot = Quaternion.LookRotation(dir);
-                birdEmitter.transform.rotation = Quaternion.Lerp(birdEmitter.transform.rotation, rot, timeBirdsFollow / 2 * Time.deltaTime);
+                birdEmitter.transform.rotation = Quaternion.Lerp(birdEmitter.transform.rotation, rot, timeBirdsFollow / 2f * Time.deltaTime);
 
                 if (numBursts != -1)
                 {
