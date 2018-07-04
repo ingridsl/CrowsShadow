@@ -588,7 +588,14 @@ Alex: Another one?!
 [title=M7Corridor2End]
 [title=M7CorridorSceneRepeat]
 [title=M7CorridorSceneRepeatEnd]
-
+----------------------------------- CENAS NO BANHEIRO -----------------------------------
+[title=M7BathroomShadowSceneStart]
+Shadow: Destroy! I have to destroy!
+Pumpkin: You must not fail...
+Pumpkin: or the task shall be left for the following one.
+Shadow: If I fail, I die!
+Shadow: If I can't kill it... At least I'll try to imprison it!
+[title=M7BathroomShadowSceneEnd]
 
 
 -------------------------------------- MISSAO 8 ----------------------------------------------------
