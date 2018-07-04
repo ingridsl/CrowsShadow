@@ -537,6 +537,10 @@ Alex: I think I should stop lighting the purple ones ...
 ----------------------------------- ESPECIAL -----------------------------------
 [title=M7Dica]
 [title=M7DicaEnd]
+[title=M7HowStart]
+Alex: Fire! I need fire!
+Alex: But where can I find fire?
+[title=M7HowEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
@@ -572,6 +576,15 @@ Shadow: The raven and the cat.
 [title=M7LightFullEnd]
 [title=M7MomRoomSceneRepeat]
 [title=M7MomRoomSceneRepeatEnd]
+[title=M7MomRoomShadowSceneStart]
+Shadow: Fire! I need to find fire!
+Pumpkin: And don't forget... throw it inside the rift.
+Shadow: The time and space rifts?
+Pumpkin: Yes. 
+Pumpkin: For it is with light and fire that we destroy the darkness.
+Pumpkin: Mainly with fire.
+Shadow: I like fire.
+[title=M7MomRoomShadowSceneEnd]
 ----------------------------------- CENAS NA SALA -----------------------------------
 [title=M7LivingroomSceneStart]
 Alex: Pumpkin !! What are you doing there?
@@ -583,9 +596,6 @@ Alex: Pumpkin !! What are you doing there?
 ----------------------------------- CENAS NO CORREDOR -----------------------------------
 [title=M7CorridorSceneStart]
 [title=M7CorridorSceneEnd]
-[title=M7Corridor2]
-Alex: Another one?!
-[title=M7Corridor2End]
 [title=M7CorridorSceneRepeat]
 [title=M7CorridorSceneRepeatEnd]
 ----------------------------------- CENAS NO BANHEIRO -----------------------------------
