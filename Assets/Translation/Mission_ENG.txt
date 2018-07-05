@@ -535,13 +535,76 @@ Alex: I think I should stop lighting the purple ones ...
 
 -------------------------------------- MISSAO 7 ----------------------------------------------------
 ----------------------------------- ESPECIAL -----------------------------------
+[title=M7FineStart]
+Pumpkin: Fine then.
+[title=M7FineEnd]
 [title=M7Dica]
 [title=M7DicaEnd]
 [title=M7HowStart]
 Alex: Fire! I need fire!
 Alex: But where can I find fire?
+Alex: But...
+Alex: How strange it was... Pumpkin... you...
+[question=6] What do you want to do now?
+[choice] Acuse Pumpkin of being evil
+[choice] Ask Pumpkin more about the memories
 [title=M7HowEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
+[title=M7AcusaStart]
+Alex: Pumpkin! You are evil!
+Pumpkin: ...
+Alex: That person!! 
+Alex: That person died because of you!
+Pumpkin: If you want to believe it...
+[title=M7AcusaEnd]
+[title=M7PerguntaStart]
+Alex: Pumpkin, can you explain me better?
+Pumpkin: In fact, I can. 
+Alex: So...
+Pumpkin: Me and the raven are fighting for centuries.
+Pumpkin: You wasn't the first to try to help me.
+[question=7] What do you want to do now?
+[choice] "What happened to that person worried about life?"
+[choice] "What is the raven's objective?"
+[choice] End chat
+[title=M7PerguntaEnd]
+[title=M7Pergunta1Start]
+Alex: What happened to that person worried about life?
+Pumpkin: She died.
+Pumpkin: It was a noble sacrifice.
+Pumpkin: Thanks to her sacrifice, the raven is imprisioned.
+Alex: Where?
+Pumpkin: Inside the time and space rift.
+[question=8] What do you want to do now?
+[choice] "What is the raven's objective?"
+[choice] End chat
+[title=M7Pergunta1End]
+[title=M7Pergunta10Start]
+Alex: What happened to that person worried about life?
+Pumpkin: She died.
+Pumpkin: It was a noble sacrifice.
+Pumpkin: Thanks to her sacrifice, the raven is imprisioned.
+Alex: Where?
+Pumpkin: Inside the time and space rift.
+[title=M7Pergunta10End]
+[title=M7Pergunta2Start]
+Alex: What is the raven's objective?
+Pumpkin: The raven wants to destroy the world.
+Pumpkin: Reshape it to its liking.
+Pumpkin: Conquer it.
+Alex: What exactly is the raven?
+Pumpkin: An being of pure evil.
+[question=9] What do you want to do now?
+[choice] "What happened to that person worried about life?"
+[choice] End chat
+[title=M7Pergunta20End]
+Alex: What is the raven's objective?
+Pumpkin: The raven wants to destroy the world.
+Pumpkin: Reshape it to its liking.
+Pumpkin: Conquer it.
+Alex: What exactly is the raven?
+Pumpkin: An being of pure evil.
+[title=M7Pergunta20End]
 
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M7KidRoomSceneStart]
@@ -563,8 +626,6 @@ Shadow: The raven that urges.
 Shadow: The cat that strikes!
 Shadow: Two sides of the same coin.
 Shadow: For one must live while the other lives still.
-Shadow: Shadow and Light.
-Shadow: The world destroyer and the protector.
 Shadow: The raven and the cat.
 [title=M7GardenShadowSceneEnd]
 [title=M7GardenSceneRepeat]
@@ -584,10 +645,10 @@ Pumpkin: Yes.
 Pumpkin: For it is with light and fire that we destroy the darkness.
 Pumpkin: Mainly with fire.
 Shadow: I like fire.
+Pumpkin: Burn it all.
 [title=M7MomRoomShadowSceneEnd]
 ----------------------------------- CENAS NA SALA -----------------------------------
 [title=M7LivingroomSceneStart]
-Alex: Pumpkin !! What are you doing there?
 [title=M7LivingroomSceneEnd]
 [title=M7TalkedPumpkin]
 [title=M7TalkedPumpkinEnd]
@@ -603,8 +664,9 @@ Alex: Pumpkin !! What are you doing there?
 Shadow: Destroy! I have to destroy!
 Pumpkin: You must not fail...
 Pumpkin: or the task shall be left for the following one.
-Shadow: If I fail, I die!
-Shadow: If I can't kill it... At least I'll try to imprison it!
+Shadow: If I do what you say...
+Shadow: I'll die!
+Pumpkin: I know.
 [title=M7BathroomShadowSceneEnd]
 
 
