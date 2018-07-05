@@ -550,14 +550,14 @@ Alex: How strange it was... Pumpkin... you...
 [choice] Ask Pumpkin more about the memories
 [title=M7HowEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
-[title=M7AcusaStart]
+[title=M7Q6C0]
 Alex: Pumpkin! You are evil!
 Pumpkin: ...
 Alex: That person!! 
 Alex: That person died because of you!
 Pumpkin: If you want to believe it...
-[title=M7AcusaEnd]
-[title=M7PerguntaStart]
+[title=M7Q6C0End]
+[title=M7Q6C1]
 Alex: Pumpkin, can you explain me better?
 Pumpkin: In fact, I can. 
 Alex: So...
@@ -567,7 +567,7 @@ Pumpkin: You wasn't the first to try to help me.
 [choice] "What happened to that person worried about life?"
 [choice] "What is the raven's objective?"
 [choice] End chat
-[title=M7PerguntaEnd]
+[title=M7Q6C1End]
 [title=M7Pergunta1Start]
 Alex: What happened to that person worried about life?
 Pumpkin: She died.
@@ -579,14 +579,6 @@ Pumpkin: Inside the time and space rift.
 [choice] "What is the raven's objective?"
 [choice] End chat
 [title=M7Pergunta1End]
-[title=M7Pergunta10Start]
-Alex: What happened to that person worried about life?
-Pumpkin: She died.
-Pumpkin: It was a noble sacrifice.
-Pumpkin: Thanks to her sacrifice, the raven is imprisioned.
-Alex: Where?
-Pumpkin: Inside the time and space rift.
-[title=M7Pergunta10End]
 [title=M7Pergunta2Start]
 Alex: What is the raven's objective?
 Pumpkin: The raven wants to destroy the world.
@@ -605,6 +597,14 @@ Pumpkin: Conquer it.
 Alex: What exactly is the raven?
 Pumpkin: An being of pure evil.
 [title=M7Pergunta20End]
+[title=M7Pergunta10Start]
+Alex: What happened to that person worried about life?
+Pumpkin: She died.
+Pumpkin: It was a noble sacrifice.
+Pumpkin: Thanks to her sacrifice, the raven is imprisioned.
+Alex: Where?
+Pumpkin: Inside the time and space rift.
+[title=M7Pergunta10End]
 
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M7KidRoomSceneStart]

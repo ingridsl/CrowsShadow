@@ -1119,7 +1119,7 @@ namespace CrowShadowManager
                     rpgTalk.NewTalk("M4Q3C1", "M4Q3C1End"); //essa escolha está sem fala definida. falas vazias não devem ser chamadas.
                 }
             }
-            if (questionId == 4)
+            else if (questionId == 4)
             { // escolha final da missão 4
                 if (choiceID == 0)
                 { // falar a verdade
@@ -1132,7 +1132,7 @@ namespace CrowShadowManager
                     rpgTalk.NewTalk("M4Q4C1", "M4Q4C1End");
                 }
             }
-            if (questionId == 5)
+            else if (questionId == 5)
             { // escolha final da missão 5
                 if (choiceID == 0)
                 { // esconder
@@ -1145,6 +1145,72 @@ namespace CrowShadowManager
                     rpgTalk.NewTalk("M5Q5C1", "M5Q5C1End");
                 }
             }
+            else if (questionId == 5)
+            { // escolha final da missão 5
+                if (choiceID == 0)
+                { // esconder
+                    pathBird += 4;
+                    rpgTalk.NewTalk("M5Q5C0", "M5Q5C0End");
+                }
+                else
+                { // investigar
+                    pathCat += 5;
+                    rpgTalk.NewTalk("M5Q5C1", "M5Q5C1End");
+                }
+            }
+            else if (questionId == 6)
+            { // escolha final da missão 7
+                if (choiceID == 0)
+                { // acusar
+                    pathBird += 4;
+                    rpgTalk.NewTalk("M7Q6C0", "M5Q6C0End");
+                }
+                else
+                { // preguntar
+                    pathCat += 5;
+                    rpgTalk.NewTalk("M7Q6C1", "M7Q6C1End");
+                }
+            }
+            else if (questionId == 7)
+            { // escolha de dialogo de perguntar ao gato
+                switch(choiceID)
+                {
+                    case 0:
+                        rpgTalk.NewTalk("M7Pergunta1Start", "M7Pergunta1End");
+                        break;
+                    case 1:
+                        rpgTalk.NewTalk("M7Pergunta2Start", "M7Pergunta2End");
+                        break;
+                    default:
+                        rpgTalk.NewTalk("M7FineStart", "M7FineEnd");
+                        break;
+                }
+            }
+            else if (questionId == 8)
+            { // escolha de dialogo de perguntar ao gato
+                switch (choiceID)
+                {
+                    case 0:
+                        rpgTalk.NewTalk("M7Pergunta10Start", "M7Pergunta10End");
+                        break;
+                    default:
+                        rpgTalk.NewTalk("M7FineStart", "M7FineEnd");
+                        break;
+                }
+            }
+            else if (questionId == 9)
+            { // escolha de dialogo de perguntar ao gato
+                switch (choiceID)
+                {
+                    case 0:
+                        rpgTalk.NewTalk("M7Pergunta20Start", "M7Pergunta20End");
+                        break;
+                    default:
+                        rpgTalk.NewTalk("M7FineStart", "M7FineEnd");
+                        break;
+                }
+            }
+
             mission.InvokeMissionChoice(choiceID);
         }
 
