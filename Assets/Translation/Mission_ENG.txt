@@ -589,7 +589,7 @@ Pumpkin: An being of pure evil.
 [question=9] What do you want to do now?
 [choice] "What happened to that person worried about life?"
 [choice] End chat
-[title=M7Pergunta20End]
+[title=M7Pergunta20Start]
 Alex: What is the raven's objective?
 Pumpkin: The raven wants to destroy the world.
 Pumpkin: Reshape it to its liking.
