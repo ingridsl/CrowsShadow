@@ -367,30 +367,34 @@ Alex: There must be something in that closet...
 -------------------------------------- MISSAO 5 ----------------------------------------------------
 ----------------------------------- ESPECIAL -----------------------------------
 [title=Dica5]
-Alex: I have to be careful.
-Alex: Some may still be in that strange world.
 [title=Dica5End]
-[title=DicaMundoInvertido5]
-Alex: O que são essas coisas?
-Alex: Elas parecem tentar falar comigo.
-Alex: "Precisamos de Luz!"... O que isso quer dizer?
+[title=DicaMundoInvertido5Start]
+Alex: Maybe I have to do that thing again.
+Alex: That thing that made me see my grandparents memories.
 [title=DicaMundoInvertido5End]
+[title=DicaSide5Start]
+Alex: That glowing thing is so beautiful.
+Alex: It looks like there is something there.
+Alex: I have to check.
+[title=DicaSide5End]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M5Q5C0]
-Pumpkin: Grrrr.
-Alex: Pumpkin... Don't make me do it...
-Pumpkin: Grrrrrrr.
-Alex: Ok... But don't leave me alone!
 [title=M5Q5C0End]
 [title=M5Q5C1]
-Alex: Come on, Pumpkin!
-Alex: We need to find out what is happening.
 [title=M5Q5C1End]
-
+----------------------------------- CENAS DA SIDE QUEST -----------------------------------
+[title=M5Side1Start]
+Alex: Where am I?
+[title=M5Side1End]
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M5KidRoomSceneStart]
 Alex: I wonder if there is something interesting in that book.
+Alex: I have to check.
 [title=M5KidRoomSceneEnd]
+[title=M5KidRoomSceneSideStart]
+Alex: What is that glowing thing?
+Alex: Maybe I can get closer!
+[title=M5KidRoomSceneSideEnd]
 [title=M5KidRoomSceneRepeat]
 [title=M5KidRoomSceneRepeatEnd]
 ----------------------------------- CENAS NA COZINHA -----------------------------------
