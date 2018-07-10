@@ -338,30 +338,34 @@ Alex: Deve ter algo naquele armário…
 -------------------------------------- MISSAO 5 ----------------------------------------------------
 ----------------------------------- ESPECIAL -----------------------------------
 [title=Dica5]
-Alex: Tenho que tomar cuidado.
-Alex: Algumas podem estar naquele mundo estranho.
 [title=Dica5End]
-[title=DicaMundoInvertido5]
-Alex: O que são essas coisas?
-Alex: Elas parecem tentar falar comigo.
-Alex: "Precisamos de Luz!"... O que isso quer dizer?
+[title=DicaMundoInvertido5Start]
+Alex: Talvez eu tenha que fazer aquilo de novo.
+Alex: Aquilo que me fez ver as memórias de meus bisavós.
 [title=DicaMundoInvertido5End]
+[title=DicaSide5Start]
+Alex: Aquela coisa brilhante é tão linda.
+Alex: Acho que tem algo lá.
+Alex: Preciso checar.
+[title=DicaSide5End]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M5Q5C0]
-Pumpkin: Grrrr.
-Alex: Pumpkin... Não me faça fazer isso...
-Pumpkin: Grrrrrrr.
-Alex: Ok... Mas não me deixe sozinho!
 [title=M5Q5C0End]
 [title=M5Q5C1]
-Alex: Vamos, Pumpkin!
-Alex: Precisamos descobrir o que está acontecendo.
 [title=M5Q5C1End]
-
+----------------------------------- CENAS DA SIDE QUEST -----------------------------------
+[title=M5Side1Start]
+Alex: Onde estou?
+[title=M5Side1End]
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M5KidRoomSceneStart]
-Alex: Me pergunto se tem alguma coisa interessante nesse livro.
+Alex: Me pergunto se tem algo interessante no livro.
+Alex: Tenho que checar.
 [title=M5KidRoomSceneEnd]
+[title=M5KidRoomSceneSideStart]
+Alex: O que é essa coisa brilhante?
+Alex: Talvez eu possa chegar mais perto!
+[title=M5KidRoomSceneSideEnd]
 [title=M5KidRoomSceneRepeat]
 [title=M5KidRoomSceneRepeatEnd]
 ----------------------------------- CENAS NA COZINHA -----------------------------------
@@ -371,7 +375,7 @@ Alex: Me pergunto se tem alguma coisa interessante nesse livro.
 [title=M5KitchenSceneRepeatEnd]
 ----------------------------------- CENAS NO JARDIM -----------------------------------
 [title=M5GardenSceneStart]
-Alex: Esse livro está faltando várias páginas.
+Alex: Esse livro está com várias páginas faltando.
 Alex: Vou tentar reuni-las.
 [title=M5GardenSceneEnd]
 [title=M5GardenSpiritKilled]
@@ -506,19 +510,82 @@ Alex: Acho que eu deveria parar de iluminar os roxos...
 
 -------------------------------------- MISSAO 7 ----------------------------------------------------
 ----------------------------------- ESPECIAL -----------------------------------
+[title=M7FineStart]
+Pumpkin: Ok então.
+[title=M7FineEnd]
 [title=M7Dica]
-Alex: Acho que não posso sair de dentro do círculo...
 [title=M7DicaEnd]
+[title=M7HowStart]
+Alex: Fogo! Preciso de fogo!
+Alex: Mas onde eu posso achar fogo?
+Alex: Mas...
+Alex: Que estenho... Pumpkin... você...
+[question=6] O que você quer fazer agora?
+[choice] Acusar Pumpkin de ser mão.
+[choice] Perguntar para sobre as memórias.
+[title=M7HowEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
+[title=M7Q6C0]
+Alex: Pumpkin! Você é do mal!
+Pumpkin: ...
+Alex: Aquela pessoa!! 
+Alex: Aquela pessoa morreu por causa de você!
+Pumpkin: Se você quer acreditar assim...
+[title=M7Q6C0End]
+[title=M7Q6C1]
+Alex: Pumpkin, pode explicar melhor?
+Pumpkin: De fato, posso. 
+Alex: Então...
+Pumpkin: Eu e o corvo temos lutado por séculos.
+Pumpkin: Você não foi o primeiro a tentar me ajudar.
+[question=7] O que quer fazer agora?
+[choice] "O que aconteceu com aquela pessoa preocupada com a vida?"
+[choice] "Qual o objetivo do corvo?"
+[choice] End chat
+[title=M7Q6C1End]
+[title=M7Pergunta1Start]
+Alex: O que aconteceu com aquela pessoa preocupada com a vida?
+Pumpkin: Ela morreu.
+Pumpkin: Foi um sacrifício nobre.
+Pumpkin: Graças ao sacrifício dela,
+Pumpkin: o corvo está preso.
+Alex: Onde?
+Pumpkin: Dentro de uma fenda no espaço-tempo.
+[question=8] O que quer fazer agora?
+[choice] "Qual o objetivo do corvo?"
+[choice] End chat
+[title=M7Pergunta1End]
+[title=M7Pergunta2Start]
+Alex: Qual o objetivo do corvo?
+Pumpkin: O objetivo do corvo é destruir o mundo.
+Pumpkin: Moldá-lo às suas vontades.
+Pumpkin: Conquista-lo.
+Alex: O que exatamente é o corvo?
+Pumpkin: Um ser de pura maldade.
+[question=9] What do you want to do now?
+[choice] "O que aconteceu com aquela pessoa preocupada com a vida?"
+[choice] End chat
+[title=M7Pergunta20Start]
+Alex: Qual o objetivo do corvo?
+Pumpkin: O objetivo do corvo é destruir o mundo.
+Pumpkin: Moldá-lo às suas vontades.
+Pumpkin: Conquista-lo.
+Alex: O que exatamente é o corvo?
+Pumpkin: Um ser de pura maldade.
+[title=M7Pergunta20End]
+[title=M7Pergunta10Start]
+Alex: O que aconteceu com aquela pessoa preocupada com a vida?
+Pumpkin: Ela morreu.
+Pumpkin: Foi um sacrifício nobre.
+Pumpkin: Graças ao sacrifício dela,
+Pumpkin: o corvo está preso.
+Alex: Onde?
+Pumpkin: Dentro de uma fenda no espaço-tempo.
+[title=M7Pergunta10End]
 
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M7KidRoomSceneStart]
-Alex: !!!!!
-Alex: O que é isso?! Uma página!
 [title=M7KidRoomSceneEnd]
-[title=M7PagePicked]
-Alex: Espera, parece que não falta mais nenhuma página!!
-[title=M7PagePickedEnd]
 [title=M7KidRoomSceneRepeat]
 [title=M7KidRoomSceneRepeatEnd]
 ----------------------------------- CENAS NA COZINHA -----------------------------------
@@ -528,56 +595,56 @@ Alex: Espera, parece que não falta mais nenhuma página!!
 [title=M7KitchenSceneRepeatEnd]
 ----------------------------------- CENAS NO JARDIM -----------------------------------
 [title=M7GardenSceneStart]
+Alex: Isso não funcionou.
+Alex: Preciso tentar com outra coisa!
 [title=M7GardenSceneEnd]
+[title=M7GardenShadowSceneStart]
+Shadow: O corvo que deseja.
+Shadow: O gato que ataca!
+Shadow: Dois lados da mesma moeda.
+Shadow: Pois um só vive enquanto o outro viver.
+Shadow: O corvo e o gato.
+[title=M7GardenShadowSceneEnd]
 [title=M7GardenSceneRepeat]
 [title=M7GardenSceneRepeatEnd]
------------------------------------ CENAS NO QUARTO DA MÃE -----------------------------------
+----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M7MomRoomSceneStart]
-Alex: Quantas páginas será que ainda faltam?
-Alex: Com esse escuro repentino...
-Alex: Fica complicado ver o livro desse jeito.
-Alex: Pra não dizer perigoso até...
-Alex: Calma... Cadê o Pumpkin?
-Alex: Onde será que ele foi?
-Alex: Pumpkin?!?
 [title=M7MomRoomSceneEnd]
 [title=M7LightFull]
-Alex: O que é essa luz?!
-Alex: Seriam aqueles...
-Alex: ...espíritos ou sentimentos que ajudei!?
-Alex: Ela deve ter aparecido por algum motivo...
 [title=M7LightFullEnd]
 [title=M7MomRoomSceneRepeat]
 [title=M7MomRoomSceneRepeatEnd]
+[title=M7MomRoomShadowSceneStart]
+Shadow: Fogo! Eu preciso de fogo!!
+Pumpkin: E não se esqueça... jogue-o dentro da fenda.
+Shadow: A fenda do espaço-tempo?
+Pumpkin: Sim. 
+Pumpkin: Pois é com luz e fogo que destruimos a escuridão.
+Pumpkin: Principalmente com fogo.
+Shadow: Eu gosto de fogo.
+Pumpkin: Queime tudo.
+[title=M7MomRoomShadowSceneEnd]
 ----------------------------------- CENAS NA SALA -----------------------------------
 [title=M7LivingroomSceneStart]
-Alex: Pumpkin!! O que está fazendo ai?
 [title=M7LivingroomSceneEnd]
 [title=M7TalkedPumpkin]
-Alex: Pumpkin, o que está fazendo?
-Pumpkin: Miaaau...
-Alex: Por que está arisco dessa forma!?
-Alex: O quê? O livro?! Espere...
-Alex: Você quer que eu leia ele?
-Alex: Aqui não é seguro...
-Alex: Preciso ir para meu quarto para isso!
-Pumpkin: Miau!
-Alex: Você deve ficar bem! Eu já volto!
 [title=M7TalkedPumpkinEnd]
 [title=M7LivingroomSceneRepeat]
 [title=M7LivingroomSceneRepeatEnd]
 ----------------------------------- CENAS NO CORREDOR -----------------------------------
 [title=M7CorridorSceneStart]
-Alex: Se multiplicou em duas!
-Alex: Que barulho é esse?
-Alex: Parece estar vindo da sala...
-Alex: Será que é o Pumpkin?
 [title=M7CorridorSceneEnd]
-[title=M7Corridor2]
-Alex: Outra?!
-[title=M7Corridor2End]
 [title=M7CorridorSceneRepeat]
 [title=M7CorridorSceneRepeatEnd]
+----------------------------------- CENAS NO BANHEIRO -----------------------------------
+[title=M7BathroomShadowSceneStart]
+Shadow: Destruir! Tenho que destruir!
+Pumpkin: Não deve falhar...
+Pumpkin: ou a tarefa será deixada para o próximo.
+Shadow: M-Mas se eu fizer o que diz..
+Shadow: morrerei!
+Pumpkin: Eu sei.
+[title=M7BathroomShadowSceneEnd]
 
 
 

@@ -605,7 +605,8 @@ Pumpkin: An being of pure evil.
 Alex: What happened to that person worried about life?
 Pumpkin: She died.
 Pumpkin: It was a noble sacrifice.
-Pumpkin: Thanks to her sacrifice, the raven is imprisioned.
+Pumpkin: Thanks to her sacrifice,
+Pumpkin: the raven is imprisioned.
 Alex: Where?
 Pumpkin: Inside the time and space rift.
 [title=M7Pergunta10End]
@@ -668,7 +669,7 @@ Pumpkin: Burn it all.
 Shadow: Destroy! I have to destroy!
 Pumpkin: You must not fail...
 Pumpkin: or the task shall be left for the following one.
-Shadow: If I do what you say...
+Shadow: B-but if I do what you say...
 Shadow: I'll die!
 Pumpkin: I know.
 [title=M7BathroomShadowSceneEnd]
