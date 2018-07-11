@@ -48,6 +48,7 @@ TagManager:
   - Papel
   - SickCrow
   - MiniGameRightArea
+  - MinionEmitter
   layers:
   - Default
   - TransparentFX

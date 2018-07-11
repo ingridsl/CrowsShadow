@@ -222,6 +222,11 @@ namespace CrowShadowPlayer
             {
                 triggered = true;
             }
+            if (collision.tag.Equals("MinnionEmitter"))
+            {
+                collision.gameObject.SetActive(false);
+
+            }
         }
 
         protected void OnTriggerExit2D(Collider2D collision)
