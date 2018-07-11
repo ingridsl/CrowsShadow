@@ -24,6 +24,7 @@ namespace CrowShadowPlayer
         private bool playing = false;
         private float timeLeft;
         private int counter;
+        public bool paper = false;
 
         public GameObject miniGame;
 
@@ -34,17 +35,25 @@ namespace CrowShadowPlayer
 
         public void Update()
         {
+            //if(activated && paper)
+           // {
+           //     miniGame.SetActive(true);
+
+           // }
             if (activated && CrossPlatformInputManager.GetButtonDown("keyUseObject") && !achievedGoal)
             {
                 miniGame.SetActive(true);
             }
             if (activated && miniGame.activeSelf && !achievedGoal)
             {
-                if (miniGame.transform.GetChild(1).gameObject.GetComponent<MiniGameCircle>().goalAchieved)
-                {
-                    achievedGoal = true;
-                    StopMiniGame();
+                var miniGameCircle = miniGame.transform.GetChild(1).gameObject.GetComponent<MiniGameCircle>();
+                if (miniGameCircle) {
+                    if (miniGameCircle.goalAchieved)
+                    {
+                        achievedGoal = true;
+                        StopMiniGame();
 
+                    }
                 }
 
             }
@@ -67,6 +76,7 @@ namespace CrowShadowPlayer
           //  if (anim != null) anim.SetActive(false);
            // if (flare != null) Destroy(flare);
             playing = false;
+            miniGame.transform.GetChild(1).gameObject.GetComponent<MiniGameCircle>().goalAchieved = false;
         }
 
         private void InitImage()

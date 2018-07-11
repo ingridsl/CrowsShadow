@@ -4,7 +4,7 @@ namespace CrowShadowPlayer
 {
     public class FarAttackMiniGameObject : FarAttackObject
     {
-        public bool miniGameBlocked = true;
+        public bool miniGameBlocked = false;
         public bool miniGameUnlocked = false;
         public bool achievedGoal = false;
 
@@ -19,11 +19,11 @@ namespace CrowShadowPlayer
             miniGameObject = GetComponent<MiniGameObject>();
             fireHolder = transform.Find("FirePaperHolder").gameObject;
             fire = fireHolder.transform.Find("Fire").gameObject;
-            if (!miniGameBlocked)
+            if (fire != null)
             {
                 addObject = false;
                 SetMiniGame();
-            }
+           }
         }
 
         protected new void Update()
@@ -42,7 +42,7 @@ namespace CrowShadowPlayer
                 }
                 else if (init && !attacking)
                 {
-                    EndFire();
+                   // EndFire();
                 }
                 else if (achievedGoal && !initAttack && !attacking)
                 {
@@ -97,6 +97,8 @@ namespace CrowShadowPlayer
         protected void SetMiniGame(bool e = true)
         {
             miniGameUnlocked = e;
+            miniGameObject.activated = e;
+            miniGameObject.paper = e;
             miniGameObject.enabled = e;
         }
 
@@ -112,6 +114,7 @@ namespace CrowShadowPlayer
                 SetMiniGame();
             }
             achievedGoal = false;
+            miniGameUnlocked = false;
             ShowFire(false);
         }
     }
