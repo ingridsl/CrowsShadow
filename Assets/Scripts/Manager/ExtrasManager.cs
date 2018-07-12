@@ -56,25 +56,37 @@ namespace CrowShadowManager
                 quest1.GetComponent<SideQuestObject>().numSideQuest = 1;
             }
             else if (sideQuests == 1 && current >= 6 && current != 9 && current != 10 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set side quest 2
+                GameObject quest2 = GameManager.instance.AddObject(
+                   "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
+                quest2.GetComponent<SideQuestObject>().numSideQuest = 2;
             }
             else if (sideQuests == 2 && current >= 7 && current != 9 && current != 10 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+                && GameManager.currentSceneName.Equals("Cozinha"))
             {
                 // set side quest 3
+                GameObject quest3 = GameManager.instance.AddObject(
+                   "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
+                quest3.GetComponent<SideQuestObject>().numSideQuest = 3;
             }
             else if (sideQuests == 3 && current >= 8 && current != 9 && current != 10 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+                && GameManager.currentSceneName.Equals("Banheiro"))
             {
                 // set side quest 4
+                GameObject quest4 = GameManager.instance.AddObject(
+                   "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
+                quest4.GetComponent<SideQuestObject>().numSideQuest = 4;
             }
             else if (sideQuests == 4 && Book.pageQuantity == 5 && current >= 12
-                && GameManager.currentSceneName.Equals(""))
+                && GameManager.currentSceneName.Equals("QuartoKid"))
             {
                 // set side quest 5
                 // flashback mostrando algo que desbloqueia a última página e chama o PagesManager ao final
+                GameObject quest5 = GameManager.instance.AddObject(
+                   "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
+                quest5.GetComponent<SideQuestObject>().numSideQuest = 5;
             }
         }
 
@@ -83,36 +95,48 @@ namespace CrowShadowManager
             int current = GameManager.instance.currentMission;
             int pages = Book.pageQuantity;
 
-            if (pages >= 0 && current >= 5 && current != 9 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+            if (pages == 0 && current >= 5 && current != 9 && current != 11
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set page 1
+                GameObject page1 = GameManager.instance.AddObject(
+                   "Objects/Page", "", new Vector3(0.5f, 0f, 0f), new Vector3(1, 1, 1));
             }
-            if (pages >= 1 && current >= 6 && current != 9 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+            if (pages == 1 && current >= 6 && current != 9 && current != 11
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set page 2
+                GameObject page2 = GameManager.instance.AddObject(
+                   "Objects/Page", "", new Vector3(1f, 0f, 0f), new Vector3(1, 1, 1));
             }
-            if (pages >= 2 && current >= 7 && current != 9 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+            if (pages == 2 && current >= 7 && current != 9 && current != 11
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set page 3
+                GameObject page3 = GameManager.instance.AddObject(
+                   "Objects/Page", "", new Vector3(1.5f, 0f, 0f), new Vector3(1, 1, 1));
             }
-            if (pages >= 3 && current >= 8 && current != 9 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+            if (pages == 3 && current >= 8 && current != 9 && current != 11
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set page 4
+                GameObject page4 = GameManager.instance.AddObject(
+                   "Objects/Page", "", new Vector3(2f, 0f, 0f), new Vector3(1, 1, 1));
             }
-            if (pages >= 4 && current >= 10 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+            if (pages == 4 && current >= 10 && current != 11
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set page 5
+                GameObject page5 = GameManager.instance.AddObject(
+                   "Objects/Page", "", new Vector3(2.5f, 0f, 0f), new Vector3(1, 1, 1));
             }
             if (pages == 5 && GameManager.instance.sideQuests == 5 && current >= 12 && current != 9 && current != 11
-                && GameManager.currentSceneName.Equals(""))
+                && GameManager.currentSceneName.Equals("Jardim"))
             {
-                // página aonde ocorrer o flashback da sideQuest 5
+                // página aparece aonde ocorrer o flashback da sideQuest 5, após este
                 // set page 6
+                GameObject page6 = GameManager.instance.AddObject(
+                   "Objects/Page", "", new Vector3(3f, 0f, 0f), new Vector3(1, 1, 1));
             }
         }
 
