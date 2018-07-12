@@ -7,9 +7,9 @@ namespace CrowShadowNPCs
 {
     public class Minion : Follower
     {
-        public int healthLight = 200; //decrementa 1 por colisão
-        public int healthMelee = 300;
-        public int decrementFaca = 30, decrementBastao = 25, decrementPedra = 20;
+        public int healthLight = 600; //decrementa 1 por colisão
+        public int healthMelee = 200;
+        public int decrementFaca = 50, decrementBastao = 35, decrementPedra = 25;
         public float addPath = 0.5f; // quanto vai ser adicionado ao somatório das escolhas
         public float timeMaxPower = 3f; // tempo máximo que pode ficar colidindo com o minion para não ativar próximo poder
         public float timeMaxChangeVelocity = 6f, factorDivideSpeed = 1.2f; // tempo máximo com velocidade menor e fator para dividi-la
@@ -172,15 +172,17 @@ namespace CrowShadowNPCs
             {
                 OnTriggerCalled(collision);
             }
-            //print("Minion: " + collision.tag);
+            print("Minion: " + collision.tag);
             if ((collision.tag.Equals("Flashlight") && Flashlight.GetState()) || collision.tag.Equals("Lamp"))
             {
                 healthLight--;
             }
             else if (collision.tag.Equals("Faca") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
             {
+                print("FAAACAA");
                 timeLeftAttack = AttackObject.timeAttack;
                 healthMelee -= decrementFaca;
+                print(healthMelee);
             }
             else if (collision.tag.Equals("Bastao") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
             {
