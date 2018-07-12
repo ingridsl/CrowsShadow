@@ -14,7 +14,7 @@ public class SideQuest1 : SideQuest
             sideX = 0f; sideY = 18f;
             sideDir = 3;
             // Determinar tempo para terminar o nível
-            timeEscape = 10f;
+            timeEscape = 30f;
             SetInitialSettings();
         }
 
@@ -24,7 +24,7 @@ public class SideQuest1 : SideQuest
         // Determinar conjuntos de espíritos
         GameObject holder = GameManager.instance.AddObject("Scenery/SpiritHolder", "", new Vector3(0, 0, 0), new Vector3(1, 1, 1));
         spiritManager = holder.GetComponent<SpiritManager>();
-        spiritManager.GenerateSpiritMap(3f, 0f, -5f, 4);
+        spiritManager.GenerateSpiritMap(3f, 0f, -5f, /*4*/6);
     }
 
     public override void UpdateSideQuest()

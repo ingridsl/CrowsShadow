@@ -367,6 +367,8 @@ Alex: O que é essa coisa brilhante?
 Alex: Talvez eu possa chegar mais perto!
 [title=M5KidRoomSceneSideEnd]
 [title=M5KidRoomSceneRepeat]
+Alex: Espera! Que som é esse?
+Alex: Eu preciso ver de onde ele está vindo...
 [title=M5KidRoomSceneRepeatEnd]
 ----------------------------------- CENAS NA COZINHA -----------------------------------
 [title=M5KitchenSceneStart]

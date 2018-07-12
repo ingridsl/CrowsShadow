@@ -396,6 +396,8 @@ Alex: What is that glowing thing?
 Alex: Maybe I can get closer!
 [title=M5KidRoomSceneSideEnd]
 [title=M5KidRoomSceneRepeat]
+Alex: Wait! What is that sound?
+Alex: I need to see where this is coming from...
 [title=M5KidRoomSceneRepeatEnd]
 ----------------------------------- CENAS NA COZINHA -----------------------------------
 [title=M5KitchenSceneStart]
