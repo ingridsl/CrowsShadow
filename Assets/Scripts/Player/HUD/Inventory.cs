@@ -319,6 +319,8 @@ namespace CrowShadowPlayer
             else
             {
                 currentItem = -1;
+                pedraCount = 0;
+                papelCount = 0;
             }
         }
 
