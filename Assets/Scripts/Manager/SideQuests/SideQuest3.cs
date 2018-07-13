@@ -42,7 +42,7 @@ public class SideQuest3 : SideQuest
         lightManager.AddLight(2, sideX, sideY - 12, 3f, false, 0, null);
         lightManager.AddLight(1, sideX, sideY - 16, 4f, false, 0, null);
         lightManager.AddLight(2, sideX, sideY - 20, 3f, false, 0, null);
-        lightManager.AddLight(1, sideX, sideY - 23, 1.5f, false, 0, null);
+        lightManager.AddLight(1, sideX, sideY - 22, 1f, false, 0, null);
     }
 
     public override void UpdateSideQuest()

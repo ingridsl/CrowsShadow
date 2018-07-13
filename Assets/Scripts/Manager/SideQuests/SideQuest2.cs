@@ -37,10 +37,12 @@ public class SideQuest2 : SideQuest
         lightManager.GenerateBorderLightMap(sideX, sideY, radius, originX, originY);
 
         // Determinar luzes
-        lightManager.AddLight(1, sideX, sideY - 4, 3f, false, 0, null);
+        Vector3[] aux1 = { new Vector3(sideX - 5, sideY - 4, 0), new Vector3(sideX + 5, sideY - 4, 0) };
+        lightManager.AddLight(1, sideX, sideY - 4, 3f, true, 2f, aux1);
         lightManager.AddLight(1, sideX, sideY - 8, 4f, false, 0, null);
         lightManager.AddLight(1, sideX, sideY - 12, 3f, false, 0, null);
-        lightManager.AddLight(1, sideX, sideY - 16, 4f, false, 0, null);
+        Vector3[] aux2 = { new Vector3(sideX - 3, sideY - 16, 0), new Vector3(sideX + 3, sideY - 16, 0) };
+        lightManager.AddLight(1, sideX, sideY - 16, 4f, true, 1f, aux2);
         lightManager.AddLight(1, sideX, sideY - 20, 3f, false, 0, null);
         lightManager.AddLight(1, sideX, sideY - 23, 1.5f, false, 0, null);
     }
