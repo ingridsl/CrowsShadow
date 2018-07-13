@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 50318696087106856}
   - component: {fileID: 114031394400129998}
   m_Layer: 0
-  m_Name: Corvo
+  m_Name: Crow
   m_TagString: Corvo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
