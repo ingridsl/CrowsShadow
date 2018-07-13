@@ -7,7 +7,7 @@ namespace CrowShadowNPCs
 {
     public class Minion : Follower
     {
-        public int healthLight = 100; //decrementa 1 por colisão
+        public int healthLight = 300; //decrementa 1 por colisão
         public int healthMelee = 200;
         public int decrementFaca = 50, decrementBastao = 35, decrementPedra = 25;
         public float addPath = 0.5f; // quanto vai ser adicionado ao somatório das escolhas
@@ -19,12 +19,15 @@ namespace CrowShadowNPCs
         Player playerScript;
         Rigidbody2D playerRB;
         Renderer playerRenderer;
+        AttackObject faca, bastao;
         ProtectionObject tampa, escudo;
+        FarAttackObject pedra;
+        FarAttackMiniGameObject papel;
 
         float timeLeftAttack = 0, timePower = 0, timeChangeVelocity = 0;
         int power = 0; // 1 - diminui velocidade, 2 - inverte controles, 3 - morre
         bool onCollision = false, changeVelocity = false;
-        bool attackFlahslight = false;
+        bool attackFlashlight = false, attackFaca = false, attackBastao = false, attackPedra = false, attackPapel = false;
 
         protected new void Start()
         {
@@ -35,8 +38,12 @@ namespace CrowShadowNPCs
             playerScript = player.GetComponent<Player>();
             playerRB = player.GetComponent<Rigidbody2D>();
             playerRenderer = player.GetComponent<Renderer>();
+            faca = GameManager.instance.gameObject.transform.Find("Faca").gameObject.GetComponent<AttackObject>();
+            bastao = GameManager.instance.gameObject.transform.Find("Bastao").gameObject.GetComponent<AttackObject>();
             tampa = GameManager.instance.gameObject.transform.Find("Tampa").gameObject.GetComponent<ProtectionObject>();
             escudo = GameManager.instance.gameObject.transform.Find("Escudo").gameObject.GetComponent<ProtectionObject>();
+            pedra = GameManager.instance.gameObject.transform.Find("Pedra").gameObject.GetComponent<FarAttackObject>();
+            papel = GameManager.instance.gameObject.transform.Find("Papel").gameObject.GetComponent<FarAttackMiniGameObject>();
         }
 
         protected new void Update()
@@ -63,10 +70,19 @@ namespace CrowShadowNPCs
                 }
             }
 
-            if (attackFlahslight)
+            if (attackFlashlight)
             {
-                print("LUUUUUZ " + healthLight);
                 healthLight--;
+            }
+            else if (attackFaca && faca.attacking && timeLeftAttack <= 0)
+            {
+                timeLeftAttack = AttackObject.timeAttack;
+                healthMelee -= decrementFaca;
+            }
+            else if (attackBastao && bastao.attacking && timeLeftAttack <= 0)
+            {
+                timeLeftAttack = AttackObject.timeAttack;
+                healthMelee -= decrementBastao;
             }
 
             // Ao colidir
@@ -174,44 +190,35 @@ namespace CrowShadowNPCs
 
             if ((collision.tag.Equals("Flashlight") && Flashlight.GetState()) || collision.tag.Equals("Lamp"))
             {
-                attackFlahslight = true;
+                attackFlashlight = true;
             }
-        }
-
-        protected new void OnTriggerStay2D(Collider2D collision)
-        {
-            if (!followingPlayer)
+            else if (collision.tag.Equals("Faca"))
             {
-                OnTriggerCalled(collision);
+                attackFaca = true;
             }
-            //print("Minion: " + collision.tag);
-            
-            if (collision.tag.Equals("Faca") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
+            else if (collision.tag.Equals("Bastao"))
             {
-                print("FAAACAA");
-                timeLeftAttack = AttackObject.timeAttack;
-                healthMelee -= decrementFaca;
-                print(healthMelee);
+                attackBastao = true;
             }
-            else if (collision.tag.Equals("Bastao") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
+            else if (collision.tag.Equals("Pedra") && pedra.attacking)
             {
-                timeLeftAttack = AttackObject.timeAttack;
-                healthMelee -= decrementBastao;
-            }
-            else if (collision.tag.Equals("Pedra") && collision.GetComponent<FarAttackObject>().attacking)
-            {
-                collision.GetComponent<FarAttackObject>().hitSuccess = true;
+                pedra.hitSuccess = true;
                 healthMelee -= decrementPedra;
             }
-            else if (collision.tag.Equals("Papel") && collision.GetComponent<FarAttackMiniGameObject>().attacking)
+            else if (collision.tag.Equals("Papel") && papel.attacking)
             {
-                collision.GetComponent<FarAttackMiniGameObject>().hitSuccess = true;
-                if (collision.GetComponent<FarAttackMiniGameObject>().achievedGoal)
+                papel.hitSuccess = true;
+                if (papel.achievedGoal)
                 {
                     if (emmitter) emmitter.currentMinions--;
                     Destroy(gameObject);
                 }
             }
+        }
+
+        protected new void OnTriggerStay2D(Collider2D collision)
+        {
+            
         }
 
         protected void OnTriggerExit2D(Collider2D collision)
@@ -223,7 +230,15 @@ namespace CrowShadowNPCs
 
             if (collision.tag.Equals("Flashlight") || collision.tag.Equals("Lamp"))
             {
-                attackFlahslight = false;
+                attackFlashlight = false;
+            }
+            else if (collision.tag.Equals("Faca"))
+            {
+                attackFaca = true;
+            }
+            else if (collision.tag.Equals("Bastao"))
+            {
+                attackBastao = true;
             }
         }
 

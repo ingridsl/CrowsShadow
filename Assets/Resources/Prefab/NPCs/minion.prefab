@@ -117,7 +117,7 @@ MonoBehaviour:
   offsetActionPatroller: 0.2
   followWhenClose: 1
   followingPlayer: 0
-  healthLight: 100
+  healthLight: 300
   healthMelee: 200
   decrementFaca: 50
   decrementBastao: 35
