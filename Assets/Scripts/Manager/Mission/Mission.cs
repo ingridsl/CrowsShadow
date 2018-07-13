@@ -99,6 +99,7 @@ public abstract class Mission {
         if (Crow.instance != null) Crow.instance.DestroyRaven();
 
         GameManager.instance.paused = false;
+        GameManager.instance.blocked = false;
 
         player = GameManager.instance.gameObject;
         fosforo = player.transform.Find("Fosforo").gameObject;

@@ -14,8 +14,13 @@ namespace CrowShadowNPCs
         public bool hydraEffect = true, destructible = false, colliding = false;
         public float limitX0 = -3f, limitXF = 3f, limitY0 = -2f, limitYF = 2f;
 
+        Player playerScript;
+        float speedPlayer = 0;
+
         private void Start()
         {
+            playerScript = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<Player>();
+            speedPlayer = playerScript.movespeed;
             GenerateMinionMap();
         }
 
@@ -118,6 +123,9 @@ namespace CrowShadowNPCs
                 if (collision.GetComponent<FarAttackMiniGameObject>().achievedGoal)
                 {
                     // Colocar animação de destruição e todos os minions morrendo
+                    playerScript.movespeed = speedPlayer;
+                    playerScript.invertControlsTime = 0;
+                    GameManager.instance.Invoke("InvokeMission", 0.2f);
                     Destroy(gameObject);
                 }
             }
