@@ -376,6 +376,10 @@ public class Mission11 : Mission {
 
     }
 
+    public override void SetPorao()
+    {
+
+    }
     public override void EspecificaEnum(int pos)
     {
         secao = (enumMission) pos;

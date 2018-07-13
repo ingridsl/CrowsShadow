@@ -399,6 +399,10 @@ public class Mission1 : Mission {
     {
 
     }
+    public override void SetPorao()
+    {
+
+    }
 
     public override void ForneceDica()
     {

@@ -4,6 +4,7 @@ using CrowShadowNPCs;
 using CrowShadowObjects;
 using CrowShadowPlayer;
 using CrowShadowScenery;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Mission10 : Mission {
     enum enumMission { NIGHT, INICIO, CORVO_APARECE_CAT, CORVO_ATACA_CAT_INIT, CORVO_ATACA_CAT, MAE_CAT, FINAL_CAT,
@@ -17,12 +18,13 @@ public class Mission10 : Mission {
     bool estanteBurn = false, poltronaBurn = false, sofaBurn = false;
     bool falaMae = false, falaGato = false;
     bool birdsActive = false;
-    float portaDefaultX, portaDefaultY; 
+    float portaDefaultX, portaDefaultY;
+    bool fireBasement = false;
 
     // ANALISAR DIFICULDADE DO NIVEL E DOS DIFERENTES OBJETOS - FACA, PEDRO, FOSFORO, ISQUEIRO
     public override void InitMission()
     {
-        sceneInit = "QuartoKid";
+        sceneInit = "Porao";
         GameManager.initMission = true;
         GameManager.initX = (float) 1.5;
         GameManager.initY = (float) 0.2;
@@ -584,6 +586,15 @@ public class Mission10 : Mission {
 
     public override void AreaTriggered(string tag)
     {
+
+        if (tag.Equals("PoraoTrigger") && (Inventory.HasItemType(Inventory.InventoryItems.ISQUEIRO) || Inventory.HasItemType(Inventory.InventoryItems.FOSFORO)))
+        {
+            if (CrossPlatformInputManager.GetButtonDown("keyInteract") && !fireBasement) {
+                GameObject fire = GameManager.instance.AddObject(
+               "ScenerySounds/FogoChamine", "", new Vector3(-1.19f, 0.9f, -2f), new Vector3(1f, 1f, 0.5242185f));
+                fireBasement = true;
+            }
+        }
         if (tag.Equals("EnterMomTrigger") && !falaMae)
         {
             GameManager.instance.rpgTalk.NewTalk("M8MomRoomSceneStart", "M8MomRoomSceneEnd", false);
@@ -651,6 +662,17 @@ public class Mission10 : Mission {
     public override void SetBanheiro()
     {
 
+    }
+
+    public override void SetPorao()
+    {
+        GameObject trigger = GameManager.instance.AddObject("Scenery/AreaTrigger", "", new Vector3(-1.2f, 0.75f, 0), new Vector3(1, 1, 1));
+        trigger.name = "PoraoTrigger";
+        trigger.GetComponent<Collider2D>().offset = new Vector2(0, 0);
+        trigger.GetComponent<BoxCollider2D>().size = new Vector2(2f, 1f);
+
+
+        GameObject aux = GameManager.instance.AddObject("Effects/MasterRiftEmitter", new Vector3(-2.9f, 0.67f, 0));
     }
 
     public override void InvokeMission()

@@ -57,6 +57,10 @@ public abstract class Mission {
         {
             SetBanheiro();
         }
+        else if (GameManager.currentSceneName.Equals("Porao"))
+        {
+            SetPorao();
+        }
     }
 
     public abstract void InitMission();
@@ -76,6 +80,8 @@ public abstract class Mission {
     public abstract void SetSala();
 
     public abstract void SetBanheiro();
+
+    public abstract void SetPorao();
 
     public abstract void EspecificaEnum(int pos);
 
