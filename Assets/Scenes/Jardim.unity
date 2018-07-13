@@ -15137,6 +15137,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec04b9b417439fb4d9a24a13df283fbe, type: 2}
   m_IsPrefabParent: 0
+--- !u!212 &513204368 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212634031637202178, guid: 2df224d072d6e7c4f871134aadb92158,
+    type: 2}
+  m_PrefabInternal: {fileID: 1188741918}
 --- !u!1 &518326665
 GameObject:
   m_ObjectHideFlags: 0
@@ -33859,6 +33864,10 @@ Prefab:
       propertyPath: isOpened
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1191008083747400, guid: 2df224d072d6e7c4f871134aadb92158, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2df224d072d6e7c4f871134aadb92158, type: 2}
   m_IsPrefabParent: 0
@@ -37974,7 +37983,7 @@ Prefab:
     - target: {fileID: 224177635510228340, guid: c38ca62de99e318449daf6d0da891795,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224177635510228340, guid: c38ca62de99e318449daf6d0da891795,
         type: 2}
@@ -38299,6 +38308,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 114534867240342550, guid: c38ca62de99e318449daf6d0da891795,
+        type: 2}
+      propertyPath: rendererBasement
+      value: 
+      objectReference: {fileID: 513204368}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c38ca62de99e318449daf6d0da891795, type: 2}
   m_IsPrefabParent: 0
