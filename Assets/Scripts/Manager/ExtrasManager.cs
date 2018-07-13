@@ -55,7 +55,7 @@ namespace CrowShadowManager
                     "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
                 quest1.GetComponent<SideQuestObject>().numSideQuest = 1;
             }
-            else if (sideQuests == 1 && current >= 6 && current != 9 && current != 10 && current != 11
+            else if (sideQuests == 1 && current >= 12//current >= 6 && current != 9 && current != 10 && current != 11
                 && GameManager.currentSceneName.Equals("Jardim"))
             {
                 // set side quest 2
@@ -63,7 +63,7 @@ namespace CrowShadowManager
                    "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
                 quest2.GetComponent<SideQuestObject>().numSideQuest = 2;
             }
-            else if (sideQuests == 2 && current >= 7 && current != 9 && current != 10 && current != 11
+            else if (sideQuests == 2 && current >= 12//current >= 7 && current != 9 && current != 10 && current != 11
                 && GameManager.currentSceneName.Equals("Cozinha"))
             {
                 // set side quest 3
@@ -71,7 +71,7 @@ namespace CrowShadowManager
                    "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
                 quest3.GetComponent<SideQuestObject>().numSideQuest = 3;
             }
-            else if (sideQuests == 3 && current >= 8 && current != 9 && current != 10 && current != 11
+            else if (sideQuests == 3 && current >= 12//current >= 8 && current != 9 && current != 10 && current != 11
                 && GameManager.currentSceneName.Equals("Banheiro"))
             {
                 // set side quest 4
