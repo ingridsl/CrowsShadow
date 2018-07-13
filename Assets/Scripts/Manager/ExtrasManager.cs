@@ -7,7 +7,7 @@ namespace CrowShadowManager
     public class ExtrasManager
     {
         //ATINGIU CONDIÇÕES DE ATIVAR RESPECTIVA SIDE QUEST
-        public static bool canActivateSide1 = false;
+        public static bool canActivateSide1 = false, canActivatePage4 = false;
 
         public static void InitSideQuest(int numSideQuest)
         {
@@ -117,7 +117,7 @@ namespace CrowShadowManager
                    "Objects/Page", "", new Vector3(1.5f, 0f, 0f), new Vector3(1, 1, 1));
             }
             if (pages == 3 && current >= 8 && current != 9 && current != 11
-                && GameManager.currentSceneName.Equals("Jardim"))
+                && GameManager.currentSceneName.Equals("Jardim") && canActivatePage4)
             {
                 // set page 4
                 GameObject page4 = GameManager.instance.AddObject(
