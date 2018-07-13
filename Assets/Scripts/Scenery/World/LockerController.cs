@@ -33,7 +33,7 @@ namespace CrowShadowScenery
 
         GameObject locker, basement;
         SceneDoor sceneDoor;
-        SpriteRenderer rendererBasement;
+        public SpriteRenderer rendererBasement;
 
         int selectedRow = 1;
         int selectedNumber1 = 1;
@@ -51,7 +51,7 @@ namespace CrowShadowScenery
             {
                 basement = GameObject.Find("Jardim").gameObject.transform.GetChild(0).gameObject;
                 sceneDoor = basement.GetComponent<SceneDoor>();
-                rendererBasement = basement.GetComponent<SpriteRenderer>();
+                //rendererBasement = basement.GetComponent<SpriteRenderer>();
             }
         }
 
@@ -99,8 +99,11 @@ namespace CrowShadowScenery
                             source.PlayOneShot(success);
 
                             Invoke("Show", 0.5f);
-                            sceneDoor.isOpened = true;
-                            rendererBasement.sprite = Resources.Load<Sprite>("Sprites/Objects/Scene/porão-aberto");
+                            //sceneDoor.isOpened = true;
+                            var doorToBasement = GameObject.Find("Jardim").gameObject.transform.GetChild(0).gameObject;
+                            doorToBasement.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Objects/Scene/vasoPlanta_quebrado");
+                            doorToBasement.GetComponent<SceneDoor>().isOpened = true;
+
                         }
                     }
                 }
@@ -323,7 +326,7 @@ namespace CrowShadowScenery
             }
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        void OnTriggerStay2D(Collider2D other)
         {
             GameObject board;
 
