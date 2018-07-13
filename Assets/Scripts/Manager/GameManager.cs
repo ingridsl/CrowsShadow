@@ -1199,18 +1199,20 @@ namespace CrowShadowManager
                         break;
                 }
             }
-            else if (questionId == 9)
+            else if (questionId == 10)
             { // escolha de dialogo de perguntar ao gato
                 switch (choiceID)
                 {
                     case 0:
-                        rpgTalk.NewTalk("M7Pergunta20Start", "M7Pergunta20End");
+                        rpgTalk.NewTalk("M5Q10C0", "M5Q10C0End");
                         break;
                     default:
-                        rpgTalk.NewTalk("M7FineStart", "M7FineEnd");
+                        rpgTalk.NewTalk("M5Q10C1", "M5Q10C1End");
                         break;
                 }
+
             }
+
 
             mission.InvokeMissionChoice(choiceID);
         }

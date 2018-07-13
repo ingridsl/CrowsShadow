@@ -78,7 +78,7 @@ namespace CrowShadowNPCs
 
         public void StopAllMinions()
         {
-            StopAll = true;
+            stopAll = true;
             foreach (GameObject minion in minionList)
             {
                 if (minion != null)
