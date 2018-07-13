@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using CrowShadowManager;
 
 namespace CrowShadowScenery
 {
@@ -38,6 +39,7 @@ namespace CrowShadowScenery
                     }
                     lastNumBird = numBird;
                     print("BIRDSSS: " + lastNumBird);
+                    GameManager.instance.scenerySounds.PlayBird(1);
                     GameObject.Find("CrowBabies (" + numBird + ")").gameObject.transform.Find("BirdEmitterCollider").gameObject.SetActive(true);
                     timeEmitter = timeTotalEmitter;
                 }

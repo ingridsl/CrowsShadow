@@ -21,7 +21,7 @@ namespace CrowShadowScenery
         }
 
         // Pode adicionar outros parâmetros para mudar (intensidade, cor)
-        private void AddLight(int type, float x, float y, float radius, bool active, float speed, Vector3[] targets, bool changeZ = false)
+        public void AddLight(int type, float x, float y, float radius, bool active, float speed, Vector3[] targets, bool changeZ = false)
         {
             switch (type)
             {
