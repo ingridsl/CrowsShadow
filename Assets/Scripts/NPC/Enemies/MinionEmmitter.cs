@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using CrowShadowManager;
+using CrowShadowPlayer;
 
 namespace CrowShadowNPCs
 {
@@ -8,7 +9,7 @@ namespace CrowShadowNPCs
 
         public GameObject minionObject = null;
         public int numMinions = 5, currentMinions = 0;
-        public bool hydraEffect = true;
+        public bool hydraEffect = true, destructible = false, colliding = false;
         public float limitX0 = -3f, limitXF = 3f, limitY0 = -2f, limitYF = 2f;
 
         private void Start()
@@ -63,6 +64,35 @@ namespace CrowShadowNPCs
                 }
                 targets[numTargets - 1] = new Vector3(transform.position.x, transform.position.y, 0);
                 minion.GetComponent<Minion>().targets = targets;
+            }
+        }
+
+        protected void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag.Equals("Player"))
+            {
+                colliding = true;
+            }
+        }
+
+        protected void OnTriggerStay2D(Collider2D collision)
+        {
+            if (destructible && collision.tag.Equals("Papel") && collision.GetComponent<FarAttackMiniGameObject>().attacking)
+            {
+                collision.GetComponent<FarAttackMiniGameObject>().hitSuccess = true;
+                if (collision.GetComponent<FarAttackMiniGameObject>().achievedGoal)
+                {
+                    // Colocar animação de destruição e todos os minions morrendo
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        protected void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag.Equals("Player"))
+            {
+                colliding = false;
             }
         }
 
