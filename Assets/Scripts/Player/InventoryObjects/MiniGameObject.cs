@@ -15,22 +15,21 @@ namespace CrowShadowPlayer
         public int counterMax = 20;
         public bool refreshTimeMax = true;
         public float posFlareX = 0, posFlareY = 0;
+        public bool paper = false;
 
         GameObject anim, flare;
         RectTransform animRect;
         Image animImage;
+        GameObject miniGame;
 
         private bool otherItem = true;
         private bool playing = false;
         private float timeLeft;
         private int counter;
-        public bool paper = false;
-
-        public GameObject miniGame;
 
         void Start()
         {
-          
+            miniGame = GameObject.Find("HUDCanvas").transform.Find("MiniGameHolder").gameObject;
         }
 
         public void Update()
