@@ -11,14 +11,14 @@ namespace CrowShadowPlayer
         public bool attacking = false;
 
         Player player;
-        Collider2D colliderComponent;
+        CircleCollider2D colliderComponent;
 
         float timeLeftAttack = 0;
 
         void Start()
         {
             player = GetComponentInParent<Player>();
-            colliderComponent = GetComponent<Collider2D>();
+            colliderComponent = GetComponent<CircleCollider2D>();
             attacking = false;
         }
 
@@ -73,16 +73,16 @@ namespace CrowShadowPlayer
             switch (player.direction)
             {
                 case Player.Directions.EAST:
-                    colliderComponent.offset = new Vector2(1, 0);
+                    colliderComponent.offset = new Vector2(0.5f, 0);
                     break;
                 case Player.Directions.WEST:
-                    colliderComponent.offset = new Vector2(-1, 0);
+                    colliderComponent.offset = new Vector2(-0.5f, 0);
                     break;
                 case Player.Directions.NORTH:
-                    colliderComponent.offset = new Vector2(0, 1);
+                    colliderComponent.offset = new Vector2(0, 0.5f);
                     break;
                 case Player.Directions.SOUTH:
-                    colliderComponent.offset = new Vector2(0, -1);
+                    colliderComponent.offset = new Vector2(0, -0.5f);
                     break;
                 default:
                     break;

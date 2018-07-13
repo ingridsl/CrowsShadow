@@ -152,7 +152,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114336094573981668, guid: 063980b53742ff1448b88d2562035754,
+    - target: {fileID: 114334103409424932, guid: 063980b53742ff1448b88d2562035754,
         type: 2}
       propertyPath: miniGame
       value: 
@@ -162,7 +162,7 @@ Prefab:
       propertyPath: miniGame
       value: 
       objectReference: {fileID: 1764328100}
-    - target: {fileID: 114334103409424932, guid: 063980b53742ff1448b88d2562035754,
+    - target: {fileID: 114336094573981668, guid: 063980b53742ff1448b88d2562035754,
         type: 2}
       propertyPath: miniGame
       value: 
@@ -9391,6 +9391,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224557403657529144, guid: 8d1b083e1fa293148a13d0924d536cb5,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d1b083e1fa293148a13d0924d536cb5, type: 2}

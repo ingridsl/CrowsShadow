@@ -52,7 +52,7 @@ namespace CrowShadowNPCs
                 minion.GetComponent<Minion>().speed = Random.Range(0.15f, 0.3f);
                 minion.GetComponent<Minion>().timeMaxPower = Random.Range(2f, 5f);
                 minion.GetComponent<Minion>().timeMaxChangeVelocity = Random.Range(4f, 8f);
-                minion.GetComponent<Minion>().factorDivideSpeed = Random.Range(1.5f, 2f);
+                minion.GetComponent<Minion>().factorDivideSpeed = Random.Range(1.2f, 1.5f);
                 minion.GetComponent<Minion>().timeInvertControls = Random.Range(4f, 8f);
 
                 int numTargets = Random.Range(2, 5);

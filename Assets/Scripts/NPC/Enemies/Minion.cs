@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using CrowShadowManager;
 using CrowShadowPlayer;
 
@@ -6,9 +7,9 @@ namespace CrowShadowNPCs
 {
     public class Minion : Follower
     {
-        public int healthLight = 200; //decrementa 1 por colisão
-        public int healthMelee = 300;
-        public int decrementFaca = 30, decrementBastao = 25, decrementPedra = 20;
+        public int healthLight = 600; //decrementa 1 por colisão
+        public int healthMelee = 200;
+        public int decrementFaca = 50, decrementBastao = 35, decrementPedra = 25;
         public float addPath = 0.5f; // quanto vai ser adicionado ao somatório das escolhas
         public float timeMaxPower = 3f; // tempo máximo que pode ficar colidindo com o minion para não ativar próximo poder
         public float timeMaxChangeVelocity = 6f, factorDivideSpeed = 1.2f; // tempo máximo com velocidade menor e fator para dividi-la
@@ -131,6 +132,7 @@ namespace CrowShadowNPCs
         private void ActivatePower()
         {
             print("ACTIVATE " + power);
+            PlayAnimation("minionAttack");
             switch (power)
             {
                 case 0:
@@ -154,25 +156,33 @@ namespace CrowShadowNPCs
 
         protected new void OnTriggerEnter2D(Collider2D collision)
         {
-            OnTriggerCalled(collision);
             if (collision.gameObject.tag.Equals("Player") && followingPlayer)
             {
                 onCollision = true;
+            }
+            else
+            {
+                OnTriggerCalled(collision);
             }
         }
 
         protected new void OnTriggerStay2D(Collider2D collision)
         {
-            OnTriggerCalled(collision);
-            //print("Minion: " + collision.tag);
+            if (!followingPlayer)
+            {
+                OnTriggerCalled(collision);
+            }
+            print("Minion: " + collision.tag);
             if ((collision.tag.Equals("Flashlight") && Flashlight.GetState()) || collision.tag.Equals("Lamp"))
             {
                 healthLight--;
             }
             else if (collision.tag.Equals("Faca") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
             {
+                print("FAAACAA");
                 timeLeftAttack = AttackObject.timeAttack;
                 healthMelee -= decrementFaca;
+                print(healthMelee);
             }
             else if (collision.tag.Equals("Bastao") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
             {
@@ -212,11 +222,28 @@ namespace CrowShadowNPCs
                 {
                     if (followWhenClose && !followingPlayer)
                     {
+                        circleCollider.radius = 0.2f;
                         FollowPlayer();
-                        circleCollider.radius = 0.3f;
                     }
                 }
             }
+        }
+
+        public void PlayAnimation(string anim, float time = 1f)
+        {
+            //print("ANIM:" + anim + time);
+            animator.Play(anim);
+            StartCoroutine(WaitCoroutineAnim(time));
+        }
+
+        IEnumerator WaitCoroutineAnim(float time)
+        {
+            Debug.Log("about to yield return WaitForSeconds(" + time + ")");
+            yield return new WaitForSeconds(time);
+            Debug.Log("Animation ended");
+            animator.SetTrigger("changeDirection");
+            yield break;
+            //Debug.Log("You'll never see this"); // produces a dead code warning
         }
     }
 }

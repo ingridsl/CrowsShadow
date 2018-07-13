@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6405815b6534e4bb0f0bcde7dfbe01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
   animator: {fileID: 0}
+  speed: 0.2
   isPatroller: 1
   destroyEndPath: 0
   stopEndPath: 0
@@ -117,15 +117,15 @@ MonoBehaviour:
   offsetActionPatroller: 0.2
   followWhenClose: 1
   followingPlayer: 0
-  healthLight: 200
-  healthMelee: 300
-  decrementFaca: 30
-  decrementBastao: 25
-  decrementPedra: 20
+  healthLight: 600
+  healthMelee: 200
+  decrementFaca: 50
+  decrementBastao: 35
+  decrementPedra: 25
   addPath: 0.5
   timeMaxPower: 4
   timeMaxChangeVelocity: 6
-  factorDivideSpeed: 1.5
+  factorDivideSpeed: 1.2
   timeInvertControls: 6
 --- !u!212 &212746056938383920
 SpriteRenderer:
