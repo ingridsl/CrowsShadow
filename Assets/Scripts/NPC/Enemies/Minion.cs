@@ -7,7 +7,7 @@ namespace CrowShadowNPCs
 {
     public class Minion : Follower
     {
-        public int healthLight = 600; //decrementa 1 por colisão
+        public int healthLight = 100; //decrementa 1 por colisão
         public int healthMelee = 200;
         public int decrementFaca = 50, decrementBastao = 35, decrementPedra = 25;
         public float addPath = 0.5f; // quanto vai ser adicionado ao somatório das escolhas
@@ -24,6 +24,7 @@ namespace CrowShadowNPCs
         float timeLeftAttack = 0, timePower = 0, timeChangeVelocity = 0;
         int power = 0; // 1 - diminui velocidade, 2 - inverte controles, 3 - morre
         bool onCollision = false, changeVelocity = false;
+        bool attackFlahslight = false;
 
         protected new void Start()
         {
@@ -60,6 +61,12 @@ namespace CrowShadowNPCs
                 {
                     FollowPlayer(false);
                 }
+            }
+
+            if (attackFlahslight)
+            {
+                print("LUUUUUZ " + healthLight);
+                healthLight--;
             }
 
             // Ao colidir
@@ -164,6 +171,11 @@ namespace CrowShadowNPCs
             {
                 OnTriggerCalled(collision);
             }
+
+            if ((collision.tag.Equals("Flashlight") && Flashlight.GetState()) || collision.tag.Equals("Lamp"))
+            {
+                attackFlahslight = true;
+            }
         }
 
         protected new void OnTriggerStay2D(Collider2D collision)
@@ -172,12 +184,9 @@ namespace CrowShadowNPCs
             {
                 OnTriggerCalled(collision);
             }
-            print("Minion: " + collision.tag);
-            if ((collision.tag.Equals("Flashlight") && Flashlight.GetState()) || collision.tag.Equals("Lamp"))
-            {
-                healthLight--;
-            }
-            else if (collision.tag.Equals("Faca") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
+            //print("Minion: " + collision.tag);
+            
+            if (collision.tag.Equals("Faca") && collision.GetComponent<AttackObject>().attacking && timeLeftAttack <= 0)
             {
                 print("FAAACAA");
                 timeLeftAttack = AttackObject.timeAttack;
@@ -210,6 +219,11 @@ namespace CrowShadowNPCs
             if (collision.gameObject.tag.Equals("Player"))
             {
                 onCollision = false;
+            }
+
+            if (collision.tag.Equals("Flashlight") || collision.tag.Equals("Lamp"))
+            {
+                attackFlahslight = false;
             }
         }
 
