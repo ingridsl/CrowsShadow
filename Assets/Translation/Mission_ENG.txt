@@ -386,6 +386,19 @@ Alex: I have to check.
 [title=M5Side1Start]
 Alex: Where am I?
 [title=M5Side1End]
+[title=M5Side1FlashbackStart]
+Shadow: I locked it.
+Shadow: I hope it doesn't scape.
+Shadow: Underground seemed a good spot.
+Shadow: Even if the entire house is over it.
+Shadow: I must get out of this house. 
+Shadow: Get out.
+Shadow: Out.
+Shadow: OUT.
+Shadow: Before it scapes the basement.
+Shadow: I can't! I won't! I won't return...
+Shadow: Not to the basement.
+[title=M5Side1FlashbackEnd]
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M5KidRoomSceneStart]
 Alex: I wonder if there is something interesting in that book.
