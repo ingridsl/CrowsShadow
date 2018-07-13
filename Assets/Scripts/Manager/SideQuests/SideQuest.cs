@@ -124,6 +124,10 @@ public abstract class SideQuest
         {
             camera.transform.Rotate(0, 0, speed * Time.deltaTime);
         }
+        else if (GameManager.currentSceneName.Equals("SideQuest"))
+        {
+            camera = GameObject.Find("MainCamera").gameObject;
+        }
     }
 
     public void EndSideQuest()

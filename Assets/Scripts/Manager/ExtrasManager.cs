@@ -60,7 +60,7 @@ namespace CrowShadowManager
             {
                 // set side quest 2
                 GameObject quest2 = GameManager.instance.AddObject(
-                   "Scenery/SideQuestObject", "", new Vector3(0f, 0f, 0f), new Vector3(1, 1, 1));
+                   "Scenery/SideQuestObject", "", new Vector3(-1f, 0f, 0f), new Vector3(1, 1, 1));
                 quest2.GetComponent<SideQuestObject>().numSideQuest = 2; // MUDAR VALOR AQUI PRA TESTE
             }
             else if (sideQuests == 2 && current >= 12//current >= 7 && current != 9 && current != 10 && current != 11

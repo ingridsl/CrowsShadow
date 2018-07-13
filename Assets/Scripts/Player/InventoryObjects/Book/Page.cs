@@ -6,9 +6,32 @@ namespace CrowShadowPlayer
     public class Page : MonoBehaviour
     {
 
-        void OnTriggerEnter2D(Collider2D other)
+        Renderer rendererPage = null;
+        bool hidden = false;
+
+        private void Start()
         {
-            if (other.gameObject.tag.Equals("Player"))
+            rendererPage = GetComponent<Renderer>();
+        }
+
+        private void Update()
+        {
+
+            if (!hidden && !GameManager.instance.invertWorld)
+            {
+                hidden = true;
+                rendererPage.enabled = false;
+            }
+            else if (hidden && GameManager.instance.invertWorld)
+            {
+                hidden = false;
+                rendererPage.enabled = true;
+            }
+        }
+
+        void OnTriggerStay2D(Collider2D other)
+        {
+            if (!hidden && other.gameObject.tag.Equals("Player"))
             {
                 // Som de pegar página
                 Book.AddPage();

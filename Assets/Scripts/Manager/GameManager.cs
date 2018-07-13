@@ -791,6 +791,7 @@ namespace CrowShadowManager
                     escudoProtectionObject.life = currentSave.lifeEscudo;
                 }
                 Inventory.pedraCount = currentSave.pedraCount;
+                Inventory.papelCount = currentSave.papelCount;
 
                 Book.pageQuantity = currentSave.numberPages;
                 sideQuests = currentSave.sideQuests;

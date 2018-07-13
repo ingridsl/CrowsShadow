@@ -15,12 +15,15 @@ namespace CrowShadowNPCs
         public float limitX0 = -3f, limitXF = 3f, limitY0 = -2f, limitYF = 2f;
         public bool stopAll = false;
         Player playerScript;
+        Renderer rendererME = null;
         float speedPlayer = 0;
+        bool hidden = false;
 
         private void Start()
         {
             playerScript = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<Player>();
             speedPlayer = playerScript.movespeed;
+            rendererME = GetComponent<Renderer>();
             GenerateMinionMap();
         }
 
@@ -40,6 +43,17 @@ namespace CrowShadowNPCs
                     AddMinion();
                     currentMinions++;
                 }
+            }
+
+            if (!hidden && !GameManager.instance.invertWorld)
+            {
+                hidden = true;
+                rendererME.enabled = false;
+            }
+            else if (hidden && GameManager.instance.invertWorld)
+            {
+                hidden = false;
+                rendererME.enabled = true;
             }
         }
 
@@ -118,7 +132,7 @@ namespace CrowShadowNPCs
 
         protected void OnTriggerStay2D(Collider2D collision)
         {
-            if (destructible && collision.tag.Equals("Papel") && collision.GetComponent<FarAttackMiniGameObject>().attacking)
+            if (!hidden && destructible && collision.tag.Equals("Papel") && collision.GetComponent<FarAttackMiniGameObject>().attacking)
             {
                 collision.GetComponent<FarAttackMiniGameObject>().hitSuccess = true;
                 if (collision.GetComponent<FarAttackMiniGameObject>().achievedGoal)
