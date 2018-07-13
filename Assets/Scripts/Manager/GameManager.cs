@@ -690,6 +690,7 @@ namespace CrowShadowManager
                 save.lifeEscudo = 0;
             }
             save.pedraCount = Inventory.pedraCount;
+            save.papelCount = Inventory.papelCount;
 
 
             save.numberPages = Book.pageQuantity;

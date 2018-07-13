@@ -14,6 +14,7 @@ public class Save
     public int lifeTampa = 80; // vida restante para objeto protetor
     public int lifeEscudo = 120; // vida restante para objeto protetor
     public int pedraCount = 0;
+    public int papelCount = 0;
 
     // COLECIONÁVEIS
     public int numberPages = 0; // número de páginas encontradas
