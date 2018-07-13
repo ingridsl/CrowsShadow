@@ -82,6 +82,7 @@ namespace CrowShadowNPCs
         protected void GotoNextPoint()
         {
             if (targets.Length == 0 || transform == null) return;
+            if (destPoint >= targets.Length) destPoint = 0;
 
             float step = speed * Time.deltaTime;
 
