@@ -378,10 +378,15 @@ Alex: It looks like there is something there.
 Alex: I have to check.
 [title=DicaSide5End]
 ----------------------------------- ESCOLHAS -----------------------------------
-[title=M5Q5C0]
-[title=M5Q5C0End]
-[title=M5Q5C1]
-[title=M5Q5C1End]
+[title=M5Q10C0]
+Mom: ALEX! HELP ME!
+Mom: AHHHHHHHHHH!
+Mom: You bastard kid!
+[title=M5Q10C0End]
+[title=M5Q10C1]
+Mom: ALEX! HELP ME!
+Mom: AHHHHHHHHHH!
+[title=M5Q10C1End]
 ----------------------------------- CENAS DA SIDE QUEST -----------------------------------
 [title=M5Side1Start]
 Alex: Where am I?
@@ -436,6 +441,16 @@ Alex: Mother ...? I have a bad feeling.
 [title=M5BookClosedEnd]
 [title=M5GardenSceneRepeat]
 [title=M5GardenSceneRepeatEnd]
+[title=M5HelpMomStart]
+Mom: What is happening here?!
+Mom: Care to explain?!
+Mom: Wait...
+[title=M5HelpMomEnd]
+[title=M5HelpMom2Start]
+[question=10] What do you want to do now?
+[choice] Help mom.
+[choice] Don't help mom.
+[title=M5HelpMom2End]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M5MomRoomSceneStart]
 [title=M5MomRoomSceneEnd]

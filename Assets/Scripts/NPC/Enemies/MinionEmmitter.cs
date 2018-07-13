@@ -13,7 +13,7 @@ namespace CrowShadowNPCs
         public int numMinions = 5, currentMinions = 0;
         public bool hydraEffect = true, destructible = false, colliding = false;
         public float limitX0 = -3f, limitXF = 3f, limitY0 = -2f, limitYF = 2f;
-
+        public bool stopAll = false;
         Player playerScript;
         float speedPlayer = 0;
 
@@ -54,7 +54,7 @@ namespace CrowShadowNPCs
 
         private void AddMinion()
         {
-            if (minionObject != null) {
+            if (minionObject != null && !stopAll) {
                 GameObject minion = GameManager.instance.AddObjectWithParent(
                     minionObject, "", new Vector3(transform.position.x, transform.position.y, 0), new Vector3(1f, 1f, 1f), transform);
                 Minion minionScript = minion.GetComponent<Minion>();
@@ -78,6 +78,7 @@ namespace CrowShadowNPCs
 
         public void StopAllMinions()
         {
+            StopAll = true;
             foreach (GameObject minion in minionList)
             {
                 if (minion != null)
