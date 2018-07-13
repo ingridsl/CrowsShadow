@@ -118,6 +118,7 @@ namespace CrowShadowNPCs
                 if (collision.GetComponent<FarAttackMiniGameObject>().achievedGoal)
                 {
                     // Colocar animação de destruição e todos os minions morrendo
+                    GameManager.instance.Invoke("InvokeMission", 0.2f);
                     Destroy(gameObject);
                 }
             }
