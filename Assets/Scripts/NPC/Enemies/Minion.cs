@@ -63,7 +63,7 @@ namespace CrowShadowNPCs
             }
 
             // Ao colidir
-            if (onCollision)
+            if (onCollision && !GameManager.instance.blocked)
             {
                 if (timePower > 0)
                 {
