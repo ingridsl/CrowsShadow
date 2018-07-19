@@ -115,6 +115,7 @@ namespace CrowShadowNPCs
                     minionScript.followWhenClose = false;
                     minionScript.followingPlayer = false;
                     minionScript.isPatroller = true;
+                    minionScript.speed = 1;
                     Vector3[] targets = new Vector3[1];
                     targets[0] = target;
                     minionScript.targets = targets;

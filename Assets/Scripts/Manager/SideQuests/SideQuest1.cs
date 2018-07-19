@@ -6,7 +6,7 @@ using CrowShadowNPCs;
 public class SideQuest1 : SideQuest
 {
     GameObject person1, person2;
-       SpiritManager spiritManager;
+    SpiritManager spiritManager;
 
     public override void InitSideQuest()
     {
@@ -33,6 +33,7 @@ public class SideQuest1 : SideQuest
     {
         if (success && counterTimeEscape > 0f && active)
         {
+            GameObject.Find("HeartSound").gameObject.transform.GetComponent<AudioSource>().pitch = 3;
             counterTimeEscape -= Time.deltaTime;
             UpdateTimeToEscape();
             if (counterTimeEscape <= 0f)
