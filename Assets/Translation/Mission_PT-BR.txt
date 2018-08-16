@@ -182,13 +182,13 @@ Alex: São só os quadros dos meus bisavós.
 Alex: Talvez eu deva me concentrar!!
 [title=M3PaintingEnd]
 [title=M3MundoInvertido]
-Velho: Não temos mais muito dinheiro sobrando...
-Velha: Ninguém vai querer comprar uma casa assombrada dessas.
-Velho: Pare de dizer besteiras...
-Velho: Você só acha que é assombrada porque não para de falar disso.
+Sombra masculina: Não temos mais muito dinheiro sobrando...
+Sombra feminina: Ninguém vai querer comprar uma casa assombrada dessas.
+Sombra masculina: Pare de dizer besteiras...
+Sombra masculina: Você só acha que é assombrada porque não para de falar disso.
 Pumpkin: Consegue ver?
-Velha: Como você explica todos os acidentes então?
-Velho: Pff. O importante é que ainda temos nosso pequeno Pumpkin.
+Sombra feminina: Como você explica todos os acidentes então?
+Sombra masculina: Pff. O importante é que ainda temos nosso pequeno Pumpkin.
 [title=M3MundoInvertidoEnd]
 [title=M3MundoInvertido2]
 Pumpkin: Alex...
@@ -200,8 +200,8 @@ Alex: Não quero mais voltar para aquele lugar!
 [title=M3VoltaMundoInvertido]
 Mãe: O que está acontecendo aqui?
 [question=2] O que quer fazer agora?
-[choice]"Não aconteceu nada!! Não importa!"
-[choice]"Eu não sei, eu vi coisas estranhas ontem e hoje."
+[choice] "Não aconteceu nada!! Não importa!"
+[choice] "Eu não sei, eu vi coisas estranhas ontem e hoje."
 [title=M3VoltaMundoInvertidoEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M3Q2C0]
@@ -232,10 +232,13 @@ Alex: Pumpkin?
 [title=M3GardenSceneStart]
 Alex: Aqui parece um local seguro...
 Alex: Acho que devo tentar de novo.
-Alex: E talvez...
-Alex: Ir lá dentro? Eu me pergunto se ela ainda está lá.
 [title=M3GardenSceneEnd]
 [title=M3GardenSceneRepeat]
+Sombra: Onde está meu diário?
+Sombra: Eu achei que estava comigo...
+Sombra: Devo ter deixado no meu quarto.
+Sombra: Estou ficando mais doida a cada dia...
+Sombra: O que está acontecendo com minha cabeça?
 [title=M3GardenSceneRepeatEnd]
 ----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
 [title=M3MomRoomSceneStart]
@@ -285,7 +288,9 @@ Alex: Será que a estante seria óbvia demais?
 Alex: Você consegue me ajudar, Pumpkin? 
 [title=frenteCriadoEnd]
 [title=GrandeBarulhoStart]
-Alex: Tenho que distraí-la.
+Alex: O livro deve estar no quarto da mamãe...
+Alex: Deve ser o quarto usado por aquela sombra que vi.
+Alex: Tenho que distraí-la para entrar lá.
 Alex: Eu poderia fazer um grande barulho.
 Alex: Acho melhor destruir algo no corredor.
 Alex: Assim ela conseguirá ouvir.
@@ -307,8 +312,8 @@ Mãe: Alex, venha aqui agora!
 Mãe: O que está fazendo aqui?!
 Mãe: Foi você que quebrou o vaso!?
 [question=4] O que quer fazer agora?
-[choice]Falar a verdade
-[choice]Mentir 
+[choice] Falar a verdade
+[choice] Mentir 
 [title=VerdadeOuMentiraEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M4Q3C0]
@@ -321,7 +326,7 @@ Alex: Eu vou quebrar aquele vaso.
 Alex: Preciso de algo para não me machucar quebrando.
 [title=M4Q3C1End]
 [title=M4Q4C0]
-Alex: Sim mamãe, me desculpe.
+Alex: Sim, mamãe... Me desculpe.
 Mãe: Ok... para seu quarto então.
 [title=M4Q4C0End]
 [title=M4Q4C1]
@@ -390,6 +395,9 @@ Mom: Criança bastarda!
 Mom: ALEX! ME AJUDE!
 Mom: AHHHHHHHHHH!
 [title=M5Q10C1End]
+[title=M5Q10C2]
+Alex: AHHHHHHHHHH!
+[title=M5Q10C2End]
 ----------------------------------- CENAS DA SIDE QUEST -----------------------------------
 [title=M5Side1Start]
 Alex: Onde estou?
