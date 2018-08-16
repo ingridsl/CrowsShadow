@@ -4,6 +4,20 @@ Alex: A porta está trancada.
 [title=TrancadaEnd]
 
 -------------------------------------- MISSAO 1 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M1CorvoArmarioStart]
+Alex: Eu tenho que olhar o que está acima do guarda-roupa.
+Alex: Mas eu sou muito pequeno.
+Alex: Talvez eu possa usar algo para alcançar lá em cima.
+[title=M1CorvoArmarioEnd]
+[title=M1Lanterna1ArmarioStart]
+Alex: Essa casa é muito escura.
+Alex: Estou ficando com medo...
+[title=M1Lanterna1ArmarioEnd]
+[title=M1Lanterna2ArmarioStart]
+Alex: Talvez eu possa encontrar algo com luz.
+Alex: Como uma lanterna ou um isqueiro.
+[title=M1Lanterna2ArmarioEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M1Q0C0]
 Alex: Sai daqui Pumpkin, quero ficar sozinho.
@@ -65,6 +79,8 @@ Alex: Pumpkin?
 
 
 -------------------------------------- MISSAO 2 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+
 ----------------------------------- ESPECIAL -----------------------------------
 [title=M2AllObjectsRespeita]
 Alex: Acho que tenho tudo que preciso.
@@ -95,7 +111,6 @@ Alex: Ao menos Pumpkin pode ficar ao meu lado...
 Alex: Pumpkin, vamos pegar uma vela!
 Alex: Assim podemos dormir com um pouco de luz a noite!
 [title=M2Q1C1_2End]
-
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M2KidRoomSceneStart]
 Alex: Onde minha mãe está?
@@ -109,9 +124,11 @@ Alex: Eu preciso de um fósforo para acender a vela...
 [title=M2KidRoomSceneFosforoEnd]
 [title=M2KidRoomSceneFaca]
 Alex: Eu preciso de algo para atacar...
+Alex: Como uma faca ou algo assim.
 [title=M2KidRoomSceneFacaEnd]
 [title=M2KidRoomSceneTampa]
 Alex: Eu preciso de algo para me defender...
+Alex: Algo que sirva como escudo.
 [title=M2KidRoomSceneTampaEnd]
 [title=M2KidRoomSceneRepeat]
 Alex: Preciso colocar a vela em algum local e acendê-la.
@@ -154,6 +171,10 @@ Alex: Eu não posso deixar ela me ver.
 
 
 -------------------------------------- MISSAO 3 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M3QuadroStart]
+Alex: Hum... Talvez eu deva olhar aqueles retratos?
+[title=M3QuadroEnd]
 ----------------------------------- ESPECIAL -----------------------------------
 [title=M3Painting]
 Alex: O que você quer me mostrar com isso?
@@ -187,6 +208,7 @@ Mãe: O que está acontecendo aqui?
 Alex: Não aconteceu nada!! Não importa!
 Mãe: Então o que está fazendo ai parado?!
 Mãe: Ande e saia daqui para eu limpar a casa!
+Mãe: Vá brincar lá fora!
 [title=M3Q2C0End]
 [title=M3Q2C1]
 Alex: Eu não sei, eu vi coisas estranhas ontem e hoje! 
@@ -210,6 +232,8 @@ Alex: Pumpkin?
 [title=M3GardenSceneStart]
 Alex: Aqui parece um local seguro...
 Alex: Acho que devo tentar de novo.
+Alex: E talvez...
+Alex: Ir lá dentro? Eu me pergunto se ela ainda está lá.
 [title=M3GardenSceneEnd]
 [title=M3GardenSceneRepeat]
 [title=M3GardenSceneRepeatEnd]
@@ -232,7 +256,14 @@ Alex: Acho que devo tentar de novo.
 
 
 -------------------------------------- MISSAO 4 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M4DicaInvert]
+Alex: Talvez se eu usar aquele poder de novo...
+[title=M4DicaInvertEnd]
 ----------------------------------- ESPECIAL -----------------------------------
+[title=M4VaseStart]
+Alex: O vaso da mamãe está quebrado!
+[title=M4VaseEnd]
 [title=M4DicaCorredor]
 Alex: Talvez se eu tentasse ir para aquele lugar de novo...
 [title=M4DicaCorredorEnd]
@@ -279,7 +310,6 @@ Mãe: Foi você que quebrou o vaso!?
 [choice]Falar a verdade
 [choice]Mentir 
 [title=VerdadeOuMentiraEnd]
-
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M4Q3C0]
 Alex: Pumpkin, você pode quebrar aquele vaso pra mim?
@@ -335,35 +365,58 @@ Alex: Deve ter algo naquele armário…
 [title=M4CorridorSceneRepeatEnd]
 
 
+
 -------------------------------------- MISSAO 5 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+
 ----------------------------------- ESPECIAL -----------------------------------
-[title=Dica5]
-[title=Dica5End]
 [title=DicaMundoInvertido5Start]
 Alex: Talvez eu tenha que fazer aquilo de novo.
 Alex: Aquilo que me fez ver as memórias de meus bisavós.
 [title=DicaMundoInvertido5End]
 [title=DicaSide5Start]
-Alex: Aquela coisa brilhante é tão linda.
+Alex: Que barulho estranho...
+Alex: Parece estar vindo de perto da mesa.
 Alex: Acho que tem algo lá.
 Alex: Preciso checar.
 [title=DicaSide5End]
 ----------------------------------- ESCOLHAS -----------------------------------
-[title=M5Q5C0]
-[title=M5Q5C0End]
-[title=M5Q5C1]
-[title=M5Q5C1End]
+[title=M5Q10C0]
+Mom: ALEX! ME AJUDE!
+Mom: AHHHHHHHHHH!
+Mom: Criança bastarda!
+[title=M5Q10C0End]
+[title=M5Q10C1]
+Mom: ALEX! ME AJUDE!
+Mom: AHHHHHHHHHH!
+[title=M5Q10C1End]
 ----------------------------------- CENAS DA SIDE QUEST -----------------------------------
 [title=M5Side1Start]
 Alex: Onde estou?
 [title=M5Side1End]
+[title=M5Side2Start]
+Alex: O que são essa coisas?
+[title=M5Side2End]
+[title=M5Side1FlashbackStart]
+Sombra: Eu tranquei.
+Sombra: Espero que não escape.
+Shadow: O subterrâneo parecia um bom lugar.
+Sombra: Mesmo se toda a casa acabou.
+Sombra: Eu preciso sair desta casa.
+Sombra: Sair daqui.
+Sombra: Sair.
+Sombra: DAQUI.
+Sombra: Antes que aquilo saia do porão.
+Sombra: Eu não posso! Eu não vou! Eu não vou voltar...
+Sombra: Não para o porão.
+[title=M5Side1FlashbackEnd]
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M5KidRoomSceneStart]
 Alex: Me pergunto se tem algo interessante no livro.
 Alex: Tenho que checar.
 [title=M5KidRoomSceneEnd]
 [title=M5KidRoomSceneSideStart]
-Alex: O que é essa coisa brilhante?
+Alex: O que é esse barulho?
 Alex: Talvez eu possa chegar mais perto!
 [title=M5KidRoomSceneSideEnd]
 [title=M5KidRoomSceneRepeat]
@@ -394,6 +447,16 @@ Alex: Mãe...? Estou com um mal pressentimento.
 [title=M5BookClosedEnd]
 [title=M5GardenSceneRepeat]
 [title=M5GardenSceneRepeatEnd]
+[title=M5HelpMomStart]
+Mom: O que está acontecendo aqui?!
+Mom: Quer se explicar?!
+Mom: Espera...
+[title=M5HelpMomEnd]
+[title=M5HelpMom2Start]
+[question=10] O que você quer fazer agora?
+[choice] Ajudar mamãe.
+[choice] Aproveitar a distração para entrar no porão.
+[title=M5HelpMom2End]
 ----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
 [title=M5MomRoomSceneStart]
 [title=M5MomRoomSceneEnd]
@@ -411,7 +474,7 @@ Alex: Parece que eles ficaram mais brilhosos.
 Alex: Acho que preciso sair desse mundo estranho...
 [title=M5CorridorSceneEnd]
 [title=M5TryQuit]
-Alex: O que?!?! Não consigo?
+Alex: O quê?!?! Não consigo?
 [question=5] O que quer fazer agora?
 [choice]Procurar onde se esconder
 [choice]Investigar o que está acontecendo
