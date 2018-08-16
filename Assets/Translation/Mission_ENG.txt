@@ -182,13 +182,13 @@ Alex: It's just the pictures of my Great-grandparents.
 Alex: Maybe I should concentrate !!
 [title=M3PaintingEnd]
 [title=M3MundoInvertido]
-Great-grandfather: We don't have much more money left ...
-Great-grandmother: No one will want to buy such a haunted house.
-Great-grandfather: Stop talking nonsense ...
-Great-grandfather: You just think it's haunted because you keep on talking about it.
+Male shadow: We don't have much more money left ...
+Female shadow: No one will want to buy such a haunted house.
+Male shadow: Stop talking nonsense ...
+Male shadow: You just think it's haunted because you keep on talking about it.
 Pumpkin: Can you see, Alex?
-Great-grandmother: How do you explain all the accidents then?
-Great-grandfather: Pff. The important thing is that we still have our little Pumpkin.
+Female shadow: How do you explain all the accidents then?
+Male shadow: Pff. The important thing is that we still have our little Pumpkin.
 [title=M3MundoInvertidoEnd]
 [title=M3MundoInvertido2]
 Pumpkin: Alex...
@@ -200,8 +200,8 @@ Alex: I don't want to go back to that place!
 [title=M3VoltaMundoInvertido]
 Mom: What's going on here?
 [question=2] What do you want to do now?
-[choice]"Nothing happened!! It doesn't matter!"
-[choice]"I don't know, I've seen strange things yesterday and today."
+[choice] "Nothing happened!! It doesn't matter!"
+[choice] "I don't know, I've seen strange things yesterday and today."
 [title=M3VoltaMundoInvertidoEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M3Q2C0]
@@ -232,10 +232,13 @@ Alex: Pumpkin?
 [title=M3GardenSceneStart]
 Alex: It looks like a safe place here ...
 Alex: I think I should do that thing again.
-Alex: And maybe...
-Alex: Go inside? I wonder if she is still there.
 [title=M3GardenSceneEnd]
 [title=M3GardenSceneRepeat]
+Shadow: Where is my journal?
+Shadow: I thought I had it with me...
+Shadow: I must have left in my room.
+Shadow: I'm getting crazier each day...
+Shadow: What's happening with my mind?
 [title=M3GardenSceneRepeatEnd]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M3MomRoomSceneStart]
@@ -285,7 +288,9 @@ Alex: Would the bookcase be too obvious?
 Alex: Can you help me, Pumpkin?
 [title=frenteCriadoEnd]
 [title=GrandeBarulhoStart]
-Alex: I have to distract her.
+Alex: The book must be on mom's room.
+Alex: It must be the room used by that shadow I saw.
+Alex: I have to distract her so I can enter there.
 Alex: I could make a big noise.
 Alex: I think it's better to destroy something in the hallway.
 Alex: So she can hear.
@@ -390,6 +395,9 @@ Mom: You bastard kid!
 Mom: ALEX! HELP ME!
 Mom: AHHHHHHHHHH!
 [title=M5Q10C1End]
+[title=M5Q10C2]
+Alex: AHHHHHHHHHH!
+[title=M5Q10C2End]
 ----------------------------------- CENAS DA SIDE QUEST -----------------------------------
 [title=M5Side1Start]
 Alex: Where am I?
