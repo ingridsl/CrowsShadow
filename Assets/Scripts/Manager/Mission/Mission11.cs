@@ -276,6 +276,11 @@ public class Mission11 : Mission {
             velaFixa.transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 140;
         }
 
+        if (!Inventory.HasItemType(Inventory.InventoryItems.BASTAO))
+        {
+            GameManager.instance.CreateScenePickUp("Bau", Inventory.InventoryItems.BASTAO);
+        }
+
         if (secao == enumMission.QUARTO_KID)
         {
             GameManager.instance.Invoke("InvokeMission", 10f);

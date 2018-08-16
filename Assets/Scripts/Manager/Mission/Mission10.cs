@@ -357,6 +357,11 @@ public class Mission10 : Mission {
             velaFixa.transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 140;
         }
 
+        if (!Inventory.HasItemType(Inventory.InventoryItems.BASTAO))
+        {
+            GameManager.instance.CreateScenePickUp("Bau", Inventory.InventoryItems.BASTAO);
+        }
+
         if (secao == enumMission.NIGHT || secao == enumMission.INICIO)
         {
             // Porta momentaneamente travada

@@ -105,6 +105,14 @@ public class Mission1 : Mission {
             }
             
         }
+        else if (secao == enumMission.CORVO_VISTO)
+        {
+            SpinCamera(10f);
+        }
+        else if (secao == enumMission.SMILE)
+        {
+            SpinCamera(100f);
+        }
     }
 
     public override void SetCorredor()
@@ -148,8 +156,8 @@ public class Mission1 : Mission {
         if (secao == enumMission.GATO_APARECEU)
         {
             GameManager.instance.AddObject("NPCs/catFollower", "", new Vector3(8.3f, -0.6f, -0.5f), new Vector3(0.15f, 0.15f, 1));
-            GameObject.Find("MainCamera").GetComponent<Camera>().orthographicSize = 4;
-            GameObject.Find("MainCamera").GetComponent<Camera>().transform.position = new Vector3(0f, 0f, -20f);
+            camera.GetComponent<Camera>().orthographicSize = 6;
+            camera.GetComponent<Camera>().transform.position = new Vector3(0f, 0f, -20f);
             // Porta Sala
             GameObject portaSala = GameObject.Find("DoorToLivingRoom").gameObject;
             portaSala.GetComponent<SceneDoor>().isOpened = false;
@@ -172,8 +180,8 @@ public class Mission1 : Mission {
             cat.GetComponent<Cat>().targets = catPos;
 
             GameManager.instance.pausedObject = true;
-            GameObject.Find("MainCamera").GetComponent<Camera>().orthographicSize = 4;
-            GameObject.Find("MainCamera").GetComponent<Camera>().transform.position = new Vector3(0f, 0f, -20f);
+            camera.GetComponent<Camera>().orthographicSize = 4;
+            camera.GetComponent<Camera>().transform.position = new Vector3(0f, 0f, -20f);
             GameManager.instance.Invoke("InvokeMission", 2.5f);
 
             // gato andando para sala
@@ -444,7 +452,7 @@ public class Mission1 : Mission {
         {
             GameObject.Destroy(GameObject.Find("catFollower(Clone)").gameObject);
             GameManager.instance.pausedObject = false;
-            GameObject.Find("MainCamera").GetComponent<Camera>().orthographicSize = 2;
+            camera.GetComponent<Camera>().orthographicSize = 2;
         }
         else if (secao == enumMission.CORVO_VISTO)
         {

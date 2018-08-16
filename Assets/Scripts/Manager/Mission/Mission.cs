@@ -5,7 +5,7 @@ using CrowShadowPlayer;
 
 public abstract class Mission {
 
-    protected GameObject mainLight, player, fosforo, isqueiro, faca, pedra;
+    protected GameObject mainLight, camera, player, fosforo, isqueiro, faca, pedra;
     protected MiniGameObject fosforoMiniGame, isqueiroMiniGame;
     protected Book book;
 
@@ -27,6 +27,7 @@ public abstract class Mission {
             !GameManager.currentSceneName.Equals("Credits"))
         {
             mainLight = GameObject.Find("MainLight").gameObject; // Variar X (-50 - claro / 50 - escuro) - valor original: 0-100 (-50)
+            camera = GameObject.Find("MainCamera").gameObject;
         }
 
         if (GameManager.currentSceneName.Equals("Corredor"))
@@ -92,6 +93,14 @@ public abstract class Mission {
     public virtual void InvokeMission() { } // para chamar após um determinado tempo
 
     public virtual void InvokeMissionChoice(int id) { } // para chamar após uma escolha ser feita
+
+    public void SpinCamera(float speed)
+    {
+        if (camera != null)
+        {
+            camera.transform.Rotate(0, 0, speed * Time.deltaTime);
+        }
+    }
 
     public void SetInitialSettings()
     {

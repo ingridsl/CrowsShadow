@@ -921,7 +921,7 @@ namespace CrowShadowManager
         /************ FUNÇÕES ESPECIAIS ************/
 
         // ALEATORIZAR LOCAIS PARA OBJETOS
-        // Exemplo de chamada: GameManager.instance.RandomObjectsPlaces(Inventory.InventoryItems.FOSFORO, new List<string>{ "QuartoKid" });
+        // Exemplo de chamada: GameManager.instance.RandomObjectsPlaces(Inventory.InventoryItems.FLASHLIGHT, new List<string>{ "QuartoKid" });
         // Deve vir antes do GameManager.LoadScene(sceneInit);
         public void RandomObjectsPlaces(Inventory.InventoryItems pickUp, List<string> places = null)
         {

@@ -123,6 +123,26 @@ namespace CrowShadowNPCs
             }
         }
 
+        public void MoveAllMinionsAround(Vector3 target, float dist = 0.1f)
+        {
+            foreach (GameObject minion in minionList)
+            {
+                if (minion != null)
+                {
+                    Minion minionScript = minion.GetComponent<Minion>();
+                    minionScript.followWhenClose = false;
+                    minionScript.followingPlayer = false;
+                    minionScript.isPatroller = true;
+                    minionScript.speed += 0.5f;
+                    Vector3[] targets = new Vector3[1];
+                    target.x += Random.Range(-dist, dist);
+                    target.y += Random.Range(-dist, dist);
+                    targets[0] = target;
+                    minionScript.targets = targets;
+                }
+            }
+        }
+
         protected void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag.Equals("Player"))

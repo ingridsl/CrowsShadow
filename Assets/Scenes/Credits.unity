@@ -459,22 +459,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ingrid Santana Lopes\nMarcos Paulo Cayres Rosa\n\n\nIngrid Santana Lopes\nMarcos
-    Paulo Cayres Rosa\nRenn\xEA Ruan Alves Oliveira\n\n\nCibele Daniel N. Longuinho\nIngrid
-    Santana Lopes\nMilena de Aguiar Soares\n-\nRenn\xEA Ruan Alves Oliveira\nVitor
-    Oliveira de Sousa Dias\n\n\nIngrid Santana Lopes\nMarcos Paulo Cayres Rosa\nRenn\xEA
-    Ruan Alves Oliveira\n\n\nIngrid Santana Lopes\nMarcos Paulo Cayres Rosa\n\n\nIngrid
-    Santana Lopes\nMarcos Paulo Cayres Rosa\n\n\nART ASSETS\n2D Pixel Trees (By Grumpy
-    Diamond Assets)\nPixel Texture Pack Add-On For Isometric Shooter (By Assetcrew)\nFREE
-    PIXEL FOOD (By Henry Software)\nFantasy Environment and Animated Characters (Pixel
-    Art) (By ALEXLKA\r)\nGothicVania Town (By ANSIMUZ\r)\n\nSOUND ASSETS\nDark Magic
-    (By Mgw Sound Design)\nFree Horror Music Pack (By Akuma Kira)\nHorror And Sci-Fi
-    Ambience Loops Lite (By Seth O\u2019dale)\nJungle Animal Sounds Fx (By Laali Unit)\nRetro
-    Ui Sounds (By Alessandro Fam\xE0)\nScream Volume 1 - Sample Pack (By Christopher
-    Escalante)\nWestern Demo Audio And Music (By John Leonard French)\nMedieval Action
-    Sound FX Pack (By Mariobastos)\n8-BIT DIVERSITY FREE EDITION (By TooTidy Labs)\nFINAL
-    BOSS (By Jake South)\n\nSCRIPTING ASSETS\nRpgtalk (By Seize Studios)\n\nEFFECTS
-    ASSETS\nCinema Themes 2 (By Cinema Suite)\n\n\nCarla Denise Castanho"
+  m_Text: "\n\n\n\n\n\n\n\n\n\nIngrid Santana Lopes\nMarcos Paulo Cayres Rosa\n\n\nIngrid
+    Santana Lopes\nMarcos Paulo Cayres Rosa\nRenn\xEA Ruan Alves Oliveira\n\n\nCibele
+    Daniel N. Longuinho\nIngrid Santana Lopes\nMilena de Aguiar Soares\n-\nRenn\xEA
+    Ruan Alves Oliveira\nVitor Oliveira de Sousa Dias\n\n\nIngrid Santana Lopes\nMarcos
+    Paulo Cayres Rosa\nRenn\xEA Ruan Alves Oliveira\n\n\nIngrid Santana Lopes\nMarcos
+    Paulo Cayres Rosa\n\n\nIngrid Santana Lopes\nMarcos Paulo Cayres Rosa\n\n\nART
+    ASSETS\n2D Pixel Trees (By Grumpy Diamond Assets)\nPixel Texture Pack Add-On For
+    Isometric Shooter (By Assetcrew)\nFREE PIXEL FOOD (By Henry Software)\nFantasy
+    Environment and Animated Characters (Pixel Art) (By ALEXLKA\r)\nGothicVania Town
+    (By ANSIMUZ\r)\n\nSOUND ASSETS\nDark Magic (By Mgw Sound Design)\nFree Horror
+    Music Pack (By Akuma Kira)\nHorror And Sci-Fi Ambience Loops Lite (By Seth O\u2019dale)\nJungle
+    Animal Sounds Fx (By Laali Unit)\nRetro Ui Sounds (By Alessandro Fam\xE0)\nScream
+    Volume 1 - Sample Pack (By Christopher Escalante)\nWestern Demo Audio And Music
+    (By John Leonard French)\nMedieval Action Sound FX Pack (By Mariobastos)\n8-BIT
+    DIVERSITY FREE EDITION (By TooTidy Labs)\nFINAL BOSS (By Jake South)\n\nSCRIPTING
+    ASSETS\nRpgtalk (By Seize Studios)\n\nEFFECTS ASSETS\nCinema Themes 2 (By Cinema
+    Suite)\n\n\nCarla Denise Castanho"
 --- !u!222 &1038080638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -549,7 +550,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Game Directors
+  m_Text: 'TO BE CONTINUED
+
+
+
+
+
+
+
+
+
+
+    Game Directors
 
 
 
