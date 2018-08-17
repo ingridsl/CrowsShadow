@@ -27,6 +27,16 @@ public class SideQuest1 : SideQuest
         GameObject holder = GameManager.instance.AddObject("Scenery/SpiritHolder", "", new Vector3(0, 0, 0), new Vector3(1, 1, 1));
         spiritManager = holder.GetComponent<SpiritManager>();
         spiritManager.GenerateSpiritMap(3f, 0f, -5f, /*4*/6);
+
+        GameObject trigger1 = GameManager.instance.AddObject("Scenery/AreaTrigger", "", new Vector3(0f, 0f, 0), new Vector3(1, 1, 1));
+        trigger1.name = "Trigger1Side";
+        trigger1.GetComponent<Collider2D>().offset = new Vector2(5f, 5f);
+        trigger1.GetComponent<BoxCollider2D>().size = new Vector2(10f, 2f);
+        
+        if (GameManager.previousSceneName.Equals("GameOver"))
+        {
+            GameManager.instance.rpgTalk.NewTalk("M5Side5Start", "M5Side5End", false);
+        }
     }
 
     public override void UpdateSideQuest()
@@ -52,7 +62,6 @@ public class SideQuest1 : SideQuest
         }
         ////if (success)
         //{
-//
            //EndSideQuest();
         //}
         SpinCamera(5f);

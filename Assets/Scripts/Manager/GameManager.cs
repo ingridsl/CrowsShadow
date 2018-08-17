@@ -1205,10 +1205,17 @@ namespace CrowShadowManager
                 switch (choiceID)
                 {
                     case 0:
-                        rpgTalk.NewTalk("M5Q10C0", "M5Q10C0End");
+                        if (pathBird > pathCat)
+                        {
+                            rpgTalk.NewTalk("M5Q10C1-1", "M5Q10C1-1End");
+                        }
+                        else
+                        {
+                            rpgTalk.NewTalk("M5Q10C1-2", "M5Q10C1-2End");
+                        }
                         break;
                     default:
-                        rpgTalk.NewTalk("M5Q10C1", "M5Q10C1End");
+                        rpgTalk.NewTalk("M5Q10C2", "M5Q10C2End");
                         break;
                 }
 
