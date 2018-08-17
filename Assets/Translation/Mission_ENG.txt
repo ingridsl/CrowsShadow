@@ -448,12 +448,15 @@ Alex: I wonder what will happen if I mess with them?
 [title=M5Side3Start]
 Alex: What I have that may mess with them?
 [title=M5Side3End]
+[title=M5Side3-2Start]
+Alex: I should test the items I already have on them.
+[title=M5Side3-2End]
 [title=M5Side4Start]
 Alex: It seems they don't like the light...
 Alex: I should use it!
 [title=M5Side4End]
 [title=M5Side5Start]
-Alex: I can't dentroy them all!
+Alex: I think I can't dentroy them all!
 Alex: I need to discover which of them I should destroy.
 [title=M5Side5End]
 [title=M5Side1FlashbackStart]
