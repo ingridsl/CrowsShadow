@@ -70,6 +70,16 @@ namespace CrowShadowMenu
                     ChangeTextMenu("Novo Jogo", "Continuar", "Escolha o jogo salvo", "Carregar Jogo",
                         "Escolha a missão", "*O jogo não será salvo", "Controles", "Opções", "Idioma", "Sair", "Voltar");
                     break;
+                case "JP":
+                    LanguageSettings.actualLanguage = SupportedLanguages.JP;
+                    ChangeTextMenu("新しいゲーム", "続く", "ゲームを選ぶ", "ゲームをロードする",
+                        "ミッションを選ぶ", " *ゲームは保存されません", "コントロール", "オプション", "言語", "出る", "戻る");
+                    break;
+                case "FR":
+                    LanguageSettings.actualLanguage = SupportedLanguages.FR;
+                    ChangeTextMenu("Nouveau jeu", "Continuer", "Choisir un jeu enregistré", "Charger un jeu",
+                        "Choisissez la mission", "Le jeu ne sera pas enregistré", "Contrôles", "Options", "Langue", "Quitter", "Retourner");
+                    break;
             }
         }
 

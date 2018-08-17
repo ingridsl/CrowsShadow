@@ -78,6 +78,14 @@ namespace CrowShadowPlayer
                     LanguageSettings.actualLanguage = SupportedLanguages.PT_BR;
                     ChangeTextMenu("Pausa", "Continuar", "Inventário", "Controles", "Sair");
                     break;
+                case "JP":
+                    LanguageSettings.actualLanguage = SupportedLanguages.JP;
+                    ChangeTextMenu("止む", "続く", "発明", "コントロール", "出る");
+                    break;
+                case "FR":
+                    LanguageSettings.actualLanguage = SupportedLanguages.FR;
+                    ChangeTextMenu("Pause", "Continuer", "Inventaire", "Contrôles", "Quitter");
+                    break;
             }
         }
 
