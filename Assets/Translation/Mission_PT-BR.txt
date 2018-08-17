@@ -25,6 +25,10 @@ Alex: Sai daqui Pumpkin, quero ficar sozinho.
 [title=M1Q0C1]
 Alex: Você pode dormir comigo, Pumpkin?
 [title=M1Q0C1End]
+----------------------------------- ESPECIAL -----------------------------------
+[title=M1LivingroomSpecialCat]
+Alex: Onde será que está Pumpkin?
+[title=M1LivingroomSpecialCatEnd]
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M1KidRoomSceneStart]
 Alex: Hm? O que é esse barulho estranho?
@@ -93,6 +97,11 @@ Alex: Melhor guardar isso no meu quarto.
 [title=M2AtaqueContesta]
 Pumpkin: Mrrrrow!
 [title=M2AtaqueContestaEnd]
+[title=M2BathroomSpecialWater]
+Alex: Pumpkin, lembra quando eu tinha medo da água?
+Pumpkin: Grrrr
+Alex: Era tão fria, eu achava que ia congelar até morrer.
+[title=M1BathroomSpecialWaterEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M2Q1C0]
 Alex: Você não me entende!! 
@@ -203,6 +212,12 @@ Mãe: O que está acontecendo aqui?
 [choice] "Não aconteceu nada!! Não importa!"
 [choice] "Eu não sei, eu vi coisas estranhas ontem e hoje."
 [title=M3VoltaMundoInvertidoEnd]
+[title=M3GardenSpecialBasement]
+Alex: Esse lugar é tão assustador...
+Alex: Eu acho que tem monstros dentro.
+Pumpkin: Grrrrrrrrrrr
+Alex: Eu tenho que ficar longe daqui!
+[title=M3GardenSpecialBasementEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M3Q2C0]
 Alex: Não aconteceu nada!! Não importa!
@@ -315,6 +330,19 @@ Mãe: Foi você que quebrou o vaso!?
 [choice] Falar a verdade
 [choice] Mentir 
 [title=VerdadeOuMentiraEnd]
+[title=M4LivingroomSpecialBall]
+Alex: Pumpkin, lembra quando brincávamos com isso?
+Pumpkin: Meeeeeooow
+Alex: Aqueles tempos eram bons!
+Alex: Eu não tinha tantos medos...
+[title=M4LivingroomSpecialBallEnd]
+[title=M4LivingroomSpecialShelf]
+Alex: NOSSA!!!
+Pumpkin: Meow?
+Alex: Acabei de lembrar quando quase coloquei fogo na estante!
+Alex: A mamãe ficou tão brava...
+Alex: Nunca mais quero ver ela daquele jeito!
+[title=M4LivingroomSpecialShelfEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M4Q3C0]
 Alex: Pumpkin, você pode quebrar aquele vaso pra mim?
@@ -385,16 +413,22 @@ Alex: Parece estar vindo de perto da mesa.
 Alex: Acho que tem algo lá.
 Alex: Preciso checar.
 [title=DicaSide5End]
+[title=M5KitchenSpecialStick]
+Mãe: Alex! Queria falar contigo...
+Alex: O que foi, mãe?
+Mãe: Eu achei algumas tralhas suas e guardei no seu quarto.
+Alex: Ahhh... Obrigado, mãe! Vou lá ver isso!
+[title=M5KitchenSpecialStickEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
-[title=M5Q10C0]
+[title=M5Q10C1-1]
 Mom: ALEX! ME AJUDE!
 Mom: AHHHHHHHHHH!
 Mom: Criança bastarda!
-[title=M5Q10C0End]
-[title=M5Q10C1]
+[title=M5Q10C1-1End]
+[title=M5Q10C1-2]
 Mom: ALEX! ME AJUDE!
 Mom: AHHHHHHHHHH!
-[title=M5Q10C1End]
+[title=M5Q10C1-2End]
 [title=M5Q10C2]
 Alex: AHHHHHHHHHH!
 [title=M5Q10C2End]
@@ -404,7 +438,19 @@ Alex: Onde estou?
 [title=M5Side1End]
 [title=M5Side2Start]
 Alex: O que são essa coisas?
+Alex: O que será que vai acontecer se eu mexer com elas?
 [title=M5Side2End]
+[title=M5Side3Start]
+Alex: O que eu tenho que eu possa usar para mexer com elas?
+[title=M5Side3End]
+[title=M5Side4Start]
+Alex: Parece que elas não gostam da luz...
+Alex: Eu devo usar isso!
+[title=M5Side4End]
+[title=M5Side5Start]
+Alex: Eu não posso destruir todas!
+Alex: Eu preciso descobrir quais destruir.
+[title=M5Side5End]
 [title=M5Side1FlashbackStart]
 Sombra: Eu tranquei.
 Sombra: Espero que não escape.
