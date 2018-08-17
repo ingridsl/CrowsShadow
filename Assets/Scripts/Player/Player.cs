@@ -281,7 +281,7 @@ namespace CrowShadowPlayer
                     else
                     {
                         transform.position = new Vector3(11.9f, -0.3f, -1f);
-                        ChangeDirection((int)Directions.NORTH);
+                        ChangeDirection((int)Directions.SOUTH);
                     }
                 }
                 else if (GameManager.currentSceneName.Equals("Cozinha"))

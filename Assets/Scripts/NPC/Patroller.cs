@@ -13,7 +13,7 @@ namespace CrowShadowNPCs
         public bool destroyEndPath = false;
         public bool stopEndPath = false;
         public Vector3[] targets;
-        public bool hasActionPatroller = false;
+        public bool hasActionPatroller = false, isAreaTrigger = false;
         public float offsetActionPatroller = 0f;
 
         protected SpriteRenderer spriteRenderer;
@@ -202,7 +202,14 @@ namespace CrowShadowNPCs
                 print("ActionPatroller: " + collision.tag);
                 if (collision.gameObject.tag.Equals("Player") && !collision.gameObject.GetComponent<Player>().hidden)
                 {
-                    GameManager.instance.GameOver();
+                    if (isAreaTrigger)
+                    {
+                        GameManager.instance.mission.AreaTriggered("MomPatrollerTrigger");
+                    }
+                    else
+                    {
+                        GameManager.instance.GameOver();
+                    }
                 }
             }
         }

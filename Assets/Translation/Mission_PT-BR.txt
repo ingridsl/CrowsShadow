@@ -101,7 +101,7 @@ Pumpkin: Mrrrrow!
 Alex: Pumpkin, lembra quando eu tinha medo da água?
 Pumpkin: Grrrr
 Alex: Era tão fria, eu achava que ia congelar até morrer.
-[title=M1BathroomSpecialWaterEnd]
+[title=M2BathroomSpecialWaterEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M2Q1C0]
 Alex: Você não me entende!! 
@@ -215,7 +215,6 @@ Mãe: O que está acontecendo aqui?
 [title=M3GardenSpecialBasement]
 Alex: Esse lugar é tão assustador...
 Alex: Eu acho que tem monstros dentro.
-Pumpkin: Grrrrrrrrrrr
 Alex: Eu tenho que ficar longe daqui!
 [title=M3GardenSpecialBasementEnd]
 ----------------------------------- ESCOLHAS -----------------------------------

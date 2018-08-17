@@ -14,6 +14,8 @@ public class Mission2 : Mission {
     GameObject crowBabies;
     GameObject vela, velaFixa;
 
+    bool specialTrigger = false;
+
     public override void InitMission()
     {
         sceneInit = "QuartoKid";
@@ -113,17 +115,19 @@ public class Mission2 : Mission {
             portaSala.GetComponent<SceneDoor>().isOpened = false;
 
             // Porta Quarto Mae
-            GameObject portaMae = GameObject.Find("DoorToMomRoom").gameObject; float portaMaeDefaultY = portaMae.transform.position.y;
+            GameObject portaMae = GameObject.Find("DoorToMomRoom").gameObject;
+            float portaMaeDefaultY = portaMae.transform.position.y;
             float posX = portaMae.GetComponent<SpriteRenderer>().bounds.size.x / 5;
             portaMae.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Objects/Scene/door-closed");
             portaMae.GetComponent<SceneDoor>().isOpened = false;
             portaMae.transform.position = new Vector3(portaMae.transform.position.x - posX, portaMaeDefaultY, portaMae.transform.position.z);
 
             // Mae
-            GameManager.instance.AddObject("NPCs/mom", "", new Vector3(-1.5f, 0f, -0.5f), new Vector3(0.3f, 0.3f, 1));
-            GameObject trigger = GameManager.instance.AddObject("Scenery/AreaTrigger", "", new Vector3(-1.5f, 0f, 1), new Vector3(1, 1, 1));
-            trigger.GetComponent<Collider2D>().offset = new Vector2(0, 0);
-            trigger.GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
+            // Mae
+            GameObject momA = GameManager.instance.AddObject("NPCs/mom", "", new Vector3(-1.5f, 0f, -0.5f), new Vector3(0.3f, 0.3f, 1));
+            momA.GetComponent<Patroller>().hasActionPatroller = true;
+            momA.GetComponent<Patroller>().isAreaTrigger = true;
+            momA.GetComponent<CircleCollider2D>().radius = 4;
         }
         else if (secao == enumMission.CONTESTA_MAE || secao == enumMission.RESPEITA_MAE ||
             secao == enumMission.CONTESTA_MAE2 || secao == enumMission.RESPEITA_MAE2 || 
@@ -312,7 +316,10 @@ public class Mission2 : Mission {
     }
     public override void SetBanheiro()
     {
-
+        GameObject trigger = GameManager.instance.AddObject("Scenery/AreaTrigger", "", new Vector3(0f, 0f, 0), new Vector3(1, 1, 1));
+        trigger.name = "SpecialTrigger";
+        trigger.GetComponent<Collider2D>().offset = new Vector2(-1.2f, -1.2f);
+        trigger.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 1.5f);
     }
 
     public override void SetPorao()
@@ -417,9 +424,14 @@ public class Mission2 : Mission {
 
     public override void AreaTriggered(string tag)
     {
-        if (tag.Equals("AreaTrigger(Clone)") && (secao == enumMission.INICIO_GATO || secao == enumMission.INICIO_SOZINHO))
+        if (tag.Equals("MomPatrollerTrigger") && (secao == enumMission.INICIO_GATO || secao == enumMission.INICIO_SOZINHO))
         {
             EspecificaEnum((int)enumMission.ENCONTRA_MAE);
+        }
+        else if (tag.Equals("SpecialTrigger") && !specialTrigger)
+        {
+            GameManager.instance.rpgTalk.NewTalk("M2BathroomSpecialWater", "M2BathroomSpecialWaterEnd", GameManager.instance.rpgTalk.txtToParse);
+            specialTrigger = true;
         }
         else if (secao == enumMission.FINAL_RESPEITA)
         {

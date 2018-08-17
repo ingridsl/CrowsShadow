@@ -13,7 +13,7 @@ public class Mission1 : Mission {
     SceneObject window;
     SickCrow sickCrow;
     
-    bool areaTriggered = false, birdsActive = false;
+    bool areaTriggered = false, birdsActive = false, specialTrigger = false;
     float portaDefaultX, portaDefaultY;
 
     public override void InitMission()
@@ -308,6 +308,11 @@ public class Mission1 : Mission {
         trigger2.GetComponent<Collider2D>().offset = new Vector2(7f, -0.4f);
         trigger2.GetComponent<BoxCollider2D>().size = new Vector2(1.55f, 0.8f);
 
+        GameObject trigger3 = GameManager.instance.AddObject("Scenery/AreaTrigger", "", new Vector3(0f, 0f, 0), new Vector3(1, 1, 1));
+        trigger3.name = "SpecialTrigger";
+        trigger3.GetComponent<Collider2D>().offset = new Vector2(-7f, -2f);
+        trigger3.GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+
         // Tutorial
         GameManager.instance.AddObject("Tutorial/Z-key2");
         GameManager.instance.AddObject("Tutorial/X-key");
@@ -443,6 +448,11 @@ public class Mission1 : Mission {
         else if (tag.Equals("TVTrigger") && secao == enumMission.LANTERNA_ENCONTRADA && !birdsActive)
         {
             EspecificaEnum((int)enumMission.CORVO_VISTO);
+        }
+        else if (tag.Equals("SpecialTrigger") && !specialTrigger)
+        {
+            GameManager.instance.rpgTalk.NewTalk("M1LivingroomSpecialCat", "M1LivingroomSpecialCatEnd", GameManager.instance.rpgTalk.txtToParse);
+            specialTrigger = true;
         }
     }
 
