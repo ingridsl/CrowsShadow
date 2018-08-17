@@ -255,6 +255,11 @@ Shadow: I must have left in my room.
 Shadow: I'm getting crazier each day...
 Shadow: What's happening with my mind?
 [title=M3GardenSceneRepeatEnd]
+[title=M3GardenSceneRepeat2]
+Shadow: What are those?
+Shadow: This house is getting stranger each day...
+Shadow: Let's run inside!
+[title=M3GardenSceneRepeat2End]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M3MomRoomSceneStart]
 [title=M3MomRoomSceneEnd]
