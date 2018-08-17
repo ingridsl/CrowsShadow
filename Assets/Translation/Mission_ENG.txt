@@ -4,6 +4,24 @@ Alex: The door is locked.
 [title=TrancadaEnd]
 
 -------------------------------------- MISSAO 1 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+[title=M1CorvoArmarioStart]
+Alex: I have to look what is above the wardrobe.
+Alex: But I'm too small.
+Alex: Maybe I can use something to reach up there.
+[title=M1CorvoArmarioEnd]
+[title=M1Lanterna1ArmarioStart]
+Alex: This house is too dark.
+Alex: I'm getting scared...
+[title=M1Lanterna1ArmarioEnd]
+[title=M1Lanterna2ArmarioStart]
+Alex: Maybe I can find something with light.
+Alex: Like a lantern or a lighter.
+[title=M1Lanterna2ArmarioEnd]
+----------------------------------- ESPECIAL -----------------------------------
+[title=M1LivingroomSpecialCat]
+Alex: Where Pumpkin must be?
+[title=M1LivingroomSpecialCatEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M1Q0C0]
 Alex: Go away Pumpkin, I want to be alone.
@@ -44,7 +62,7 @@ Alex: Why are you staring at me?
 [title=M1GardenSceneEnd]
 [title=M1GardenSceneRepeat]
 [title=M1GardenSceneRepeatEnd]
------------------------------------ CENAS NO QUARTO DA Mom -----------------------------------
+----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
 [title=M1MomRoomSceneStart]
 Alex: Pumpkin?
 [title=M1MomRoomSceneEnd]
@@ -61,20 +79,9 @@ Alex: Pumpkin?
 [title=M1CorridorSceneEnd]
 [title=M1CorridorSceneRepeat]
 [title=M1CorridorSceneRepeatEnd]
------------------------------------ DICAS --------------------------------------------
-[title=M1CorvoArmarioStart]
-Alex: I have to look what is above the wardrobe.
-Alex: But I'm too small.
-Alex: Maybe I can use something to reach up there.
-[title=M1CorvoArmarioEnd]
-[title=M1Lanterna1ArmarioStart]
-Alex: This house is too dark.
-Alex: I'm getting scared.
-[title=M1Lanterna1ArmarioEnd]
-[title=M1Lanterna2ArmarioStart]
-Alex: Maybe I can find something with light.
-Alex: Like a lantern or a lighter.
-[title=M1Lanterna2ArmarioEnd]
+
+
+
 -------------------------------------- MISSAO 2 ----------------------------------------------------
 ----------------------------------- DICAS --------------------------------------------
 
@@ -90,6 +97,11 @@ Alex: Better keep this in my room.
 [title=M2AtaqueContesta]
 Pumpkin: Mrrrrow!
 [title=M2AtaqueContestaEnd]
+[title=M2BathroomSpecialWater]
+Alex: Pumpkin, remember when I feared the water?
+Pumpkin: Grrrr
+Alex: It was so cold, I thought I would freeze to death.
+[title=M1BathroomSpecialWaterEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M2Q1C0]
 Alex: You don't understand me!! 
@@ -108,7 +120,6 @@ Alex: At least Pumpkin can be by my side...
 Alex: Pumpkin, let's get a candle!
 Alex: So we can sleep with a little light at night!
 [title=M2Q1C1_2End]
-
 ----------------------------------- CENAS NO QUARTO DA CRIANÇA -----------------------------------
 [title=M2KidRoomSceneStart]
 Alex: Where is my mom?
@@ -121,7 +132,7 @@ Alex: I need a candle to light ...
 Alex: I need a match to light the candle ...
 [title=M2KidRoomSceneFosforoEnd]
 [title=M2KidRoomSceneFaca]
-Alex: I need something to attack ...
+Alex: I need something to attack...
 Alex: Like a knife or something.
 [title=M2KidRoomSceneFacaEnd]
 [title=M2KidRoomSceneTampa]
@@ -180,13 +191,13 @@ Alex: It's just the pictures of my Great-grandparents.
 Alex: Maybe I should concentrate !!
 [title=M3PaintingEnd]
 [title=M3MundoInvertido]
-Great-grandfather: We don't have much more money left ...
-Great-grandmother: No one will want to buy such a haunted house.
-Great-grandfather: Stop talking nonsense ...
-Great-grandfather: You just think it's haunted because you keep on talking about it.
+Male shadow: We don't have much more money left ...
+Female shadow: No one will want to buy such a haunted house.
+Male shadow: Stop talking nonsense ...
+Male shadow: You just think it's haunted because you keep on talking about it.
 Pumpkin: Can you see, Alex?
-Great-grandmother: How do you explain all the accidents then?
-Great-grandfather: Pff. The important thing is that we still have our little Pumpkin.
+Female shadow: How do you explain all the accidents then?
+Male shadow: Pff. The important thing is that we still have our little Pumpkin.
 [title=M3MundoInvertidoEnd]
 [title=M3MundoInvertido2]
 Pumpkin: Alex...
@@ -198,15 +209,21 @@ Alex: I don't want to go back to that place!
 [title=M3VoltaMundoInvertido]
 Mom: What's going on here?
 [question=2] What do you want to do now?
-[choice]"Nothing happened!! It doesn't matter!"
-[choice]"I don't know, I've seen strange things yesterday and today."
+[choice] "Nothing happened!! It doesn't matter!"
+[choice] "I don't know, I've seen strange things yesterday and today."
 [title=M3VoltaMundoInvertidoEnd]
+[title=M3GardenSpecialBasement]
+Alex: This place is so creepy...
+Alex: I think there are monsters inside.
+Pumpkin: Grrrrrrrrrrr
+Alex: I must stay away from it!
+[title=M3GardenSpecialBasementEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M3Q2C0]
 Alex: Nothing happened!! It doesn't matter!
 Mom: So what are you doing standing there ?!
 Mom: Walk and get out of here so I can clean the house!
-Mom: Go play outside or something like that!
+Mom: Go play outside!
 [title=M3Q2C0End]
 [title=M3Q2C1]
 Alex: I don't know, I've seen strange things yesterday and today.! 
@@ -230,11 +247,19 @@ Alex: Pumpkin?
 [title=M3GardenSceneStart]
 Alex: It looks like a safe place here ...
 Alex: I think I should do that thing again.
-Alex: And maybe...
-Alex: Go inside? I wonder if she is still there.
 [title=M3GardenSceneEnd]
 [title=M3GardenSceneRepeat]
+Shadow: Where is my journal?
+Shadow: I thought I had it with me...
+Shadow: I must have left in my room.
+Shadow: I'm getting crazier each day...
+Shadow: What's happening with my mind?
 [title=M3GardenSceneRepeatEnd]
+[title=M3GardenSceneRepeat2]
+Shadow: What are those?
+Shadow: This house is getting stranger each day...
+Shadow: Let's run inside!
+[title=M3GardenSceneRepeat2End]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M3MomRoomSceneStart]
 [title=M3MomRoomSceneEnd]
@@ -283,7 +308,9 @@ Alex: Would the bookcase be too obvious?
 Alex: Can you help me, Pumpkin?
 [title=frenteCriadoEnd]
 [title=GrandeBarulhoStart]
-Alex: I have to distract her.
+Alex: The book must be on mom's room.
+Alex: It must be the room used by that shadow I saw.
+Alex: I have to distract her so I can enter there.
 Alex: I could make a big noise.
 Alex: I think it's better to destroy something in the hallway.
 Alex: So she can hear.
@@ -308,7 +335,19 @@ Mom: Did you break the vase!?
 [choice] Tell the truth
 [choice] Lie
 [title=VerdadeOuMentiraEnd]
-
+[title=M4LivingroomSpecialBall]
+Alex: Pumpkin, remember when we used to play with this?
+Pumpkin: Meeeeeooow
+Alex: Those were great times!
+Alex: I was fearless...
+[title=M4LivingroomSpecialBallEnd]
+[title=M4LivingroomSpecialShelf]
+Alex: WOW!!!
+Pumpkin: Meow?
+Alex: I just remembered when I almost put fire on the shelf!
+Alex: Mom was so mad...
+Alex: I never wanna see her that way again!
+[title=M4LivingroomSpecialShelfEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M4Q3C0]
 Alex: Pumpkin, can you break that vase for me?
@@ -346,7 +385,7 @@ Alex: You want me to follow you?
 [title=M4GardenSceneEnd]
 [title=M4GardenSceneRepeat]
 [title=M4GardenSceneRepeatEnd]
------------------------------------ CENAS NO QUARTO DA Mom -----------------------------------
+----------------------------------- CENAS NO QUARTO DA MÂE -----------------------------------
 [title=M4MomRoomSceneStart]
 Alex: There must be something in that closet...
 [title=M4MomRoomSceneEnd]
@@ -364,33 +403,62 @@ Alex: There must be something in that closet...
 [title=M4CorridorSceneRepeatEnd]
 
 
+
 -------------------------------------- MISSAO 5 ----------------------------------------------------
+----------------------------------- DICAS --------------------------------------------
+
 ----------------------------------- ESPECIAL -----------------------------------
-[title=Dica5]
-[title=Dica5End]
 [title=DicaMundoInvertido5Start]
 Alex: Maybe I have to do that thing again.
 Alex: That thing that made me see my grandparents memories.
 [title=DicaMundoInvertido5End]
 [title=DicaSide5Start]
-Alex: That glowing thing is so beautiful.
+Alex: What a strange noise...
+Alex: It seems to be coming from near the table.
 Alex: It looks like there is something there.
 Alex: I have to check.
 [title=DicaSide5End]
+[title=M5KitchenSpecialStick]
+Mom: Alex! I wanted to talk to you...
+Alex: What is it, mom?
+Mom: I found some of your stuff and put it in your room.
+Alex: Ahhh... Thanks, mom! I'll go there and see that!
+[title=M5KitchenSpecialStickEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
-[title=M5Q10C0]
+[title=M5Q10C1-1]
 Mom: ALEX! HELP ME!
 Mom: AHHHHHHHHHH!
 Mom: You bastard kid!
-[title=M5Q10C0End]
-[title=M5Q10C1]
+[title=M5Q10C1-1End]
+[title=M5Q10C1-2]
 Mom: ALEX! HELP ME!
 Mom: AHHHHHHHHHH!
-[title=M5Q10C1End]
+[title=M5Q10C1-2End]
+[title=M5Q10C2]
+Alex: AHHHHHHHHHH!
+[title=M5Q10C2End]
 ----------------------------------- CENAS DA SIDE QUEST -----------------------------------
 [title=M5Side1Start]
 Alex: Where am I?
 [title=M5Side1End]
+[title=M5Side2Start]
+Alex: What are those things?
+Alex: I wonder what will happen if I mess with them?
+[title=M5Side2End]
+[title=M5Side3Start]
+Alex: What I have that may mess with them?
+[title=M5Side3End]
+[title=M5Side3-2Start]
+Alex: I should test the items I already have on them.
+[title=M5Side3-2End]
+[title=M5Side4Start]
+Alex: It seems they don't like the light...
+Alex: I should use it!
+[title=M5Side4End]
+[title=M5Side5Start]
+Alex: I think I can't dentroy them all!
+Alex: I need to discover which of them I should destroy.
+[title=M5Side5End]
 [title=M5Side1FlashbackStart]
 Shadow: I locked it.
 Shadow: I hope it doesn't scape.
@@ -410,7 +478,7 @@ Alex: I wonder if there is something interesting in that book.
 Alex: I have to check.
 [title=M5KidRoomSceneEnd]
 [title=M5KidRoomSceneSideStart]
-Alex: What is that glowing thing?
+Alex: What is that noise?
 Alex: Maybe I can get closer!
 [title=M5KidRoomSceneSideEnd]
 [title=M5KidRoomSceneRepeat]
@@ -449,7 +517,7 @@ Mom: Wait...
 [title=M5HelpMom2Start]
 [question=10] What do you want to do now?
 [choice] Help mom.
-[choice] Don't help mom.
+[choice] Take advantage of the distraction to enter the basement.
 [title=M5HelpMom2End]
 ----------------------------------- CENAS NO QUARTO DA Mom -----------------------------------
 [title=M5MomRoomSceneStart]
