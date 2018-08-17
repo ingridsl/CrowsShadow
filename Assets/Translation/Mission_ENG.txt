@@ -18,6 +18,10 @@ Alex: I'm getting scared...
 Alex: Maybe I can find something with light.
 Alex: Like a lantern or a lighter.
 [title=M1Lanterna2ArmarioEnd]
+----------------------------------- ESPECIAL -----------------------------------
+[title=M1LivingroomSpecialCat]
+Alex: Where Pumpkin must be?
+[title=M1LivingroomSpecialCatEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M1Q0C0]
 Alex: Go away Pumpkin, I want to be alone.
@@ -93,6 +97,11 @@ Alex: Better keep this in my room.
 [title=M2AtaqueContesta]
 Pumpkin: Mrrrrow!
 [title=M2AtaqueContestaEnd]
+[title=M2BathroomSpecialWater]
+Alex: Pumpkin, remember when I feared the water?
+Pumpkin: Grrrr
+Alex: It was so cold, I thought I would freeze to death.
+[title=M1BathroomSpecialWaterEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M2Q1C0]
 Alex: You don't understand me!! 
@@ -203,6 +212,12 @@ Mom: What's going on here?
 [choice] "Nothing happened!! It doesn't matter!"
 [choice] "I don't know, I've seen strange things yesterday and today."
 [title=M3VoltaMundoInvertidoEnd]
+[title=M3GardenSpecialBasement]
+Alex: This place is so creepy...
+Alex: I think there are monsters inside.
+Pumpkin: Grrrrrrrrrrr
+Alex: I must stay away from it!
+[title=M3GardenSpecialBasementEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M3Q2C0]
 Alex: Nothing happened!! It doesn't matter!
@@ -315,6 +330,19 @@ Mom: Did you break the vase!?
 [choice] Tell the truth
 [choice] Lie
 [title=VerdadeOuMentiraEnd]
+[title=M4LivingroomSpecialBall]
+Alex: Pumpkin, remember when we used to play with this?
+Pumpkin: Meeeeeooow
+Alex: Those were great times!
+Alex: I was fearless...
+[title=M4LivingroomSpecialBallEnd]
+[title=M4LivingroomSpecialShelf]
+Alex: WOW!!!
+Pumpkin: Meow?
+Alex: I just remembered when I almost put fire on the shelf!
+Alex: Mom was so mad...
+Alex: I never wanna see her that way again!
+[title=M4LivingroomSpecialShelfEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
 [title=M4Q3C0]
 Alex: Pumpkin, can you break that vase for me?
@@ -352,7 +380,7 @@ Alex: You want me to follow you?
 [title=M4GardenSceneEnd]
 [title=M4GardenSceneRepeat]
 [title=M4GardenSceneRepeatEnd]
------------------------------------ CENAS NO QUARTO DA Mom -----------------------------------
+----------------------------------- CENAS NO QUARTO DA MÂE -----------------------------------
 [title=M4MomRoomSceneStart]
 Alex: There must be something in that closet...
 [title=M4MomRoomSceneEnd]
@@ -385,16 +413,22 @@ Alex: It seems to be coming from near the table.
 Alex: It looks like there is something there.
 Alex: I have to check.
 [title=DicaSide5End]
+[title=M5KitchenSpecialStick]
+Mom: Alex! I wanted to talk to you...
+Alex: What is it, mom?
+Mom: I found some of your stuff and put it in your room.
+Alex: Ahhh... Thanks, mom! I'll go there and see that!
+[title=M5KitchenSpecialStickEnd]
 ----------------------------------- ESCOLHAS -----------------------------------
-[title=M5Q10C0]
+[title=M5Q10C1-1]
 Mom: ALEX! HELP ME!
 Mom: AHHHHHHHHHH!
 Mom: You bastard kid!
-[title=M5Q10C0End]
-[title=M5Q10C1]
+[title=M5Q10C1-1End]
+[title=M5Q10C1-2]
 Mom: ALEX! HELP ME!
 Mom: AHHHHHHHHHH!
-[title=M5Q10C1End]
+[title=M5Q10C1-2End]
 [title=M5Q10C2]
 Alex: AHHHHHHHHHH!
 [title=M5Q10C2End]
@@ -404,7 +438,19 @@ Alex: Where am I?
 [title=M5Side1End]
 [title=M5Side2Start]
 Alex: What are those things?
+Alex: I wonder what will happen if I mess with them?
 [title=M5Side2End]
+[title=M5Side3Start]
+Alex: What I have that may mess with them?
+[title=M5Side3End]
+[title=M5Side4Start]
+Alex: It seems they don't like the light...
+Alex: I should use it!
+[title=M5Side4End]
+[title=M5Side5Start]
+Alex: I can't dentroy them all!
+Alex: I need to discover which of them I should destroy.
+[title=M5Side5End]
 [title=M5Side1FlashbackStart]
 Shadow: I locked it.
 Shadow: I hope it doesn't scape.
