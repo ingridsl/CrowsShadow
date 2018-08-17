@@ -37,6 +37,7 @@ public class SideQuest1 : SideQuest
         {
             GameManager.instance.rpgTalk.NewTalk("M5Side5Start", "M5Side5End", false);
         }
+        //success = true;
     }
 
     public override void UpdateSideQuest()
@@ -54,22 +55,36 @@ public class SideQuest1 : SideQuest
             }
         }
         // Conferir se todos os SpiritManagers alcançaram sucesso
-        else if (spiritManager.success && !success)
+        else if (spiritManager && spiritManager.success && !success)
         {
             success = true;
             counterTimeEscape = timeEscape;
             SetTimeToEscape();
         }
-        ////if (success)
-        //{
-           //EndSideQuest();
-        //}
+        if (success && showingFlashback)
+        {
+            if (!GameManager.instance.rpgTalk.isPlaying)
+            {
+                if (person1)
+                {
+                    GameObject.Destroy(person1);
+                }
+                if (person2)
+                {
+                    GameObject.Destroy(person2);
+                }
+                EndFlashback();
+            }
+        }
         SpinCamera(5f);
     }
 
     public override void ShowFlashback()
     {
+        GameManager.instance.InvertWorld(true);
+        GameManager.instance.invertWorldBlocked = true;
         GameManager.instance.rpgTalk.NewTalk("M5Side1FlashbackStart", "M5Side1FlashbackEnd", GameManager.instance.rpgTalk.txtToParse);
+        
         // Pessoa 1
         person1 = GameManager.instance.AddObject("NPCs/personShadow", "", new Vector3(2f, 0.5f, -0.5f), new Vector3(0.3f, 0.3f, 1));
         person1.GetComponent<Patroller>().isPatroller = true;
@@ -85,7 +100,8 @@ public class SideQuest1 : SideQuest
         person1.GetComponent<Patroller>().targets = p1Pos;
         person1.GetComponent<Patroller>().speed = 0.9f;
         person1.GetComponent<Patroller>().stopEndPath = true;
-        EndFlashback();
+
+        showingFlashback = true;
     }
 
 }

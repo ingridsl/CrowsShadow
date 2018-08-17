@@ -6,7 +6,8 @@ using CrowShadowPlayer;
 
 public abstract class SideQuest
 {
-    protected bool active = true, success = false;
+    public bool success = false;
+    protected bool active = true, showingFlashback = false;
     protected bool hasCat = false, hasRaven = false, invertBlocked = false, wasInverted = false;
     protected string oldScene = "";
 
@@ -54,7 +55,7 @@ public abstract class SideQuest
         GameManager.instance.invertWorldBlocked = false;
         wasInverted = GameManager.instance.invertWorld;
         GameManager.instance.InvertWorld(false);
-        GameManager.instance.paused = false;
+        GameManager.instance.blocked = false;
 
         if (GameManager.instance.rpgTalk.isPlaying)
         {
@@ -147,7 +148,7 @@ public abstract class SideQuest
 
         GameManager.instance.invertWorldBlocked = invertBlocked;
         GameManager.instance.InvertWorld(true);
-        GameManager.instance.paused = true;
+        GameManager.instance.blocked = true;
 
         if (GameManager.instance.rpgTalk.isPlaying)
         {
@@ -167,13 +168,15 @@ public abstract class SideQuest
 
         active = false;
         DeleteTimeToEscape();
-        ExtrasManager.EndSideQuest();
     }
 
     protected void EndFlashback()
     {
+        GameManager.instance.invertWorldBlocked = false;
         GameManager.instance.InvertWorld(wasInverted);
-        GameManager.instance.paused = false;
+        GameManager.instance.blocked = false;
+        ExtrasManager.EndSideQuest();
+        GameManager.instance.Print("EndFlashback");
     }
 
 }
