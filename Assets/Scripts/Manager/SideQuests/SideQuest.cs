@@ -146,8 +146,6 @@ public abstract class SideQuest
             Crow.instance.gameObject.SetActive(true);
         }
 
-        GameManager.instance.invertWorldBlocked = invertBlocked;
-        GameManager.instance.InvertWorld(true);
         GameManager.instance.blocked = true;
 
         if (GameManager.instance.rpgTalk.isPlaying)
@@ -163,6 +161,8 @@ public abstract class SideQuest
         }
         else
         {
+            GameManager.instance.invertWorldBlocked = invertBlocked;
+            GameManager.instance.InvertWorld(true);
             EndFlashback();
         }
 
@@ -172,9 +172,10 @@ public abstract class SideQuest
 
     protected void EndFlashback()
     {
-        GameManager.instance.invertWorldBlocked = false;
+        GameManager.instance.invertWorldBlocked = invertBlocked;
         GameManager.instance.InvertWorld(wasInverted);
         GameManager.instance.blocked = false;
+        GameManager.instance.paused = false; // ERRO TÁ AQUI
         ExtrasManager.EndSideQuest();
         GameManager.instance.Print("EndFlashback");
     }
