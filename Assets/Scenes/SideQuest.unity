@@ -4438,7 +4438,7 @@ GameObject:
   - component: {fileID: 1145773774}
   - component: {fileID: 1145773775}
   m_Layer: 0
-  m_Name: SoundObject
+  m_Name: HeartSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
