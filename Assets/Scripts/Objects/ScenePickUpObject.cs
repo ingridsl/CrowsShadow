@@ -12,6 +12,7 @@ namespace CrowShadowObjects
         public SceneObject.PositionSprite positionSprite = SceneObject.PositionSprite.DEFAULT;
         public float scale = 1;
         public Inventory.InventoryItems item;
+        public bool onlyInvertedWorld = false;
         public bool isUp = false;
         public bool blockAfterPick = false;
         public bool blockSortOrder = false;
@@ -67,9 +68,12 @@ namespace CrowShadowObjects
             if (spriteRenderer.sprite == sprite1)
             {
                 spriteRenderer.sprite = sprite2;
-                Inventory.NewItem(item);
-                if (numRandomListed != -1) GameManager.instance.ObjectPicked(numRandomListed);
-                if (blockAfterPick) blockChange = true;
+                if (!onlyInvertedWorld || (onlyInvertedWorld && GameManager.instance.invertWorld))
+                {
+                    Inventory.NewItem(item);
+                    if (numRandomListed != -1) GameManager.instance.ObjectPicked(numRandomListed);
+                    if (blockAfterPick) blockChange = true;
+                }
             }
             else
             {

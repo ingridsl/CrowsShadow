@@ -266,7 +266,7 @@ namespace CrowShadowPlayer
                     else if (previousSceneName.Equals("QuartoMae"))
                     {
                         transform.position = new Vector3(-1.6f, -0.3f, -1f);
-                        ChangeDirection((int)Directions.NORTH);
+                        ChangeDirection((int)Directions.SOUTH);
                     }
                     else if (previousSceneName.Equals("Cozinha"))
                     {
@@ -275,7 +275,7 @@ namespace CrowShadowPlayer
                     else if (previousSceneName.Equals("Banheiro"))
                     {
                         transform.position = new Vector3(-11.3f, -0.3f, -1f);
-                        ChangeDirection((int)Directions.NORTH);
+                        ChangeDirection((int)Directions.SOUTH);
                     }
                     //else if (previousSceneName.Equals("QuartoKid"))
                     else
@@ -293,32 +293,32 @@ namespace CrowShadowPlayer
                     if (previousSceneName.Equals("Porao"))
                     {
                         transform.position = new Vector3(6.0f, 2.5f, -1f);
-                        ChangeDirection((int)Directions.NORTH);
+                        ChangeDirection((int)Directions.SOUTH);
                     }
                     else
                     {
-                        transform.position = new Vector3(3.25f, 2.3f, -1f);
+                        transform.position = new Vector3(2.9f, 2.3f, -1f);
                     }
                 }
                 else if (GameManager.currentSceneName.Equals("Porao"))
                 {
                     transform.position = new Vector3(3.2f, 0.5f, -1f);
-                    ChangeDirection((int)Directions.NORTH);
+                    ChangeDirection((int)Directions.WEST);
                 }
                 else if (GameManager.currentSceneName.Equals("QuartoKid"))
                 {
                     transform.position = new Vector3(1.75f, 0.65f, -1f);
-                    ChangeDirection((int)Directions.NORTH);
+                    ChangeDirection((int)Directions.SOUTH);
                 }
                 else if (GameManager.currentSceneName.Equals("QuartoMae"))
                 {
                     transform.position = new Vector3(-3.8f, -0.45f, -1f);
-                    ChangeDirection((int)Directions.NORTH);
+                    ChangeDirection((int)Directions.SOUTH);
                 }
                 else if (GameManager.currentSceneName.Equals("Banheiro"))
                 {
                     transform.position = new Vector3(2.171f, 0.284f, -1f);
-                    ChangeDirection((int)Directions.NORTH);
+                    ChangeDirection((int)Directions.SOUTH);
                 }
                 else if (GameManager.currentSceneName.Equals("Sala"))
                 {
@@ -330,7 +330,7 @@ namespace CrowShadowPlayer
                     else
                     {
                         transform.position = new Vector3(-3.15f, 0.85f, -1f);
-                        ChangeDirection((int)Directions.NORTH);
+                        ChangeDirection((int)Directions.SOUTH);
                     }
                 }
                 else if (GameManager.currentSceneName.Equals("SideQuest"))

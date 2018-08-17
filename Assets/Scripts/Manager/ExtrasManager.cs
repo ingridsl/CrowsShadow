@@ -100,7 +100,7 @@ namespace CrowShadowManager
             {
                 // set page 1
                 GameObject page1 = GameManager.instance.AddObject(
-                   "Objects/Page", "", new Vector3(0.5f, 0f, 0f), new Vector3(1, 1, 1));
+                   "Objects/Page", "", new Vector3(-3.5f, 4f, 0f), new Vector3(1, 1, 1));
             }
             if (pages == 1 && current >= 6 && current != 9 && current != 11
                 && GameManager.currentSceneName.Equals("Jardim"))
