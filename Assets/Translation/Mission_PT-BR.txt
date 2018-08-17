@@ -448,12 +448,15 @@ Alex: O que será que vai acontecer se eu mexer com elas?
 [title=M5Side3Start]
 Alex: O que eu tenho que eu possa usar para mexer com elas?
 [title=M5Side3End]
+[title=M5Side3-2Start]
+Alex: Eu deveria testar os itens que já tenho.
+[title=M5Side3-2End]
 [title=M5Side4Start]
 Alex: Parece que elas não gostam da luz...
 Alex: Eu devo usar isso!
 [title=M5Side4End]
 [title=M5Side5Start]
-Alex: Eu não posso destruir todas!
+Alex: Eu acho que não posso destruir todas!
 Alex: Eu preciso descobrir quais destruir.
 [title=M5Side5End]
 [title=M5Side1FlashbackStart]
