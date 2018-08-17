@@ -255,6 +255,11 @@ Sombra: Devo ter deixado no meu quarto.
 Sombra: Estou ficando mais doida a cada dia...
 Sombra: O que está acontecendo com minha cabeça?
 [title=M3GardenSceneRepeatEnd]
+[title=M3GardenSceneRepeat2]
+Shadow: O que são esses?
+Shadow: Essa casa está mais estranha a cada dia...
+Shadow: Vamos correr para dentro!
+[title=M3GardenSceneRepeat2End]
 ----------------------------------- CENAS NO QUARTO DA MÃE -----------------------------------
 [title=M3MomRoomSceneStart]
 [title=M3MomRoomSceneEnd]
