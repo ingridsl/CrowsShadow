@@ -30,8 +30,8 @@ public class SideQuest1 : SideQuest
 
         GameObject trigger1 = GameManager.instance.AddObject("Scenery/AreaTrigger", "", new Vector3(0f, 0f, 0), new Vector3(1, 1, 1));
         trigger1.name = "Trigger1Side";
-        trigger1.GetComponent<Collider2D>().offset = new Vector2(5f, 5f);
-        trigger1.GetComponent<BoxCollider2D>().size = new Vector2(10f, 2f);
+        trigger1.GetComponent<Collider2D>().offset = new Vector2(0f, 0f);
+        trigger1.GetComponent<BoxCollider2D>().size = new Vector2(50f, 2f);
         
         if (GameManager.previousSceneName.Equals("GameOver"))
         {
