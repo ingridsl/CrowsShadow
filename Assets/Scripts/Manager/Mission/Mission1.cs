@@ -26,7 +26,8 @@ public class Mission1 : Mission {
         GameManager.LoadScene(sceneInit);
         secao = enumMission.NIGHT;
         Book.bookBlocked = true;
-        GameManager.instance.invertWorld = false;
+
+        GameManager.instance.InvertWorld(false);
         GameManager.instance.invertWorldBlocked = true;
 
         PlayerPrefs.DeleteKey("MO_Corredor_0X");

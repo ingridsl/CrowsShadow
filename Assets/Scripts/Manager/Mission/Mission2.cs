@@ -27,7 +27,7 @@ public class Mission2 : Mission {
         secao = enumMission.NIGHT;
         Book.bookBlocked = true;
 
-        GameManager.instance.invertWorld = false;
+        GameManager.instance.InvertWorld(false);
         GameManager.instance.invertWorldBlocked = true;
 
         SetInitialSettings();

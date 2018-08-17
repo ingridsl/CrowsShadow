@@ -1000,7 +1000,7 @@ namespace CrowShadowManager
         public void InvertWorld(bool sel)
         {
             invertWorld = sel;
-            if (!currentSceneName.Equals("GameOver") && !currentSceneName.Equals("MainMenu"))
+            if (!currentSceneName.Equals("GameOver") && !currentSceneName.Equals("MainMenu") && !currentSceneName.Equals("Credits"))
             {
                 if (colorCamera == null)
                 {
@@ -1205,6 +1205,9 @@ namespace CrowShadowManager
                 switch (choiceID)
                 {
                     case 0:
+                        rpgTalk.NewTalk("M5Q10C2", "M5Q10C2End");
+                        break;
+                    default:
                         if (pathBird > pathCat)
                         {
                             rpgTalk.NewTalk("M5Q10C1-1", "M5Q10C1-1End");
@@ -1213,9 +1216,6 @@ namespace CrowShadowManager
                         {
                             rpgTalk.NewTalk("M5Q10C1-2", "M5Q10C1-2End");
                         }
-                        break;
-                    default:
-                        rpgTalk.NewTalk("M5Q10C2", "M5Q10C2End");
                         break;
                 }
 
