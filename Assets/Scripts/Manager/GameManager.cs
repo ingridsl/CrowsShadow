@@ -248,7 +248,7 @@ namespace CrowShadowManager
             {
                 ChangeMission(5);
             }
-            /*else if (Input.GetKeyDown(KeyCode.Alpha6))
+            else if (Input.GetKeyDown(KeyCode.Alpha6))
             {
                 ChangeMission(6);
             }
@@ -283,7 +283,7 @@ namespace CrowShadowManager
             else if (Input.GetKeyDown(KeyCode.G))
             {
                 GameOver();
-            }*/
+            }
 
         }
 
