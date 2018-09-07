@@ -97,14 +97,14 @@ namespace CrowShadowPlayer
                 GameManager.instance.scenerySounds2.PlayPaper(3);
                 if (lastPageSeen) seenAll = true;
                 book.SetActive(false);
-                GameManager.instance.paused = false;
+                GameManager.instance.PauseGame(false);
                 show = false;
             }
             else
             {
                 GameManager.instance.scenerySounds2.PlayPaper(2);
                 book.SetActive(true);
-                GameManager.instance.paused = true;
+                GameManager.instance.PauseGame(true);
                 show = true;
                 ShowBookPages();
             }

@@ -107,7 +107,7 @@ public abstract class Mission {
         if (Cat.instance != null) Cat.instance.DestroyCat();
         if (Crow.instance != null) Crow.instance.DestroyRaven();
 
-        GameManager.instance.paused = false;
+        GameManager.instance.PauseGame(false);
         GameManager.instance.blocked = false;
 
         player = GameManager.instance.gameObject;

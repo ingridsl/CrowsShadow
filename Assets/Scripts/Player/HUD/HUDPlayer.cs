@@ -50,12 +50,12 @@ namespace CrowShadowPlayer
 
                 if (pauseMenu.activeSelf)
                 {
-                    GameManager.instance.paused = false;
+                    GameManager.instance.PauseGame(false);
                     pauseMenu.SetActive(false);
                 }
                 else
                 {
-                    GameManager.instance.paused = true;
+                    GameManager.instance.PauseGame(true);
                     pauseMenu.SetActive(true);
                 }
             }

@@ -1062,6 +1062,21 @@ namespace CrowShadowManager
             showMissionStart = false;
         }
 
+        // PAUSAR JOGO
+        public void PauseGame(bool p)
+        {
+            if (p)
+            {
+                paused = true;
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                paused = false;
+                Time.timeScale = 1f;
+            }
+        }
+
         /************ FUNÇÕES DE ESCOLHA ************/
 
         // FUNÇÃO APÓS ESCOLHA SER FEITA

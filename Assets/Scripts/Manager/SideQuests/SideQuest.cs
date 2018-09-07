@@ -175,7 +175,6 @@ public abstract class SideQuest
         GameManager.instance.invertWorldBlocked = invertBlocked;
         GameManager.instance.InvertWorld(wasInverted);
         GameManager.instance.blocked = false;
-        GameManager.instance.paused = false; // ERRO TÁ AQUI
         ExtrasManager.EndSideQuest();
         GameManager.instance.Print("EndFlashback");
     }

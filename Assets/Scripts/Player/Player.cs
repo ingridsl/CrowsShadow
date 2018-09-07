@@ -236,6 +236,7 @@ namespace CrowShadowPlayer
         {
             transform.position = new Vector3(x, y, -1f);
             if (dir != -1) ChangeDirection(dir);
+            GameManager.instance.paused = false;
         }
 
         public void ChangePosition()

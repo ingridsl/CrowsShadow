@@ -37,7 +37,7 @@ public class SideQuest1 : SideQuest
         {
             GameManager.instance.rpgTalk.NewTalk("M5Side5Start", "M5Side5End", false);
         }
-        //success = true;
+        success = true;
     }
 
     public override void UpdateSideQuest()

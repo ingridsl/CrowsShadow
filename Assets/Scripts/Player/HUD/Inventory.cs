@@ -132,7 +132,7 @@ namespace CrowShadowPlayer
             {
                 open = false;
                 menu.SetActive(false);
-                GameManager.instance.paused = false;
+                GameManager.instance.PauseGame(false);
                 if (currentItem != -1)
                 {
                     GameObject currentSlot = slotsPanel.transform.Find("Slot (" + currentItem + ")").gameObject;
@@ -146,7 +146,7 @@ namespace CrowShadowPlayer
             {
                 open = true;
                 menu.SetActive(true);
-                GameManager.instance.paused = true;
+                GameManager.instance.PauseGame(true);
 
                 int count = 0;
                 foreach (DataItems i in listItems)

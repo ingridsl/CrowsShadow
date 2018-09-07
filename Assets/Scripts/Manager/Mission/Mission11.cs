@@ -27,7 +27,6 @@ public class Mission11 : Mission {
 
         GameManager.instance.invertWorld = false;
         GameManager.instance.invertWorldBlocked = false;
-        GameManager.instance.paused = false;
 
         if (GameManager.instance.rpgTalk.isPlaying)
         {

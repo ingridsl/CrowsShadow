@@ -372,13 +372,11 @@ namespace CrowShadowScenery
             if (locker.activeSelf)
             {
                 locker.SetActive(false);
-                GameManager.instance.paused = false;
                 GameManager.instance.blocked = false;
             }
             else
             {
                 locker.SetActive(true);
-                GameManager.instance.paused = true;
                 GameManager.instance.blocked = true;
             }
         }

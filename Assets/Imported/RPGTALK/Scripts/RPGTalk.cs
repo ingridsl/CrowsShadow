@@ -490,8 +490,8 @@ public class RPGTalk : MonoBehaviour {
 			}
 				
 			if(rpgtalkElements.Count == 0){
-                //Debug.LogError ("The Line To Start and the Line To Break are not fit for the given TXT");
-                Debug.LogWarning("The Line To Start and the Line To Break are not fit for the given TXT");
+                Debug.LogError("The Line To Start and the Line To Break are not fit for the given TXT");
+                //Debug.LogWarning("The Line To Start and the Line To Break are not fit for the given TXT");
                 return;
 			}
 

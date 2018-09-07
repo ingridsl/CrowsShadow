@@ -24,7 +24,7 @@ namespace CrowShadowScenery
 
         private void ChangeScene()
         {
-            GameManager.instance.paused = true;
+            GameManager.instance.blocked = true;
             GameManager.instance.sideQuest.EndSideQuest();
         }
     }
