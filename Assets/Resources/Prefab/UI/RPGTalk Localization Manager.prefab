@@ -55,15 +55,15 @@ MonoBehaviour:
   - language: 0
     txtToParse:
     - {fileID: 4900000, guid: 83bb7977ea1e1844894af8f790eb1f12, type: 3}
-  - language: 3
+  - language: 1
     txtToParse:
     - {fileID: 4900000, guid: b51189599ee49be459453e5171734ddc, type: 3}
-  - language: 4
-    txtToParse:
-    - {fileID: 4900000, guid: c9f442b2f78b0304b8af1d46e3d40343, type: 3}
   - language: 2
     txtToParse:
+    - {fileID: 4900000, guid: c9f442b2f78b0304b8af1d46e3d40343, type: 3}
+  - language: 3
+    txtToParse:
     - {fileID: 4900000, guid: 7f2e56a36693cb74cb8d9349a125095a, type: 3}
-  - language: 1
+  - language: 4
     txtToParse:
     - {fileID: 4900000, guid: 6a17e5e5aa40381449530c2c42c621c9, type: 3}
