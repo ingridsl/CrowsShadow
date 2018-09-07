@@ -8,7 +8,7 @@ namespace RPGTALK.Localization
 	/// An Enum with the supported languages. You can edit this enum at will to add more languages to your game
 	/// </summary>
 	public enum SupportedLanguages{
-		EN_US,ES,FR,PT_BR,JP
+		EN_US,PT_BR,JP,FR,ES
 	}
 
 	/// <summary>

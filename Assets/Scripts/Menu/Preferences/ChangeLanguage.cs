@@ -40,6 +40,10 @@ namespace CrowShadowMenu
                     PlayerPrefs.SetString("Language", "FR");
                     script.SetTextLanguage();
                     break;
+                case 5:
+                    PlayerPrefs.SetString("Language", "ES");
+                    script.SetTextLanguage();
+                    break;
             }
         }
 

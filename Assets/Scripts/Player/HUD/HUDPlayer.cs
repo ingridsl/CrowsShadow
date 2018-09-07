@@ -72,19 +72,23 @@ namespace CrowShadowPlayer
             {
                 case "EN_US":
                     LanguageSettings.actualLanguage = SupportedLanguages.EN_US;
-                    ChangeTextMenu("Pause", "Continue", "Inventory", "Controls", "Exit");
+                    ChangeTextMenu("Pause", "Return", "Inventory", "Controls", "Exit game");
                     break;
                 case "PT_BR":
                     LanguageSettings.actualLanguage = SupportedLanguages.PT_BR;
-                    ChangeTextMenu("Pausa", "Continuar", "Inventário", "Controles", "Sair");
+                    ChangeTextMenu("Pausa", "Retornar", "Inventário", "Controles", "Sair do jogo");
                     break;
                 case "JP":
                     LanguageSettings.actualLanguage = SupportedLanguages.JP;
-                    ChangeTextMenu("止む", "続く", "発明", "コントロール", "出る");
+                    ChangeTextMenu("止む", "戻る", "発明", "コントロール", "ゲームを終了する");
                     break;
                 case "FR":
                     LanguageSettings.actualLanguage = SupportedLanguages.FR;
-                    ChangeTextMenu("Pause", "Continuer", "Inventaire", "Contrôles", "Quitter");
+                    ChangeTextMenu("Pause", "Revenir", "Inventaire", "Contrôles", "Quittez le jeu");
+                    break;
+                case "ES":
+                    LanguageSettings.actualLanguage = SupportedLanguages.FR;
+                    ChangeTextMenu("Pausa", "Retorno", "Inventario", "Controles", "Salir del juego");
                     break;
             }
         }
