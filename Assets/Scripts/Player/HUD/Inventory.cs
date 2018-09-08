@@ -83,23 +83,24 @@ namespace CrowShadowPlayer
 
         void Update()
         {
-            if (CrossPlatformInputManager.GetButtonDown("keyInventory") && !GameManager.instance.showMissionStart &&
-                !GameManager.instance.blocked && !GameManager.instance.pausedObject && !Book.show)
+            if (!GameManager.instance.showMissionStart && !GameManager.instance.blocked &&
+                !GameManager.instance.pausedObject && !Book.show)
             {
-                if (!source.isPlaying)
-                    source.PlayOneShot(sound);
-                ShowInventoryMenu();
-            }
-
-            if (currentItemObject != null && !activeShow && currentItemObject.active)
-            {
-                menuItem.GetComponent<Image>().color = Color.red;
-                activeShow = true;
-            }
-            else if (activeShow && ((currentItemObject != null && !currentItemObject.active) || currentItemObject == null))
-            {
-                menuItem.GetComponent<Image>().color = Color.white;
-                activeShow = false;
+                if (!menu.activeSelf && CrossPlatformInputManager.GetButtonDown("keyInventory"))
+                {
+                    ShowInventoryMenu();
+                }
+                else if (menu.activeSelf)
+                {
+                    if (CrossPlatformInputManager.GetButtonDown("keyInventory"))
+                    {
+                        ShowInventoryMenu(false);
+                    }
+                    else if (CrossPlatformInputManager.GetButtonDown("keyUseObject"))
+                    {
+                        ShowInventoryMenu(true);
+                    }
+                }
             }
 
             if (menu.activeSelf && currentItem != -1)
@@ -136,17 +137,33 @@ namespace CrowShadowPlayer
                     previousItem = currentItem;
                 }
             }
+
+            if (currentItemObject != null && !activeShow && currentItemObject.active)
+            {
+                menuItem.GetComponent<Image>().color = Color.red;
+                activeShow = true;
+            }
+            else if (activeShow && ((currentItemObject != null && !currentItemObject.active) || currentItemObject == null))
+            {
+                menuItem.GetComponent<Image>().color = Color.white;
+                activeShow = false;
+            }
         }
 
         // MOSTRAR INVENTÁRIO
-        void ShowInventoryMenu()
+        void ShowInventoryMenu(bool change = false)
         {
+            if (!source.isPlaying)
+            {
+                source.PlayOneShot(sound);
+            }
+
             if (menu.activeSelf)
             {
                 open = false;
                 menu.SetActive(false);
                 GameManager.instance.PauseGame(false);
-                if (currentItem != -1)
+                if (currentItem != -1 && change)
                 {
                     GameObject currentSlot = slotsPanel.transform.Find("Slot (" + currentItem + ")").gameObject;
                     currentSlot.GetComponent<Image>().sprite = box;
