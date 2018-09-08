@@ -74,7 +74,7 @@ namespace CrowShadowScenery
 
         public void ScareTrigger()
         {
-            if (spriteRenderer.sprite == aberto && scare && !Flashlight.GetState())
+            if (spriteRenderer.sprite == aberto && scare && !Inventory.IsCurrentItemType(Inventory.InventoryItems.FLASHLIGHT, true))
             {
                 GameManager.instance.scenerySounds.PlayScare(1);
                 GameManager.instance.scenerySounds.PlayBird(1);

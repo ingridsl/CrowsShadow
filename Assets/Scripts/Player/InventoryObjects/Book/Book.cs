@@ -5,7 +5,7 @@ using CrowShadowManager;
 
 namespace CrowShadowPlayer
 {
-    public class Book : MonoBehaviour
+    public class Book : InventoryObject
     {
         public static int pageQuantity = 0;
         public static bool bookBlocked = true;
@@ -17,8 +17,9 @@ namespace CrowShadowPlayer
         private int pageShowing; // 0 - 2
         private bool lastPageSeen = false, seenAll = false, invertWorldAux = false;
 
-        void Start()
+        new void Start()
         {
+            base.Start();
             GameObject hud = GameObject.Find("HUDCanvas");
             book = hud.transform.Find("Book").gameObject;
             page1 = hud.transform.Find("Book/Page 1").gameObject;
@@ -51,7 +52,7 @@ namespace CrowShadowPlayer
             }
         }
         
-        void Update()
+        new void Update()
         {
             if ((CrossPlatformInputManager.GetButtonDown("keyJournal") ||
                 (CrossPlatformInputManager.GetButtonDown("keyUseObject") && Inventory.GetCurrentItemType() == Inventory.InventoryItems.LIVRO))
@@ -99,9 +100,14 @@ namespace CrowShadowPlayer
                 book.SetActive(false);
                 GameManager.instance.PauseGame(false);
                 show = false;
+                active = false;
             }
             else
             {
+                if (Inventory.GetCurrentItemType() == Inventory.InventoryItems.LIVRO)
+                {
+                    active = true;
+                }
                 GameManager.instance.scenerySounds2.PlayPaper(2);
                 book.SetActive(true);
                 GameManager.instance.PauseGame(true);

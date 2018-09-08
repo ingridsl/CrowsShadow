@@ -153,7 +153,7 @@ namespace CrowShadowNPCs
 
         protected void OnTriggerStay2D(Collider2D collision)
         {
-            if (!hidden && destructible && collision.tag.Equals("Papel") && collision.GetComponent<FarAttackMiniGameObject>().attacking)
+            if (!hidden && destructible && collision.tag.Equals("Papel") && collision.GetComponent<FarAttackMiniGameObject>().active)
             {
                 collision.GetComponent<FarAttackMiniGameObject>().hitSuccess = true;
                 if (collision.GetComponent<FarAttackMiniGameObject>().achievedGoal)

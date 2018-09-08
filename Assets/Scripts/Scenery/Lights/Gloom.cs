@@ -18,7 +18,7 @@ namespace CrowShadowScenery
 
         void Update()
         {
-            if (Flashlight.GetState() && !audioSource.isPlaying)
+            if (Inventory.IsCurrentItemType(Inventory.InventoryItems.FLASHLIGHT, true) && !audioSource.isPlaying)
             {
                 gameObject.GetComponent<AudioSource>().Play();
                 maxRoar--;

@@ -4,7 +4,7 @@ using CrowShadowManager;
 
 namespace CrowShadowPlayer
 {
-    public class Flashlight : MonoBehaviour
+    public class Flashlight : InventoryObject
     {
         public Inventory.InventoryItems item;
 
@@ -12,21 +12,20 @@ namespace CrowShadowPlayer
         Light lightComponent;
         Collider2D colliderComponent;
         CircleCollider2D circleCollider;
-
-        static bool enable;
+        
         float rotationSpeed = 1f, timePressed = 0f;
         bool changeDirectionTime = false;
 
-        void Start()
+        new void Start()
         {
             player = GetComponentInParent<Player>();
             lightComponent = GetComponent<Light>();
             colliderComponent = GetComponent<Collider2D>();
             circleCollider = GetComponent<CircleCollider2D>();
-            enable = colliderComponent.enabled = lightComponent.enabled;
+            active = colliderComponent.enabled = lightComponent.enabled;
         }
 
-        void Update()
+        new void Update()
         {
             //0 = east, 1 = west, 2 = north, 3 = south
             if (Inventory.GetCurrentItemType() == item && !GameManager.instance.paused &&
@@ -35,7 +34,7 @@ namespace CrowShadowPlayer
                 if (CrossPlatformInputManager.GetButtonDown("keyUseObject"))
                 {
                     EnableFlashlight(!lightComponent.enabled);
-                    if (enable)
+                    if (active)
                     {
                         transform.rotation = Quaternion.Euler((float)0.0, (float)0.0, (float)0.0);
                     }
@@ -64,7 +63,7 @@ namespace CrowShadowPlayer
                 }
             }
 
-            if (enable)
+            if (active)
             {
                 if (Inventory.GetCurrentItemType() != item)
                 {
@@ -107,17 +106,12 @@ namespace CrowShadowPlayer
 
         }
 
-        public static bool GetState()
-        {
-            return enable;
-        }
-
         public void EnableFlashlight(bool e)
         {
             lightComponent.enabled = e;
             colliderComponent.enabled = e;
-            enable = e;
-            if (enable)
+            active = e;
+            if (active)
             {
                 player.ChangeState((int)Player.States.FLASHLIGHT);
             }

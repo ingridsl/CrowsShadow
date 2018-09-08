@@ -87,7 +87,7 @@ public class Mission1 : Mission {
 
         if (secao == enumMission.GATO_SALA || secao == enumMission.LANTERNA_ENCONTRADA)
         {
-            if (areaTriggered && !Flashlight.GetState() && !birdsActive)
+            if (areaTriggered && !Inventory.IsCurrentItemType(Inventory.InventoryItems.FLASHLIGHT, true) && !birdsActive)
             {
                 GameManager.instance.scenerySounds.PlayBird(1);
                 GameObject birds = GameObject.Find("BirdEmitterHolder(Sala)").gameObject;

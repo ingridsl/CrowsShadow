@@ -36,15 +36,15 @@ namespace CrowShadowPlayer
                     fire.SetActive(true);
                     fire.transform.localPosition = new Vector3(0f, 0f, 0f);
                 }
-                else if (attacking && !init)
+                else if (active && !init)
                 {
                     init = true;
                 }
-                else if (init && !attacking)
+                else if (init && !active)
                 {
                    // EndFire();
                 }
-                else if (achievedGoal && !initAttack && !attacking)
+                else if (achievedGoal && !initAttack && !active)
                 {
                     if (Inventory.GetCurrentItemType() != item)
                     {
@@ -97,7 +97,7 @@ namespace CrowShadowPlayer
         protected void SetMiniGame(bool e = true)
         {
             miniGameUnlocked = e;
-            miniGameObject.activated = e;
+            miniGameObject.active = e;
             miniGameObject.paper = e;
             miniGameObject.enabled = e;
         }

@@ -110,8 +110,8 @@ public class Mission10 : Mission {
                 fosforoMiniGame.achievedGoal = false;
                 isqueiroMiniGame.achievedGoal = false;
 
-                fosforoMiniGame.activated = false;
-                isqueiroMiniGame.activated = false;
+                fosforoMiniGame.active = false;
+                isqueiroMiniGame.active = false;
 
                 if (estanteTrigger)
                 {
@@ -614,8 +614,8 @@ public class Mission10 : Mission {
         {
             if (tag.Equals("EnterEstanteTrigger") && !estanteBurn)
             {
-                fosforoMiniGame.activated = true;
-                isqueiroMiniGame.activated = true;
+                fosforoMiniGame.active = true;
+                isqueiroMiniGame.active = true;
                 fosforoMiniGame.posFlareX = -5.71f;
                 fosforoMiniGame.posFlareY = 1.64f;
                 isqueiroMiniGame.posFlareX = -5.71f;
@@ -624,8 +624,8 @@ public class Mission10 : Mission {
             }
             else if (tag.Equals("EnterPoltronaTrigger") && !poltronaBurn)
             {
-                fosforoMiniGame.activated = true;
-                isqueiroMiniGame.activated = true;
+                fosforoMiniGame.active = true;
+                isqueiroMiniGame.active = true;
                 fosforoMiniGame.posFlareX = -1f;
                 fosforoMiniGame.posFlareY = 1.6f;
                 isqueiroMiniGame.posFlareX = -1f;
@@ -634,8 +634,8 @@ public class Mission10 : Mission {
             }
             else if (tag.Equals("EnterSofaTrigger") && !sofaBurn)
             {
-                fosforoMiniGame.activated = true;
-                isqueiroMiniGame.activated = true;
+                fosforoMiniGame.active = true;
+                isqueiroMiniGame.active = true;
                 fosforoMiniGame.posFlareX = 5.53f;
                 fosforoMiniGame.posFlareY = 0.4f;
                 isqueiroMiniGame.posFlareX = 5.53f;
@@ -644,8 +644,8 @@ public class Mission10 : Mission {
             }
             else if (tag.Equals("ExitEstanteTrigger") || tag.Equals("ExitPoltronaTrigger") || tag.Equals("ExitSofaTrigger"))
             {
-                fosforoMiniGame.activated = false;
-                isqueiroMiniGame.activated = false;
+                fosforoMiniGame.active = false;
+                isqueiroMiniGame.active = false;
                 estanteTrigger = poltronaTrigger = sofaTrigger = false;
             }
         }

@@ -1,24 +1,22 @@
-﻿using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+﻿using UnityStandardAssets.CrossPlatformInput;
 using CrowShadowManager;
 
 namespace CrowShadowPlayer
 {
-    public class ProtectionObject : MonoBehaviour
+    public class ProtectionObject : InventoryObject
     {
         public Inventory.InventoryItems item;
         public int life = 60;
 
         Player player;
 
-        bool enterProtection = false;
-
-        void Start()
+        new void Start()
         {
+            base.Start();
             player = GetComponentInParent<Player>();
         }
 
-        void Update()
+        new void Update()
         {
             if (life <= 0)
             {
@@ -31,9 +29,9 @@ namespace CrowShadowPlayer
                     !GameManager.instance.blocked && !GameManager.instance.pausedObject &&
                     CrossPlatformInputManager.GetButtonDown("keyUseObject"))
                 {
-                    EnterProtection(!enterProtection);
+                    EnterProtection(!active);
                 }
-                else if (Inventory.GetCurrentItemType() != item && enterProtection)
+                else if (Inventory.GetCurrentItemType() != item && active)
                 {
                     EnterProtection(false);
                 }
@@ -42,10 +40,10 @@ namespace CrowShadowPlayer
 
         private void EnterProtection(bool e = true)
         {
-            enterProtection = e;
+            active = e;
             GameManager.instance.playerProtected = e;
             // mudar imagem do player
-            if (enterProtection)
+            if (active)
             {
                 if (item == Inventory.InventoryItems.TAMPA)
                 {

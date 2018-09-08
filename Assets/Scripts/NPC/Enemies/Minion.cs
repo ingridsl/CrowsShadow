@@ -74,12 +74,12 @@ namespace CrowShadowNPCs
             {
                 healthLight--;
             }
-            else if (attackFaca && faca.attacking && timeLeftAttack <= 0)
+            else if (attackFaca && faca.active && timeLeftAttack <= 0)
             {
                 timeLeftAttack = AttackObject.timeAttack;
                 healthMelee -= decrementFaca;
             }
-            else if (attackBastao && bastao.attacking && timeLeftAttack <= 0)
+            else if (attackBastao && bastao.active && timeLeftAttack <= 0)
             {
                 timeLeftAttack = AttackObject.timeAttack;
                 healthMelee -= decrementBastao;
@@ -188,7 +188,7 @@ namespace CrowShadowNPCs
                 OnTriggerCalled(collision);
             }
 
-            if ((collision.tag.Equals("Flashlight") && Flashlight.GetState()) || collision.tag.Equals("Lamp"))
+            if ((collision.tag.Equals("Flashlight") && Inventory.IsCurrentItemType(Inventory.InventoryItems.FLASHLIGHT, true)) || collision.tag.Equals("Lamp"))
             {
                 attackFlashlight = true;
             }
@@ -200,12 +200,12 @@ namespace CrowShadowNPCs
             {
                 attackBastao = true;
             }
-            else if (collision.tag.Equals("Pedra") && pedra.attacking)
+            else if (collision.tag.Equals("Pedra") && pedra.active)
             {
                 pedra.hitSuccess = true;
                 healthMelee -= decrementPedra;
             }
-            else if (collision.tag.Equals("Papel") && papel.attacking)
+            else if (collision.tag.Equals("Papel") && papel.active)
             {
                 papel.hitSuccess = true;
                 if (papel.achievedGoal)

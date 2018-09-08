@@ -5,10 +5,10 @@ using CrowShadowObjects;
 
 namespace CrowShadowPlayer
 {
-    public class FarAttackObject : MonoBehaviour
+    public class FarAttackObject : InventoryObject
     {
         public Inventory.InventoryItems item;
-        public bool attacking = false, hitSuccess = false, addObject = true;
+        public bool hitSuccess = false, addObject = true;
 
         protected Player player;
         protected SpriteRenderer spriteRenderer;
@@ -21,14 +21,15 @@ namespace CrowShadowPlayer
         protected bool changeDirection = false, initPositioning = false, initAttack = false, triggered = false;
         protected Vector3 posAttack = new Vector3(0, 0, 0), oldParentPosition;
 
-        protected void Start()
+        protected new void Start()
         {
+            base.Start();
             player = GetComponentInParent<Player>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-            attacking = false;
+            active = false;
         }
 
-        protected void Update()
+        protected new void Update()
         {
             if (timeLeftPedra > 0)
             {
@@ -40,14 +41,14 @@ namespace CrowShadowPlayer
                 EndThrow();
                 // som acerto
             }
-            else if (attacking && timeLeftPedra <= 0)
+            else if (active && timeLeftPedra <= 0)
             {
                 EndThrowAdd();
                 // som chão
             }
 
-            print("INIT: " + initAttack + attacking);
-            if (Inventory.GetCurrentItemType() == item && !initAttack && !attacking &&
+            print("INIT: " + initAttack + active);
+            if (Inventory.GetCurrentItemType() == item && !initAttack && !active &&
                 !GameManager.instance.paused && !GameManager.instance.blocked && !GameManager.instance.pausedObject)
             {
                 if (CrossPlatformInputManager.GetButtonDown("keyUseObject"))
@@ -144,7 +145,7 @@ namespace CrowShadowPlayer
                 }
 
             }
-            else if (attacking)
+            else if (active)
             {
                 transform.position = Vector3.MoveTowards(transform.position, posAttack, translateSpeed * Time.deltaTime);
             }
@@ -179,7 +180,7 @@ namespace CrowShadowPlayer
         {
             initAttack = false;
             hitSuccess = false;
-            attacking = true;
+            active = true;
             timeLeftPedra = maxTimePedra;
         }
 
@@ -190,7 +191,7 @@ namespace CrowShadowPlayer
             transform.localRotation = new Quaternion(0, 0, 0, 0);
             distance = 0;
             hitSuccess = false;
-            attacking = false;
+            active = false;
             timeLeftPedra = 0;
             Inventory.DeleteItem(item);
         }

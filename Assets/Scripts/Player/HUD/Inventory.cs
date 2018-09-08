@@ -35,8 +35,10 @@ namespace CrowShadowPlayer
         private AudioSource source { get { return GetComponent<AudioSource>(); } }
         private static List<DataItems> listItems;
         private static int currentItem = -1, lastItem = -1;
+        private static InventoryObject currentItemObject = null;
         private int previousItem = -1;
         private int slotPedra = -1, slotPapel = -1;
+        private bool activeShow = false;
 
         private void Awake()
         {
@@ -87,6 +89,17 @@ namespace CrowShadowPlayer
                 if (!source.isPlaying)
                     source.PlayOneShot(sound);
                 ShowInventoryMenu();
+            }
+
+            if (currentItemObject != null && !activeShow && currentItemObject.active)
+            {
+                menuItem.GetComponent<Image>().color = Color.red;
+                activeShow = true;
+            }
+            else if (activeShow && ((currentItemObject != null && !currentItemObject.active) || currentItemObject == null))
+            {
+                menuItem.GetComponent<Image>().color = Color.white;
+                activeShow = false;
             }
 
             if (menu.activeSelf && currentItem != -1)
@@ -192,6 +205,16 @@ namespace CrowShadowPlayer
             return GetItemType(currentItem);
         }
 
+        // RETORNA SE O ITEM ATUAL É DE UM TIPO ESPECÍFICO
+        public static bool IsCurrentItemType(InventoryItems item, bool isActive = false)
+        {
+            if (isActive)
+            {
+                return (currentItemObject != null && currentItemObject.active && GetItemType(currentItem) == item);
+            }
+            return (GetItemType(currentItem) == item);
+        }
+
         // RETORNA INVENTÁRIO
         public static List<DataItems> GetInventory()
         {
@@ -262,43 +285,68 @@ namespace CrowShadowPlayer
         // HABILITA ITEM NO PLAYER
         private static void EnableItem(InventoryItems item, bool e = true)
         {
+            GameObject itemObject;
             switch (item)
             {
                 case InventoryItems.FLASHLIGHT:
-                    player.transform.Find("Flashlight").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Flashlight").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.FOSFORO:
-                    player.transform.Find("Fosforo").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Fosforo").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.ISQUEIRO:
-                    player.transform.Find("Isqueiro").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Isqueiro").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.FACA:
-                    player.transform.Find("Faca").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Faca").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.BASTAO:
-                    player.transform.Find("Bastao").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Bastao").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.TAMPA:
-                    player.transform.Find("Tampa").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Tampa").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.ESCUDO:
-                    player.transform.Find("Escudo").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Escudo").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.PEDRA:
-                    player.transform.Find("Pedra").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Pedra").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.PAPEL:
-                    player.transform.Find("Papel").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Papel").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.VELA:
-                    player.transform.Find("Vela").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Vela").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.RACAO:
-                    player.transform.Find("Racao").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Racao").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 case InventoryItems.LIVRO:
-                    player.transform.Find("Livro").gameObject.SetActive(e);
+                    itemObject = player.transform.Find("Livro").gameObject;
+                    if (e) currentItemObject = itemObject.GetComponent<InventoryObject>();
+                    itemObject.SetActive(e);
                     break;
                 default:
                     break;
@@ -319,6 +367,7 @@ namespace CrowShadowPlayer
             else
             {
                 currentItem = -1;
+                currentItemObject = null;
                 pedraCount = 0;
                 papelCount = 0;
             }
@@ -451,6 +500,7 @@ namespace CrowShadowPlayer
                         {
                             menuItem.SetActive(false);
                             currentItem = -1;
+                            currentItemObject = null;
                         }
                     }
                     else

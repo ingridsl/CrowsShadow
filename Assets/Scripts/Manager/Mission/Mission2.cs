@@ -448,11 +448,11 @@ public class Mission2 : Mission {
         {
             if (tag.Equals("EnterVelaTrigger"))
             {
-                fosforo.GetComponent<MiniGameObject>().activated = true;
+                fosforo.GetComponent<MiniGameObject>().active = true;
             }
             else if (tag.Equals("ExitVelaTrigger"))
             {
-                fosforo.GetComponent<MiniGameObject>().activated = false;
+                fosforo.GetComponent<MiniGameObject>().active = false;
             }
         }
     }

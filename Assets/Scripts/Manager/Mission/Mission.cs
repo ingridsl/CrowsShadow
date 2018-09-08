@@ -123,8 +123,8 @@ public abstract class Mission {
         fosforoMiniGame.achievedGoal = false;
         isqueiroMiniGame.achievedGoal = false;
 
-        fosforoMiniGame.activated = false;
-        isqueiroMiniGame.activated = false;
+        fosforoMiniGame.active = false;
+        isqueiroMiniGame.active = false;
 
         if (GameManager.instance.rpgTalk.isPlaying)
         {

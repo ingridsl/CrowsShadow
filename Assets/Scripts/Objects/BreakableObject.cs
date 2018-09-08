@@ -21,7 +21,7 @@ namespace CrowShadowObjects
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (collision.tag.Equals("Pedra") && collision.GetComponent<FarAttackObject>().attacking)
+            if (collision.tag.Equals("Pedra") && collision.GetComponent<FarAttackObject>().active)
             {
                 collision.GetComponent<FarAttackObject>().hitSuccess = true;
                 broke = true;

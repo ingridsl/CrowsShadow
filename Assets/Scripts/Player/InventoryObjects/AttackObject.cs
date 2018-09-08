@@ -4,25 +4,24 @@ using CrowShadowManager;
 
 namespace CrowShadowPlayer
 {
-    public class AttackObject : MonoBehaviour
+    public class AttackObject : InventoryObject
     {
         public Inventory.InventoryItems item;
         public static float timeAttack = 1f;
-        public bool attacking = false;
 
         Player player;
         CircleCollider2D colliderComponent;
 
         float timeLeftAttack = 0;
 
-        void Start()
+        new void Start()
         {
+            base.Start();
             player = GetComponentInParent<Player>();
             colliderComponent = GetComponent<CircleCollider2D>();
-            attacking = false;
         }
 
-        void Update()
+        new void Update()
         {
             if (timeLeftAttack > 0)
             {
@@ -32,7 +31,7 @@ namespace CrowShadowPlayer
                 !GameManager.instance.paused && !GameManager.instance.blocked && !GameManager.instance.pausedObject)
             {
                 timeLeftAttack = timeAttack;
-                attacking = true;
+                active = true;
                 // animação + som
 
                 string anim = "";
@@ -67,7 +66,7 @@ namespace CrowShadowPlayer
             }
             else if (timeLeftAttack <= 0)
             {
-                attacking = false;
+                active = false;
             }
 
             switch (player.direction)

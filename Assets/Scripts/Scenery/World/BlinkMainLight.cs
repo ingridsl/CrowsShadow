@@ -34,7 +34,7 @@ namespace CrowShadowScenery
                 yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
                 lightMain.SetActive(!lightMain.activeSelf);
                 cont++;
-                print("C" + cont);
+                //print("C" + cont);
             }
             Destroy(gameObject);
         }

@@ -6,10 +6,9 @@ using CrowShadowScenery;
 
 namespace CrowShadowPlayer
 {
-    public class MiniGameObject : MonoBehaviour
+    public class MiniGameObject : InventoryObject
     {
         public Inventory.InventoryItems item;
-        public bool activated = false;
         public bool achievedGoal = false;
         public float timeMax = 5;
         public int counterMax = 20;
@@ -27,23 +26,24 @@ namespace CrowShadowPlayer
         private float timeLeft;
         private int counter;
 
-        void Start()
+        new void Start()
         {
+            base.Start();
             miniGame = GameObject.Find("HUDCanvas").transform.Find("MiniGameHolder").gameObject;
         }
 
-        public void Update()
+        new void Update()
         {
             //if(activated && paper)
            // {
            //     miniGame.SetActive(true);
 
            // }
-            if (activated && CrossPlatformInputManager.GetButtonDown("keyUseObject") && !achievedGoal)
+            if (active && CrossPlatformInputManager.GetButtonDown("keyUseObject") && !achievedGoal)
             {
                 miniGame.SetActive(true);
             }
-            if (activated && miniGame.activeSelf && !achievedGoal)
+            if (active && miniGame.activeSelf && !achievedGoal)
             {
                 var miniGameCircle = miniGame.transform.GetChild(1).gameObject.GetComponent<MiniGameCircle>();
                 if (miniGameCircle) {

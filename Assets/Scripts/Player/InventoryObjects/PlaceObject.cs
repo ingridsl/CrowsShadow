@@ -1,14 +1,18 @@
-﻿using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+﻿using UnityStandardAssets.CrossPlatformInput;
 
 namespace CrowShadowPlayer
 {
-    public class PlaceObject : MonoBehaviour
+    public class PlaceObject : InventoryObject
     {
         public Inventory.InventoryItems item;
         public bool inArea = false;
 
-        void Update()
+        new void Start()
+        {
+            base.Start();
+        }
+
+        new void Update()
         {
             if (Inventory.GetCurrentItemType() == item && inArea && CrossPlatformInputManager.GetButtonDown("keyUseObject"))
             {
