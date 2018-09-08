@@ -8,13 +8,13 @@ namespace CrowShadowPlayer
     {
         public Inventory.InventoryItems item;
 
-        Player player;
-        Light lightComponent;
-        Collider2D colliderComponent;
-        CircleCollider2D circleCollider;
+        private Player player;
+        private Light lightComponent;
+        private Collider2D colliderComponent;
+        private CircleCollider2D circleCollider;
         
-        float rotationSpeed = 1f, timePressed = 0f;
-        bool changeDirectionTime = false;
+        private float rotationSpeed = 1f, timePressed = 0f, timeHoldButton = 0f;
+        private bool changeDirectionTime = false, holdButton = false;
 
         new void Start()
         {
@@ -31,17 +31,28 @@ namespace CrowShadowPlayer
             if (Inventory.GetCurrentItemType() == item && !GameManager.instance.paused &&
                 !GameManager.instance.blocked && !GameManager.instance.pausedObject)
             {
-                if (CrossPlatformInputManager.GetButtonDown("keyUseObject"))
+                if (CrossPlatformInputManager.GetButtonDown("keyUseObject") && !active)
                 {
-                    EnableFlashlight(!lightComponent.enabled);
+                    EnableFlashlight(true);
                     if (active)
                     {
                         transform.rotation = Quaternion.Euler((float)0.0, (float)0.0, (float)0.0);
                     }
                     timePressed = 0f;
+                    holdButton = true;
+                }
+                else if (CrossPlatformInputManager.GetButtonDown("keyUseObject") && active)
+                {
+                    holdButton = false;
+                    timeHoldButton = Time.time;
                 }
                 else if (CrossPlatformInputManager.GetButton("keyUseObject"))
                 {
+                    if ((Time.time - timeHoldButton) > 0.4 && !holdButton)
+                    {
+                        holdButton = true;
+                    }
+
                     if (changeDirectionTime)
                     {
                         timePressed -= 4 * Time.deltaTime;
@@ -59,7 +70,11 @@ namespace CrowShadowPlayer
                     {
                         changeDirectionTime = false;
                     }
-
+                }
+                else if (CrossPlatformInputManager.GetButtonUp("keyUseObject") && active && !holdButton)
+                {
+                    EnableFlashlight(false);
+                    timePressed = 0f;
                 }
             }
 
