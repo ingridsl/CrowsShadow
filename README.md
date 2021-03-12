@@ -1,5 +1,7 @@
 # CROW’S SHADOW
 
+Unity version from the game Al-Ghaib https://github.com/ingridsl/Al-Ghaib (built with SDL and own engine)
+
 Versão em Unity do Game Al-Ghaib https://github.com/ingridsl/Al-Ghaib (construído com SDL e Engine Própria)
 
 Essa versão em Unity apresenta um reaproveitamento, melhora e ao mesmo tempo uma grande mudança das jogabilidades, história e ambientação do jogo Al-Ghaib presente no link acima fornecido.
